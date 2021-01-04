@@ -18,7 +18,7 @@ tree so return a boolean true.
 
 '''
 
-def sum(root):  #todo O(n^2)
+def sum(root):  
     if root is None:
         return 0
     return root.data +sum(root.left)+sum(root.right)
@@ -36,7 +36,17 @@ def isSumTree(root):
     if root.data == left+right and isSumTree(root.left) and isSumTree(root.right):
         return True
         
-
+def isSumTree(root):  #O(n)
+    if root is None:
+        return 0
+ 
+    if root.left is None and root.right is None:
+        return root.key
+ 
+    if root.key == isSumTree(root.left) + isSumTree(root.right):
+        return 2 * root.key
+ 
+    return float('-inf')
 
 
 
