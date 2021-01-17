@@ -1,4 +1,3 @@
-# The Knight’s tour problem   O(8^(N^2))
 '''
 Problem Statement:
 Given a N*N board with the Knight placed on the first block of an empty board. Moving according to the rules of chess knight must 
