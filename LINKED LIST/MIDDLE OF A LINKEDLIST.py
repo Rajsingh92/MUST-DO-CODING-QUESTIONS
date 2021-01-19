@@ -17,7 +17,20 @@ Input: [1,2,3,4,5,6]
 Output: Node 4 from this list (Serialization: [4,5,6])
 Since the list has two middle nodes with values 3 and 4, we return the second one.
 
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
 
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+}
 '''
 
 class Solution:

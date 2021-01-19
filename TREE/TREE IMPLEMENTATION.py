@@ -1,3 +1,55 @@
+# N-ARY TREE
+class Solution:
+    def maxDepth(self, root: 'Node') -> int:
+        if root is None:
+            return 0
+        
+        height = 0
+        for child in root.children:
+            height = max(height,self.maxDepth(child))
+            
+        return height+1 
+
+class Solution:
+    def __init__(self):
+        self.arr = []
+        
+    def preorder(self, root: 'Node') -> List[int]:
+        if root is None:
+            return self.arr
+        
+        self.arr.append(root.val)
+        
+        for child in root.children:
+            self.preorder(child)
+        
+        return self.arr
+
+class Solution:
+    def preorder(self, root: 'Node') -> List[int]:
+        if root is None:
+            return []
+        
+        stack = [root]
+        res = []
+        
+        while stack:
+            node = stack.pop()
+            res.append(node.val)
+            
+            for child in reversed(node.children):
+                stack.append(child)
+                
+        return res
+
+
+
+
+
+
+
+
+
 class Node:
     def __init__(self,data):
         self.data = data
@@ -134,4 +186,5 @@ def maxOfTree(root):
     rightMax = maxOfTree(root.right)
 
     return max(root.data,leftMax,rightMax)
+
 

@@ -11,6 +11,25 @@ Example 2:
 Input: 1->1->2->3->3
 Output: 1->2->3
 
+
+class Solution {
+    public ListNode deleteDuplicates(ListNode head) {
+        if(head == null || head.next == null){
+            return head;
+        }
+        
+        ListNode curr = head;
+        while(curr.next!=null){
+            if(curr.val == curr.next.val){
+                curr.next = curr.next.next;
+            }else{
+                curr = curr.next;
+            }
+        }
+        
+        return head;
+    }
+}
 '''
 
 class Solution:
@@ -47,6 +66,31 @@ Explanation:Given linked list elements are
 So, we will delete the extra repeated
 elements 2 from the linked list and the
 resultant linked list will contain 5->2->4
+
+class Solution
+{
+    public Node removeDuplicates(Node head) 
+    {
+         HashSet<Integer> hs = new HashSet<>();
+         
+         Node curr = head;
+         Node prev = null;
+         
+         while(curr!=null){
+             if(hs.contains(curr.data)){
+                 prev.next = curr.next;
+             }else{
+                 hs.add(curr.data);
+                 prev = curr;
+             }
+             curr = curr.next;
+         }
+         
+         
+         return head;
+         
+    }
+}
 '''
 
 def removeDuplicates(head):

@@ -6,6 +6,23 @@ Example:
 
 Input: 1->2->3->4->5->NULL
 Output: 5->4->3->2->1->NULL
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        
+        while(curr!=null){
+            ListNode next = curr.next;  //backup
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        
+        head = prev;
+        return head;
+    }
+}
 '''
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
