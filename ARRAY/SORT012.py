@@ -9,6 +9,33 @@ Follow up:
 Could you solve this problem without using the library's sort function?
 Could you come up with a one-pass algorithm using only O(1) constant space?
 
+
+class Solution {
+    public void sortColors(int[] nums) {
+        int left = 0;
+        int i = 0;
+        int right = nums.length-1;
+        
+        while(i<=right){
+            if(nums[i]==0){
+                swap(nums,i,left);
+                i++;
+                left++;
+            }else if(nums[i]==2){
+                swap(nums,i,right);
+                right--;
+            }else{
+                i++;
+            }
+        }
+    }
+    
+    public static void swap(int[] arr, int fp, int sp) {
+		int temp_var=arr[fp]^arr[sp];
+		arr[fp]^=temp_var;
+		arr[sp]^=temp_var;
+	}
+}
 '''
 
 class Solution:

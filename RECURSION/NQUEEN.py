@@ -1,4 +1,4 @@
-#  (N Queen Problem) O(N!)
+
 N=4
 def isValidQueen(board,row,col):
     for i in range(row):

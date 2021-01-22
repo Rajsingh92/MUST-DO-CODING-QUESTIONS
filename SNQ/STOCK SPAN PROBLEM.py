@@ -11,6 +11,56 @@ Example 1:
 
 Input: ["StockSpanner","next","next","next","next","next","next","next"], [[],[100],[80],[60],[70],[60],[75],[85]]
 Output: [null,1,1,1,2,1,4,6]
+
+public static int[] solve(int[] arr) {
+        int[] span = new int[arr.length];
+
+        Stack < Integer > st = new Stack < > ();
+        st.push(0);
+        span[0] = 1;
+
+        for (int i = 1; i < arr.length; i++) {
+            while (st.size() > 0 && arr[i] > arr[st.peek()]) {
+                st.pop();
+            }
+
+            if (st.size() == 0) {
+                span[i] = i + 1;
+            } else {
+                span[i] = i - st.peek();
+            }
+
+            st.push(i);
+        }
+
+        return span;
+    }
+
+#The Stock Span Problem       
+def stock_span_problem(arr):
+    stack = StackUsingArray()
+    result = []
+
+    for i in range(len(arr)):
+        if stack.isEmpty():
+            result.append(-1)
+            stack.push([arr[i],i])
+        elif not stack.isEmpty():
+            while not stack.isEmpty() and arr[i]>stack.peek()[0]:
+                stack.pop()
+             
+            if stack.isEmpty():
+                result.append(-1)
+            else:
+                result.append(stack.peek()[1])
+
+            stack.push([arr[i],i])
+
+    output = []
+    for index,element in enumerate(result):
+        output.append(index-element)
+
+    return output
 '''
 
 class StockSpanner:  #(INDICES-NGL)

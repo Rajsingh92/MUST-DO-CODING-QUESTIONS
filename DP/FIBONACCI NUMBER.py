@@ -17,6 +17,34 @@ Example 2:
 Input: n = 3
 Output: 2
 Explanation: F(3) = F(2) + F(1) = 1 + 1 = 2.
+
+
+public static int[][] fiboLogn(int[][] a, int n) {
+		if (n == 1) return a;
+
+		int[][] recAns = fiboLogn(a, n / 2);
+		recAns = multiplication(recAns, recAns);
+
+		return n % 2 != 0 ? multiplication(recAns, a) : recAns;
+	}
+
+	public static void basic() {
+		int n = 7;
+		int[] dp = new int[n + 1];
+		int ans = 0;
+
+
+		int[][] a = {{1, 1},
+			         {1, 0}
+		            };
+		int[][] mat = fiboLogn(a, n);
+		ans = mat[0][1];
+
+		display2D(mat);
+		// display(dp);
+		System.out.println(ans);
+
+	}
 '''
 
 
@@ -49,3 +77,19 @@ def fib_DP(n) :
         dp[i]+=dp[i-1]+dp[i-2]
             
     return dp[n]
+
+
+def fib_opti(n):
+    if n == 0:
+        return 0
+
+    a = 0
+    b = 1
+    sum = 0
+
+    for i in range(2,n):
+        sum = a+b
+        a = b
+        b = sum
+
+    return b

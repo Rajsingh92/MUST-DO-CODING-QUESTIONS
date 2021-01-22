@@ -1,4 +1,5 @@
-'''
+/**
+ * 
 Given a non-empty, singly linked list with head node head, return a middle node of linked list.
 If there are two middle nodes, return the second middle node.
 
@@ -16,42 +17,6 @@ Example 2:
 Input: [1,2,3,4,5,6]
 Output: Node 4 from this list (Serialization: [4,5,6])
 Since the list has two middle nodes with values 3 and 4, we return the second one.
-
-class Solution {
-    public ListNode middleNode(ListNode head) {
-        if (head == null || head.next == null)
-            return head;
-
-        ListNode slow = head;
-        ListNode fast = head;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-        return slow;
-    }
-}
-'''
-
-class Solution:
-    def middleNode(self, head: ListNode) -> ListNode:
-        no_of_nodes = 0
-        
-        #count nodes
-        tmp = head
-        while tmp:
-            no_of_nodes+=1
-            tmp = tmp.next
-        
-        #traverse upto count//2
-        no_of_nodes = no_of_nodes//2
-        tmp = head
-        while no_of_nodes>0:
-            tmp = tmp.next
-            no_of_nodes-=1
-            
-        return tmp
-
 
 class Solution:
     def middleNode(self, head: ListNode) -> ListNode:
@@ -72,4 +37,38 @@ class Solution:
             fast = fast.next.next
             
         return slow
+ */
 
+
+class Solution {
+    public ListNode middleNode(ListNode head) {
+        if (head == null || head.next == null)
+            return head;
+
+        ListNode slow = head;
+        ListNode fast = head;
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return slow;
+    }
+
+    public ListNode deleteMiddleNode(ListNode head){
+        if(head == null || head.next == null){
+            return null;
+        }
+
+        LisNode slow = head;
+        ListNode fast = head;
+        ListNode prev = null;
+
+        while (fast != null && fast.next != null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        prev.next = slow.next;
+    }
+}

@@ -25,8 +25,7 @@ class Solution:
         
         return self.arr
 
-class Solution:
-    def preorder(self, root: 'Node') -> List[int]:
+    def preorder2(self, root: 'Node') -> List[int]:
         if root is None:
             return []
         
@@ -47,7 +46,7 @@ class Solution:
 
 
 
-
+#----------------------------------------------------------------------------------------------------------------
 
 
 class Node:
@@ -151,6 +150,9 @@ def delete(root,key):
         
     return root
 
+
+
+#----------------------------------------------------------------------------------------------------------------
 
 #BINARY TREE
 
