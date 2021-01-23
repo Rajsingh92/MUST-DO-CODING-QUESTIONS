@@ -1,4 +1,4 @@
-'''
+/**
 LRU Cache
 Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.
 
@@ -31,8 +31,6 @@ lRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}
 lRUCache.get(1);    // return -1 (not found)
 lRUCache.get(3);    // return 3
 lRUCache.get(4);    // return 4
-
-'''
 
 class Node:
     def __init__(self,key,val):
@@ -84,4 +82,66 @@ class  LRUCache:
         self.tail.prev = node
         node.prev = p
         node.next = self.tail
+ */
 
+public class LRUCache {
+    class Node {
+        int key;
+        int value;
+        Node prev;
+        Node next;
+
+        Node(int k, int v) {
+            key = k;
+            value = v;
+        }
+    }
+
+    private Map<Integer, Node> map = new HashMap<>();
+    private Node head;
+    private Node last;
+    private int capacity;
+
+    public LRUCache(final int capacity) {
+        this.capacity = capacity;
+        head = new Node(0, 0);
+        last = new Node(0, 0);
+        head.next = last;
+        last.prev = head;
+    }
+
+    public int get(int key) {
+        Node node = map.get(key);
+        if (node == null) {
+            return -1;
+        }
+        remove(node);
+        insert(node);
+        return node.value;
+    }
+
+    public void put(int key, int value) {
+        if (map.containsKey(key)) {
+            remove(map.get(key));
+        }
+        if (map.size() == capacity) {
+            remove(last.prev);
+        }
+        insert(new Node(key, value));
+    }
+
+    private void insert(Node node) {
+        map.put(node.key, node);
+        node.next = head.next;
+        head.next.prev = node;
+        node.prev = head;
+        head.next = node;
+    }
+
+    private void remove(Node node) {
+        map.remove(node.key);
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+    }
+
+}

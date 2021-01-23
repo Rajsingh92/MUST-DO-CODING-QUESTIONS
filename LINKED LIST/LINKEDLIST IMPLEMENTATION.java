@@ -110,13 +110,7 @@ class CircularLinkedList:
             if curr == self.head:
                 break
 
-    def isCircular(self):
-        curr = self.head
-        while curr:
-            curr = curr.next
-            if curr==self.head:
-                return True
-        return False
+
 
 class DoublyNode:
     def __init__(self,data):
@@ -415,4 +409,47 @@ public class Main{
             }
 
         }
+
+
+        public class CircularLinkedList{
+
+            public void display(Node head){
+                Node temp = head;
+
+                if(head!=null){
+                    do{
+                        System.out.println(temp.data);
+                        temp = temp.next;
+                    }while(temp!=head);
+                }
+            }
+
+            public void addFirst(Node head,int data){
+                Node newNode = Node();
+                newNode.data = data;
+
+                if(head==null){
+                    head = newNode;
+                    newNode.next = head;
+                }else{
+                    curr=head;
+                    while(curr!=null && curr.next!=head){
+                        curr = curr.next;
+                    }
+
+                    newNode.next = head;
+                    curr.next = newNode;
+                    head = newNode;
+                }
+            }
+            //todo
+            public void delete(Node head,int key){
+                if(head==null){
+                    return;
+                }
+            }
+        }
 }
+
+
+
