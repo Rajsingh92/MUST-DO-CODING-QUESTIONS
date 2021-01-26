@@ -1,4 +1,14 @@
+// Quicksort for Linked Lists  
+// Roatate doubly linkedlist in group
+// reverse doubly linkedlist  
+// insert into sorted cyclic linkedlist
+// fold unfold
+// Add 1 to linked list
+// addition of ploynomials
 
+
+
+//todo
 public class Solution{
     static Node head;
 	static Node tail;
@@ -271,3 +281,4 @@ public class Solution{
 
 
 }
+

@@ -1,9 +1,4 @@
 
-
-
-
-
-
 public class Solution{
     static Node head, head1, head2; 
 

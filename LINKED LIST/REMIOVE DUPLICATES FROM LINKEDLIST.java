@@ -1,4 +1,5 @@
-'''
+/**
+ * 
 Remove Duplicates from Sorted List
 Given a sorted linked list, delete all duplicates such that each element appear only once.
 
@@ -10,6 +11,23 @@ Example 2:
 
 Input: 1->1->2->3->3
 Output: 1->2->3
+
+class Solution:
+    def deleteDuplicates(self, head: ListNode) -> ListNode:
+        if head is None:
+            return head
+        
+        curr = head
+        
+        while curr.next:
+            if curr.val == curr.next.val:
+                nextNext = curr.next.next
+                curr.next = nextNext
+            else:
+                curr = curr.next
+                
+        return head
+ */
 
 
 class Solution {
@@ -30,27 +48,11 @@ class Solution {
         return head;
     }
 }
-'''
-
-class Solution:
-    def deleteDuplicates(self, head: ListNode) -> ListNode:
-        if head is None:
-            return head
-        
-        curr = head
-        
-        while curr.next:
-            if curr.val == curr.next.val:
-                nextNext = curr.next.next
-                curr.next = nextNext
-            else:
-                curr = curr.next
-                
-        return head
 
 
 
-'''
+/**
+ 
 Remove duplicates from an unsorted linked list 
 Given an unsorted linked list of N nodes. The task is to remove duplicate elements from this unsorted Linked List. When a value 
 appears in multiple nodes, the node which appeared first should be kept, all others duplicates are to be removed.
@@ -66,6 +68,27 @@ Explanation:Given linked list elements are
 So, we will delete the extra repeated
 elements 2 from the linked list and the
 resultant linked list will contain 5->2->4
+
+
+def removeDuplicates(head):
+    if head is None or head.next is None:
+        return head
+        
+    curr = head
+    visited = set()
+    visited.add(curr.data)
+    
+    while curr and curr.next:
+        if curr.next.data in visited:
+            nextNext = curr.next.next
+            curr.next = nextNext
+        else:
+            visited.add(curr.next.data)
+            curr = curr.next
+            
+            
+    return head
+ */
 
 class Solution
 {
@@ -91,30 +114,11 @@ class Solution
          
     }
 }
-'''
 
-def removeDuplicates(head):
-    if head is None or head.next is None:
-        return head
-        
-    curr = head
-    visited = set()
-    visited.add(curr.data)
-    
-    while curr and curr.next:
-        if curr.next.data in visited:
-            nextNext = curr.next.next
-            curr.next = nextNext
-        else:
-            visited.add(curr.next.data)
-            curr = curr.next
-            
-            
-    return head
+
         
     
-
-'''
+/**
 Remove Duplicates from Sorted List II
 Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
 
@@ -128,7 +132,6 @@ Example 2:
 
 Input: 1->1->1->2->3
 Output: 2->3
-'''
 
 class Solution:
     def deleteDuplicates(self, head: ListNode) -> ListNode:
@@ -148,3 +151,5 @@ class Solution:
                 
                 
         return dummyNode.next
+ */
+
