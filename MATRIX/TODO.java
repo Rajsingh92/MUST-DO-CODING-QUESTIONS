@@ -6,4 +6,6 @@
 //  find orientation
 //  find common elements
 //  find orientation
-//  find specific pair
+//  saddle point
+//  shell rotate
+//  Print maximum sum square sub-matrix of given size

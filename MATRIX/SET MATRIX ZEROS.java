@@ -14,32 +14,6 @@ Output: [[1,0,1],[0,0,0],[1,0,1]]
 
 class Solution:
     def setZeroes(self, matrix: List[List[int]]) -> None:
-        
-        
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                if matrix[i][j]==0:
-                    self.placeOnes(matrix,i,j)
-        
-        for i in range(len(matrix)):
-            for j in range(len(matrix[0])):
-                if matrix[i][j]== float('inf'):
-                    matrix[i][j]=0
-                    
-        
-    def placeOnes(self,mat,row,col):
-        
-        for j in range(len(mat[0])):  #update row
-            if mat[row][j]!=0:
-                mat[row][j] = float('inf')
-                
-        for i in range(len(mat)):  #update col
-            if mat[i][col]!=0:
-                mat[i][col] = float('inf')
-
-
-class Solution:
-    def setZeroes(self, matrix: List[List[int]]) -> None:
         m,n = len(matrix),len(matrix[0])
         row = [None]*m
         col = [None]*n
