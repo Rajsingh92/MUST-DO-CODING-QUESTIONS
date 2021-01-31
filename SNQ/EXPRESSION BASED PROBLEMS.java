@@ -1,157 +1,341 @@
-/**
- * 
+// EVALUATE POSTFIX
+public class EvaluationPostfixExpression {
 
-class Conversion: 
-    def __init__(self, capacity): 
-        self.top = -1 
-        self.capacity = capacity 
-        self.array = [] 
-        self.output = [] 
-        self.precedence = {'+':1, '-':1, '*':2, '/':2, '^':3} 
-      
-    def isEmpty(self): 
-        return True if self.top == -1 else False
-      
-    def peek(self): 
-        return self.array[-1] 
-      
-    def pop(self): 
-        if not self.isEmpty(): 
-            self.top -= 1
-            return self.array.pop() 
-        else: 
-            return "$"
-      
-    def push(self, op): 
-        self.top += 1
-        self.array.append(op)  
-  
-    def isOperand(self, ch): 
-        return ch.isalpha() 
-  
-    def notGreater(self, i): 
-        try: 
-            a = self.precedence[i] 
-            b = self.precedence[self.peek()] 
-            return True if a  <= b else False
-        except KeyError:  
-            return False
-              
-    def infixToPostfix(self, exp): 
-        for i in exp: 
-            if self.isOperand(i): 
-                self.output.append(i) 
-              
-            elif i  == '(': 
-                self.push(i) 
-  
-            elif i == ')': 
-                while( (not self.isEmpty()) and 
-                                self.peek() != '('): 
-                    a = self.pop() 
-                    self.output.append(a) 
-                if (not self.isEmpty() and self.peek() != '('): 
-                    return -1
-                else: 
-                    self.pop() 
-            # An operator is encountered 
-            else: 
-                while(not self.isEmpty() and self.notGreater(i)): 
-                    self.output.append(self.pop()) 
-                self.push(i) 
-  
-        # pop all the operator from the stack 
-        while not self.isEmpty(): 
-            self.output.append(self.pop()) 
-  
-        print("".join(self.output)) 
+    static int evaluatePostfix(String exp)
+       {
+           Stack<Integer> stack=new Stack<>();
+           for(int i=0;i<exp.length();i++)
+           {
+               char c=exp.charAt(i);
+               if(Character.isDigit(c))
+                   stack.push(c - '0');
+               else
+               {
+                   int val1 = stack.pop();
+                   int val2 = stack.pop();
+                    
+                   switch(c)
+                   {
+                       case '+':
+                       stack.push(val2+val1);
+                       break;
+                        
+                       case '-':
+                       stack.push(val2- val1);
+                       break;
+                        
+                       case '/':
+                       stack.push(val2/val1);
+                       break;
+                        
+                       case '*':
+                       stack.push(val2*val1);
+                       break;
+                 }
+               }
+           }
+           return stack.pop();    
+       }
+}
+// INFIX EVALUATION
+public class EvaluationInfixExpression {
 
-    def isOperator(self,c):
-        if c == "*" or c == "+" or c == "-" or c == "/" or c == "^" or c == "(" or c == ")":
-            return True
-        else:
-            return False
+    public static void evaluateInfix(String exp) {
+        Stack < Integer > operands = new Stack < > ();
+        Stack < Character > operators = new Stack < > ();
+
+        for (int i = 0; i < exp.length(); i++) {
+            char ch = exp.charAt(i);
+
+            if (ch == '(') {
+                operators.push(ch);
+            } else if (Character.isDigit(ch)) {
+                operands.push(ch - '0');
+            } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+                while (operators.size() > 0 && operators.peek() != '(' &&
+                    precedence(ch) <= precedence(operators.peek())) {
+                    int val2 = operands.pop();
+                    int val1 = operands.pop();
+                    char op = operators.pop();
+
+                    int opval = operation(val1, val2, op);
+                    operands.push(opval);
+                }
+
+                operators.push(ch);
+            } else if (ch == ')') {
+                while (operators.size() > 0 && operators.peek() != '(') {
+                    int val2 = operands.pop();
+                    int val1 = operands.pop();
+                    char op = operators.pop();
+
+                    int opval = operation(val1, val2, op);
+                    operands.push(opval);
+                }
+
+                if (operators.size() > 0) {
+                    operators.pop();
+                }
+            }
+        }
+
+        while (operators.size() > 0) {
+            int val2 = operands.pop();
+            int val1 = operands.pop();
+            char op = operators.pop();
+
+            int opval = operation(val1, val2, op);
+            operands.push(opval);
+        }
+
+        int val = operands.pop();
+        System.out.println(val);
+    }
+
+    public static int precedence(char op) {
+        if (op == '+') {
+            return 1;
+        } else if (op == '-') {
+            return 1;
+        } else if (op == '*') {
+            return 2;
+        } else {
+            return 2;
+        }
+    }
+
+    public static int operation(int val1, int val2, char op) {
+        if (op == '+') {
+            return val1 + val2;
+        } else if (op == '-') {
+            return val1 - val2;
+        } else if (op == '*') {
+            return val1 * val2;
+        } else {
+            return val1 / val2;
+        }
+    }
+}
+// PREFIX EVALUATION
+public class EvaluationPrefixExpression {
+
+    public static void evaluatePrefix(String exp) {
+        Stack < Integer > vstack = new Stack < > ();
+        Stack < String > infix = new Stack < > ();
+        Stack < String > prefix = new Stack < > ();
+
+        for (int i = 0; i < exp.length(); i++) {
+            char ch = exp.charAt(i);
+
+            if (ch == '-' || ch == '+' || ch == '*' || ch == '/') {
+                int v2 = vstack.pop();
+                int v1 = vstack.pop();
+                int val = operation(v1, v2, ch);
+                vstack.push(val);
+
+                String inv2 = infix.pop();
+                String inv1 = infix.pop();
+                String inv = "(" + inv1 + ch + inv2 + ")";
+                infix.push(inv);
+
+                String prev2 = prefix.pop();
+                String prev1 = prefix.pop();
+                String prev = ch + prev1 + prev2;
+                prefix.push(prev);
+            } else {
+                vstack.push(ch - '0');
+                infix.push(ch + "");
+                prefix.push(ch + "");
+            }
+        }
+
+        System.out.println(vstack.pop());
+        System.out.println(infix.pop());
+        System.out.println(prefix.pop());
+    }
+
+    public static int operation(int v1, int v2, char op) {
+        if (op == '+') {
+            return v1 + v2;
+        } else if (op == '-') {
+            return v1 - v2;
+        } else if (op == '*') {
+            return v1 * v2;
+        } else if (op == '/') {
+            return v1 / v2;
+        } else {
+            return 0;
+        }
+    }
+}
 
 
-    def prefixToInfix(self,exp):
-        stack = []
-        i = len(exp)-1
-        while i>=0:
-            if not self.isOperator(exp[i]):
-                stack.append(exp[i])
-                i-=1
-            else:
-                str = "(" + stack.pop() + exp[i] + stack.pop() + ")"
-                stack.append(str)
-                i -= 1
+// INFIX TO POSTFIX
+public class InfixToPostfix {
+	public static String inToPost(String str) {
+		String rv = "";
 
-        return stack.pop()
+		Stack<Character> stack = new Stack<>();
 
-    def evaluatePostfix(self, exp): 
-        for i in exp: 
-            if i.isdigit(): 
-                self.push(i)  
-            else: 
-                val1 = self.pop() 
-                val2 = self.pop() 
-                self.push(str(eval(val2 + i + val1))) 
-  
-        return int(self.pop()) 
+		for (int i = 0; i < str.length(); i++) {
+			char ch = str.charAt(i);
+			int val = (int) ch;
+			// System.out.println(val);
+			if (val >= 97 && val <= 122) {
+				rv += ch;
+			} else {
+				int myPref = preference(ch);
+				if (stack.isEmpty()) {
+					stack.push(ch);
+				} else {
 
-    def postToPre(self,exp):
-        s = []
-        length = len(exp)
-        for i in range(length):
-            if self.isOperator(exp[i]):
-                op1 = s[-1]
-                s.pop()
-                op2 = s[-1]
-                s.pop()
+					if (ch == '(') {
+						stack.push(ch);
 
-                tmp = exp[i]+op2+op1
+					} else if (ch == ')') {
 
-                s.append(tmp)
-            else:
-                s.append(exp[i])
+						while (!stack.isEmpty() && stack.peek() != '(') {
+							rv += stack.pop();
+						}
+						stack.pop();
 
-        ans = ''
-        for i in s:
-            ans+=i
-        return ans
+					} else {
+						while (true) {
 
-    def preToPost(self,exp):
-        stack = []
-        exp = exp[::-1]
+							if (stack.isEmpty()) {
+								stack.push(ch);
+								break;
+							}
+							char stackTop = stack.peek();
 
-        for i in exp:
-            if self.isOperator(i):
-                a = stack.pop()
-                b = stack.pop()
+							int topPref = preference(stackTop);
+							if (topPref < myPref) {
+								stack.push(ch);
+								break;
+							} else {
+								rv += stack.pop();
 
-                tmp =a+b+i
-                stack.append(tmp)
-            else:
-                stack.append(i)
+							}
+						}
+					}
+				}
 
-        return stack
+			}
 
-    def postToInf(self,exp):  #incomplete
-        s = []
+			//System.out.println(ch + "," + stack + ", " + rv);
+		}
+		while (!stack.isEmpty()) {
+			rv += stack.pop();
+		}
 
-        for i in exp:
-            if self.isOperand(i):
-                s.insert(0,i)
-            else:
-                op1 = s[0]
-                s.pop(0)
-                op2 = s[0]
-                s.pop(0)
+		return rv;
+	}
 
-                s.insert(0,"("+op2+i+op1+")")
+	public static int preference(char ch) {
 
-        return s[0]
+		if (ch == '+' || ch == '-') {
+			return 1;
+		} else if (ch == '*' || ch == '/') {
+			return 2;
+		} else if (ch == '^') {
+			return 3;
+		}
+
+		return 0;
+	}
+
+}
 
 
-    def infixToPre(self,exp):
-        pass
- */
+// INFIX CONVERSION
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String exp = br.readLine();
+
+        // code
+        Stack < String > postfix = new Stack < > ();
+        Stack < String > prefix = new Stack < > ();
+        Stack < Character > operators = new Stack < > ();
+
+        for (int i = 0; i < exp.length(); i++) {
+            char ch = exp.charAt(i);
+
+            if (ch == '(') {
+                operators.push(ch);
+            } else if ((ch >= '0' && ch <= '9') || (ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                postfix.push(ch + "");
+                prefix.push(ch + "");
+            } else if (ch == '+' || ch == '-' || ch == '*' || ch == '/') {
+                while (operators.size() > 0 && operators.peek() != '(' && precedence(ch) <= precedence(operators.peek())) {
+                    char op = operators.pop();
+
+                    String postval2 = postfix.pop();
+                    String postval1 = postfix.pop();
+                    postfix.push(postval1 + postval2 + op);
+
+                    String preval2 = prefix.pop();
+                    String preval1 = prefix.pop();
+                    prefix.push(op + preval1 + preval2);
+                }
+
+                operators.push(ch);
+            } else if (ch == ')') {
+                while (operators.size() > 0 && operators.peek() != '(') {
+                    char op = operators.pop();
+
+                    String postval2 = postfix.pop();
+                    String postval1 = postfix.pop();
+                    postfix.push(postval1 + postval2 + op);
+
+                    String preval2 = prefix.pop();
+                    String preval1 = prefix.pop();
+                    prefix.push(op + preval1 + preval2);
+                }
+
+                if (operators.size() > 0) {
+                    operators.pop();
+                }
+            }
+        }
+
+        while (operators.size() > 0) {
+            char op = operators.pop();
+
+            String postval2 = postfix.pop();
+            String postval1 = postfix.pop();
+            postfix.push(postval1 + postval2 + op);
+
+            String preval2 = prefix.pop();
+            String preval1 = prefix.pop();
+            prefix.push(op + preval1 + preval2);
+        }
+
+        System.out.println(postfix.peek());
+        System.out.println(prefix.peek());
+    }
+
+    public static int precedence(char op) {
+        if (op == '+') {
+            return 1;
+        } else if (op == '-') {
+            return 1;
+        } else if (op == '*') {
+            return 2;
+        } else {
+            return 2;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

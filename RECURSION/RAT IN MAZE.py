@@ -49,6 +49,19 @@ def solveMazePathProblemLongest(board,solution,i,j,x,y,max_dist,dist):
 
     return max_dist
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # # Rat in a Maze with multiple steps or jump allowed
 def canJump(board,i,j):
     if i>=0 and j>=0 and i<N and j<N and board[i][j]!=0:

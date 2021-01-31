@@ -21,11 +21,8 @@
 
 
 public class Solution {
-
-	
 	public static void zigzagtraversal(int[][] arr){
 	    //diagonals start with first row
-	    
 	    for(int r = 0;r<arr.length;r++){
 	        int i = r;
 	        int j=  0;

@@ -13,7 +13,7 @@ Input :mat[][] = { {10, 20, 30, 40},
 Output : 10 20 30 40 45 35 25 15 27 29 37 48 50 39 33 32 
  */
 
-public class Solution{
+class Solution{
     public static void snake(int[][] mat,int m,int n){
         for(int i = 0;i<m;i++){
             if(i%2 == 0){
