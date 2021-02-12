@@ -27,6 +27,10 @@ def reverse(arr,i,j):
         low+=1
         high-=1
 
+
+
+
+
 def rightRotate(arr,k):
     n = len(arr)
     reverse(arr,0,n-k-1)
@@ -41,6 +45,12 @@ def rightRotateOneByOne(arr,k):
         arr[0] = last
 
         
+
+
+
+
+
+
 def leftRotate(arr,k):
     reverse(arr,0,k-1)
     reverse(arr,k,len(arr)-1)

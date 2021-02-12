@@ -18,3 +18,8 @@ public class Solution {
         }
     } 
 }
+
+
+//  Kmp Algorithm
+//  Rabin Karp Algorithm
+//  Boyer Moore Algorithm for Pattern Searching.
