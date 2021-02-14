@@ -1,6 +1,7 @@
 /**
  * 
-Search a 2D Matrix
+| 74 | Search a 2D Matrix |  Medium | Amazon, Facebook, Google, Microsoft |
+| 240 | Search a 2D Matrix II |  Medium | Amazon, Facebook, Google, Microsoft |
 
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 Integers in each row are sorted from left to right.

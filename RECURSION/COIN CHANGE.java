@@ -15,7 +15,6 @@ output:
 */
 
 public class Main {
-
     // coin change combination -- No duplicate
     public static void coinChange(int i, int[] coins, int amtsf, int tamt, String asf){
         
@@ -58,8 +57,6 @@ output:
 */
 
 public class Main {
-
-
     // coin change combination -- With duplicate
     public static void coinChange2(int i, int[] coins, int amtsf, int tamt, String asf) {
         

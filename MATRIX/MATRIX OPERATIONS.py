@@ -42,6 +42,7 @@ class Matrix:
     
         return (mat)
     
+    # | 766 | Toeplitz Matrix |  Easy | Facebook, Google |
     def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
         for i in range(1,len(matrix)):
             for j in range(1,len(matrix[i])):

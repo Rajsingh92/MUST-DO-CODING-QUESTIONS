@@ -125,7 +125,7 @@ public class Solution{
 
 
 /**
-Top K Frequent Elements
+| 347 | Top K Frequent Elements |  Medium | Facebook, Google, Microsoft |
 Given a non-empty array of integers, return the k most frequent elements.
 
 Example 1:

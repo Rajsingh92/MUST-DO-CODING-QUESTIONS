@@ -9,10 +9,6 @@
  Print Zigzag Easy
  Tower Of Hanoi Easy
 
-
-
-
-
  recursion-on-the-way-up:
  Print Subsequence Easy
  Print Kpc Easy
@@ -52,22 +48,6 @@
  Largest Number Possible After At Most K Swaps Easy
 
 
- Permutation -  1 Easy
- Combinations - 1 Medium
- Permutations - 2 Medium
- Combinations - 2 Medium
- Queens Combinations - 2d As 2d - Box Chooses Medium
- Queens Permutations - 2d As 2d - Queen Chooses Medium
- Queens Permutations - 2d As 2d - Box Chooses Medium
- Queens Combinations - 2d As 2d - Queen Chooses Medium
- Queens Combinations - 2d As 1d - Queen Chooses Medium
- Nqueens Combinations - 2d As 1d - Queen Chooses Medium
- Nknights Combinations - 2d As 1d - Knight Chooses Medium
- Nqueens Permutations - 2d As 1d - Queen Chooses Easy
- Permutations - Words - 1 Easy
- Permutations - Words - 2 Easy
-
-
 Backtracking Set 1 The Knights Tour Problem
 Backttracking Set 2 Rat In A Maze
 Backtracking Set 7 Suduku
@@ -94,42 +74,6 @@ Find the K-th Permutation Sequence of first N natural numbers
 Print all Subsequences of a string.
 Print all the permutations of the given string
 Count of number of given string in 2D character array
-
-
-public static int permuatationWithDuplicates(String str, String ans) {
-        if (str.length() == 0) {
-            System.out.println(ans);
-            return 1;
-        }
-
-        int count = 0;
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            String ros = str.substring(0, i) + str.substring(i + 1); // rest of string
-            count += permuatationWithDuplicates(ros, ans + ch);
-        }
-        return count;
-    }
-
-    public static int permuatationWithoutDuplicates(String str, String ans) {
-        if (str.length() == 0) {
-            System.out.println(ans);
-            return 1;
-        }
-
-        int count = 0;
-        boolean[] vis = new boolean[26];
-        for (int i = 0; i < str.length(); i++) {
-            char ch = str.charAt(i);
-            if (!vis[ch - 'a']) {
-                vis[ch - 'a'] = true;
-                String ros = str.substring(0, i) + str.substring(i + 1); // rest of string
-                count += permuatationWithoutDuplicates(ros, ans + ch);
-            }
-        }
-
-        return count;
-    }
 
 
  */

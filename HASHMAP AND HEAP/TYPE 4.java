@@ -143,7 +143,7 @@ class Solution{
 
 
 /**
-Subarray Sum Equals K
+| 560 | Subarray Sum Equals K |  Medium | Facebook, Microsoft |
 Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.
 
  

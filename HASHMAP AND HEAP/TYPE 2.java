@@ -6,7 +6,7 @@
 
 /**
  * 
-Valid Anagram
+| 242 | Valid Anagram |  Easy | Amazon, Apple, Facebook, Google, Microsoft |
 Given two strings s and t , write a function to determine if t is an anagram of s.
 
 Example 1:
@@ -216,7 +216,7 @@ class Solution {
  
 /**
  * 
-Isomorphic Strings
+| 205 | Isomorphic Strings |  Easy | Amazon, Google |
 Given two strings s and t, determine if they are isomorphic.
 Two strings s and t are isomorphic if the characters in s can be replaced to get t.
 All occurrences of a character must be replaced with another character while preserving the order of characters. No two characters may map to the same character, but a character may map to itself.
