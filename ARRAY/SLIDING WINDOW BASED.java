@@ -91,4 +91,18 @@ largest substring of k distinct array
 length of largest substring no repetive
 pick toy
 minimum window substring
+
+
+| 3 | Longest Substring Without Repeating Characters |  Medium | Akuna Capital, Alibaba |
+| 76 | Minimum Window Substring |  Hard | Airbnb |
+| 239 | Sliding Window Maximum |  Hard | Apple, Microsoft |
+| 340 | Longest Substring with At Most K Distinct Characters |  Hard | Facebook, Google |
+| 424 | Longest Repeating Character Replacement |  Medium | Google |
+| 480 | Sliding Window Median |  Hard | Amazon, Google |
+| 567 | Permutation in String |  Medium | Facebook, Google |
+| 727 | Minimum Window Subsequence |  Hard | Google |
+| 978 | Longest Turbulent Subarray |  Medium | Amazon |
+| 992 | Subarrays with K Different Integers |  Hard | Amazon |
+| 995 | Minimum Number of K Consecutive Bit Flips |  Hard | Akuna Capital |
+| 1004 | Max Consecutive Ones III |  Medium | Facebook |
  */

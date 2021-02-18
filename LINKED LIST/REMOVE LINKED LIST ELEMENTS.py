@@ -1,5 +1,5 @@
 '''
-Remove Linked List Elements
+| 203 | Remove Linked List Elements |  Easy | Adobe, Amazon, Microsoft |
 Remove all elements from a linked list of integers that have value val.
 
 Example:

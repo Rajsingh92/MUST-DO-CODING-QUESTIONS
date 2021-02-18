@@ -1,5 +1,5 @@
 /**
-Linked List Cycle
+| 141 | Linked List Cycle |  Easy | Adobe, Akuna Capital, Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
 Given head, the head of a linked list, determine if the linked list has a cycle in it.
 There is a cycle in a linked list if there is some node in the list that can be reached again by continuously 
 following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer 
@@ -38,7 +38,7 @@ public class Solution {
 }
 
 /**
-Linked List Cycle II
+| 142 | Linked List Cycle II |  Medium | Apple, Google, Microsoft |
 Given a linked list, return the node where the cycle begins. If there is no cycle, return null.
 There is a cycle in a linked list if there is some node in the list that can be reached again by continuously 
 following the next pointer. Internally, pos is used to denote the index of the node that tail's next pointer 

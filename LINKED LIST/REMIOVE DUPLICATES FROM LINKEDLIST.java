@@ -1,6 +1,6 @@
 /**
  * 
-Remove Duplicates from Sorted List
+| 83 | Remove Duplicates from Sorted List |  Easy | Apple, Google |
 Given a sorted linked list, delete all duplicates such that each element appear only once.
 
 Example 1:
@@ -119,7 +119,7 @@ class Solution
         
     
 /**
-Remove Duplicates from Sorted List II
+| 82 | Remove Duplicates from Sorted List II |  Medium | Google |
 Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
 
 Return the linked list sorted as well.

@@ -76,4 +76,29 @@ Print all the permutations of the given string
 Count of number of given string in 2D character array
 
 
+
+| 17 | Letter Combinations of a Phone Number |  Medium | Airbnb, Apple, Facebook |
+| 247 | Strobogrammatic Number II |  Medium | Google |
+| 248 | Strobogrammatic Number III |  Hard | Facebook |
+| 544 | Output Contest Matches |  Medium | Google |
+| 687 | Longest Univalue Path |  Easy | Amazon |
+| 698 | Partition to K Equal Sum Subsets |  Medium | Google |
+| 761 | Special Binary String |  Hard | Google |
+| 794 | Valid Tic-Tac-Toe State |  Medium | Microsoft |
+| 22 | Generate Parentheses |  Medium | Adobe, Aetion |
+| 37 | Sudoku Solver |  Hard | Amazon |
+| 39 | Combination Sum |  Medium | Airbnb, Apple, Facebook, Google, Microsoft |
+| 40 | Combination Sum II |  Medium | Microsoft |
+| 46 | Permutations |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
+| 47 | Permutations II |  Medium | Adobe, Amazon, Facebook |
+| 51 | N-Queens |  Hard | Alibaba, Amazon, Facebook, Microsoft |
+| 77 | Combinations |  Medium | Facebook, Google, Microsoft |
+| 90 | Subsets II |  Medium | Amazon |
+| 79 | Word Search |  Medium | Amazon, Apple, Facebook, Microsoft |
+| 212 | Word Search II |  Hard | Airbnb, Amazon, Apple, Facebook, Microsoft |
+| 89 | Gray Code |  Medium | Google |
+| 93 | Restore IP Addresses |  Medium | Microsoft |
+| 291 | Word Pattern II |  Hard | Facebook |
+| 294 | Flip Game II |  Medium | Google |
+| 425 | Word Squares |  Hard | Google |
  */

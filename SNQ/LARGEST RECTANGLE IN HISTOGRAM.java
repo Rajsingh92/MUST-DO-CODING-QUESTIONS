@@ -1,5 +1,5 @@
 /**
-Largest Rectangle in Histogram
+| 84 | Largest Rectangle in Histogram |  Hard | Microsoft |
 Given n non-negative integers representing the histogram's bar height where the width of each bar is 1, find the area 
 of largest rectangle in the histogram.
 
@@ -68,7 +68,7 @@ class Solution {
 
 
 /**
-Maximal Rectangle
+| 85 | Maximal Rectangle |  Hard | Adobe, Amazon, Google, Microsoft |
 Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's 
 and return its area.
 

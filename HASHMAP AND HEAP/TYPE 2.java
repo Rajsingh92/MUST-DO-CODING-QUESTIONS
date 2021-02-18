@@ -136,7 +136,7 @@ public class Solution {
 
 /**
  * 
-Anagram Mapping
+Anagram Mapping(Google)
 For every element in A, you have to print the index of that element in B.
 arr1 : 1 2 3 4 5 2    arr2: 4 3 2 1 5 2
 op: 3 2 1 0 4 5 
@@ -265,7 +265,7 @@ class Solution {
 
 /**
  * 
-Word Pattern
+| 290 | Word Pattern |  Easy | Google, Microsoft |
 Given a pattern and a string s, find if s follows the same pattern.
 Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
 
@@ -339,7 +339,7 @@ class GFG {
 
 /**
  * 
-Group Shifted String 
+| 249 | Group Shifted Strings |  Medium | Apple |
 Two strings s1 and s2 are shifted if -
    -> Length of both the strings is the same.
    -> The difference between ASCII values of every character of s1 and s2 is constant.

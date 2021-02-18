@@ -1,23 +1,4 @@
 /**
- * 
- * 
-
-
-
-
-maximum non overlapping bridges
-russian doll envelops
-activity selection
-arithmatic slices I
-arithmatic slices II
-Word Break
-maximum sum alternating sequence
-highway billboard game
-word wrap problem
-
-
-
-
 Longest Increasing Subsequence
 Given an integer array nums, return the length of the longest strictly increasing subsequence.
 
@@ -190,3 +171,19 @@ class Solution
         return omax;
     } 
 }
+
+
+/**
+
+questions iconMaximum Sum Bitonic Sub Sequence
+
+maximum non overlapping bridges
+russian doll envelops
+activity selection
+arithmatic slices I
+arithmatic slices II
+Word Break
+maximum sum alternating sequence
+highway billboard game
+word wrap problem
+ */

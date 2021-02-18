@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+// | 706 | Design HashMap |  Easy | Adobe, Amazon, Apple, Microsoft |
 
 public class Main {
 

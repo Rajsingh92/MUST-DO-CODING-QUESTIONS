@@ -343,3 +343,29 @@ class Solution:
             
                 
         return False 
+
+'''
+| 4 | Median of Two Sorted Arrays |  Hard | Alibaba, Apple |
+| 33 | Search in Rotated Sorted Array |  Medium | Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
+| 81 | Search in Rotated Sorted Array II |  Medium | Google |
+| 35 | Search Insert Position |  Easy | Adobe |
+| 153 | Find Minimum in Rotated Sorted Array |  Medium | Google |
+| 154 | Find Minimum in Rotated Sorted Array II |  Hard | Facebook, Google |
+| 162 | Find Peak Element |  Medium | Amazon, Facebook, Microsoft, Google |
+| 278 | First Bad Version |  Easy | Facebook, Google |
+| 302 | Smallest Rectangle Enclosing Black Pixels |  Hard | Google |
+| 315 | Count of Smaller Numbers After Self |  Hard | Adobe, Apple |
+| 374 | Guess Number Higher or Lower |  Easy | Google |
+| 475 | Heaters |  Easy | Google |
+| 493 | Reverse Pairs |  Hard | Apple, Facebook, Google, Microsoft |
+| 540 | Single Element in a Sorted Array |  Medium | Amazon, Google |
+| 668 | Kth Smallest Number in Multiplication Table |  Hard | Google |
+| 702 | Search in a Sorted Array of Unknown Size |  Medium | Google |
+| 774 | Minimize Max Distance to Gas Station |  Hard | Google |
+| 793 | Preimage Size of Factorial Zeroes Function |  Hard | Amazon |
+| 852 | Peak Index in a Mountain Array |  Easy | Amazon, Google |
+| 528 | Random Pick with Weight |  Medium | Google, Microsoft |
+| 497 | Random Point in Non-overlapping Rectangles |  Medium | Google |
+| 911 | Online Election |  Medium | Apple, Google |
+| 1011 | Capacity To Ship Packages Within D Days |  Medium | Google |
+'''

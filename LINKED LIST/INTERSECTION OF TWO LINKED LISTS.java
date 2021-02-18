@@ -1,5 +1,5 @@
 /**
-Intersection of Two Linked Lists
+| 160 | Intersection of Two Linked Lists |  Easy | Amazon |
 
 Write a program to find the node at which the intersection of two singly linked lists begins.
 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3

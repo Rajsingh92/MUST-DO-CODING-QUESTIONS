@@ -46,3 +46,74 @@ public class Main {
     
    }
 }
+
+
+
+/**
+class Solution {
+    public boolean isBipartite(int[][] graph) {
+        int len = graph.length;
+        int[] colors = new int[len];
+        
+        for (int i = 0; i < len; i++) {
+            if (colors[i]  == 1 || colors[i]  == -1) continue;
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(i);
+            colors[i] = 1;  
+            
+            while (!queue.isEmpty()) {
+                int cur = queue.poll();
+                for (int next : graph[cur]) {
+                    if (colors[next] == 0) {          
+                        colors[next] = -colors[cur];  
+                        queue.add(next);
+                    } 
+                    
+                    if(colors[next] == colors[cur])  return false;
+                    
+                }
+            }
+        }
+        
+        return true;
+    }
+}
+
+
+// leetcode
+class Solution {
+    public boolean possibleBipartition(int N, int[][] dislikes) {
+       
+        int[] color = new int[N+1];
+        List<Integer>[] graph = new List[N+1];
+        for(int i = 0; i <= N; i++) {
+            graph[i] = new ArrayList<>();
+        }
+        
+        for(int[] v: dislikes) {
+            graph[v[0]].add(v[1]);
+            graph[v[1]].add(v[0]);
+        }
+        
+        for(int i = 1; i <= N; i++) {
+            if(color[i] == 0) {
+                LinkedList<Integer> queue = new LinkedList<>();
+                queue.add(i);
+                color[i] = 1;
+                while(queue.size() != 0) {
+                    int top = queue.removeFirst();
+                    for(int neighbor: graph[top]) {
+                        if(color[neighbor] == color[top]) return false;
+                        if(color[neighbor] == 0) {
+                            color[neighbor] = -color[top];
+                             queue.add(neighbor);
+                        }
+                    }
+                }
+            }
+        }
+        
+        return true;
+    }
+}
+ */

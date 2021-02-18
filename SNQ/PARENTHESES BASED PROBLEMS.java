@@ -1,5 +1,5 @@
 /**
-Valid Parentheses
+| 20 | Valid Parentheses |  Easy | Adobe, Akuna Capital, Amazon, Apple, Facebook, Google, Microsoft |
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
 An input string is valid if:
@@ -114,7 +114,7 @@ class Solution {
 
 
 /**
-Minimum Add to Make Parentheses Valid
+| 921 | Minimum Add to Make Parentheses Valid |  Medium | Facebook |
 Given a string S of '(' and ')' parentheses, we add the minimum number of parentheses ( '(' or ')', and in any positions ) so that the resulting parentheses string is valid.
 
 Formally, a parentheses string is valid if and only if:

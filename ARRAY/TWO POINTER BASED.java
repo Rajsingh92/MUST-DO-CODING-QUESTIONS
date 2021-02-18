@@ -85,7 +85,7 @@ class Solution {
 
 
 /**
-Container With Most Water
+| 11 | Container With Most Water |  Medium | Airbnb, Alibaba |
 Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical 
 lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, 
 together with the x-axis forms a container, such that the container contains the most water.
@@ -120,3 +120,31 @@ class Solution {
         return maxWater ;
     }
 }
+
+
+
+
+
+/**
+
+| 15 | 3Sum |  Medium | Adobe, Akuna Capital, Amazon, Apple, Google, Microsoft, Alibaba |
+| 16 | 3Sum Closest |  Medium | Amazon, Apple, Google, Microsoft |
+| 259 | 3Sum Smaller |  Medium | Google |
+| 26 | Remove Duplicates from Sorted Array |  Easy | Amazon, Apple, Facebook, Google, Microsoft |
+| 80 | Remove Duplicates from Sorted Array II |  Medium | Google |
+| 27 | Remove Element |  Easy | Amazon, Google |
+| 88 | Merge Sorted Array |  Easy | Adobe, Amazon, Facebook, Microsoft |
+| 209 | Minimum Size Subarray Sum |  Medium | Google, Microsoft |
+| 287 | Find the Duplicate Number |  Medium | Adobe, Amazon, Google, Microsoft |
+| 344 | Reverse String |  Easy | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
+| 457 | Circular Array Loop |  Medium | Google |
+| 487 | Max Consecutive Ones II |  Medium | Google |
+| 532 | K-diff Pairs in an Array |  Easy | Amazon |
+| 713 | Subarray Product Less Than K |  Medium | Akuna Capital |
+| 723 | Candy Crush |  Medium | Google |
+| 845 | Longest Mountain in Array |  Medium | Google |
+| 881 | Boats to Save People |  Medium | Google |
+| 904 | Fruit Into Baskets |  Medium | Amazon, Google |
+| 977 | Squares of a Sorted Array |  Easy | Adobe |
+| 986 | Interval List Intersections |  Medium | Facebook, Google |
+ */

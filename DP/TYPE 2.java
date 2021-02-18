@@ -1,91 +1,214 @@
-//                  BUY AND SELL STOCK
-//                  BUY AND SELL STOCK
-//                  BUY AND SELL STOCK
+//              INCLUDE EXCLUDE BASED
+//              INCLUDE EXCLUDE BASED
+//              INCLUDE EXCLUDE BASED
 
 
-/**
-atmost 2 transaction
-k transaction
-with cooldown period
-with transaction fees
- */
+//count of binary string with no consecutive zeros
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
 
+        int oldCountZero = 1;
+        int oldCountOne = 1;
 
+        for (int i = 2; i < n + 1; i++) {
+            int newCountZero = oldCountOne;
+            int newCountOne = oldCountZero + oldCountOne;
 
-
-
-/**
-Best Time to Buy and Sell Stock -- One transaction
-| 121 | Best Time to Buy and Sell Stock |  Easy | Facebook |
-You are given an array prices where prices[i] is the price of a given stock on the ith day.
-You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to 
-sell that stock.
-Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
-
- 
-
-Example 1:
-
-Input: prices = [7,1,5,3,6,4]
-Output: 5
-Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
-Note that buying on day 2 and selling on day 1 is not allowed because you must buy before you sell.
- */
-
-class Solution {
-    public int maxProfit(int[] prices) {
-        int lsf = Integer.MAX_VALUE;
-        int profitToday = 0;
-        int overallProfit = 0;
-        
-        for(int i = 0;i<prices.length;i++){
-            if(prices[i]<lsf){
-                lsf = prices[i];
-            }
-            
-            profitToday = prices[i] - lsf;
-            if(profitToday>overallProfit)
-                overallProfit = profitToday;
+            oldCountZero = newCountZero;
+            oldCountOne = newCountOne;
         }
-        
-        return overallProfit;
+
+        System.out.println(oldCountZero + oldCountOne);
+    }
+}
+
+// Arrange Buildings
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        long n = scn.nextInt();
+
+        long oldCountZero = 1;
+        long oldCountOne = 1;
+
+        for (int i = 2; i < n + 1; i++) {
+            long newCountZero = oldCountOne;
+            long newCountOne = oldCountZero + oldCountOne;
+
+            oldCountZero = newCountZero;
+            oldCountOne = newCountOne;
+        }
+
+        long ways = oldCountZero + oldCountOne;
+        System.out.println(ways * ways);
+    }
+}
+
+// count of substring of nature a+b+c+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        String str = scn.next();
+
+        int a = 0;
+        int ab = 0;
+        int abc = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == 'a') {
+                a = 2 * a + 1;
+            } else if (ch == 'b') {
+                ab = 2 * ab + a;
+            } else if (ch == 'c') {
+                abc = 2 * abc + ab;
+            }
+        }
+
+        System.out.println(abc);
     }
 }
 
 
-/**
-Best Time to Buy and Sell Stock II -- Infinite transaction
-| 122 | Best Time to Buy and Sell Stock II |  Easy | Alibaba |
-Say you have an array prices for which the ith element is the price of a given stock on day i.
-Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell 
-one share of the stock multiple times).
-Note: You may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again).
+// Maximum Sum Non Adjacent Elements
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
 
-Example 1:
+        int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = scn.nextInt();
+        }
 
-Input: [7,1,5,3,6,4]
-Output: 7
-Explanation: Buy on day 2 (price = 1) and sell on day 3 (price = 5), profit = 5-1 = 4.
-Then buy on day 4 (price = 3) and sell on day 5 (price = 6), profit = 6-3 = 3.
- */
+        int inc = arr[0];
+        int exc = 0;
 
-class Solution {
-    public int maxProfit(int[] prices) {
-        int buyDate  = 0;
-        int sellDate = 0;
-        int profit = 0;
-        
-        for(int i =1;i<prices.length;i++){
-            if(prices[i]>=prices[i-1]){
-                sellDate++;
-            }else{
-                profit += prices[sellDate] - prices[buyDate];
-                sellDate = buyDate = i;
+        for (int i = 1; i < n; i++) {
+            int ninc = exc + arr[i];
+            int nexc = Math.max(inc, exc);
+
+            inc = ninc;
+            exc = nexc;
+        }
+
+        int ans = Math.max(inc, exc);
+        System.out.println(ans);
+    }
+}
+
+
+// paint house
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
+        int[][] arr = new int[n][3];
+        for (int i = 0; i < n; i++) {
+            String str = br.readLine();
+            String[] items = str.split(" ");
+            arr[i][0] = Integer.parseInt(items[0]);
+            arr[i][1] = Integer.parseInt(items[1]);
+            arr[i][2] = Integer.parseInt(items[2]);
+        }
+
+        long red = arr[0][0];
+        long blue = arr[0][1];
+        long green = arr[0][2];
+
+        for (int i = 1; i < arr.length; i++) {
+            long nred = arr[i][0] + Math.min(blue, green);
+            long nblue = arr[i][1] + Math.min(red, green);
+            long ngreen = arr[i][2] + Math.min(red, blue);
+
+            red = nred;
+            blue = nblue;
+            green = ngreen;
+        }
+
+        System.out.println(Math.min(red, Math.min(blue, green)));
+    }
+}
+
+// paint house -- multiple color
+public class Main {
+    public static void main(String[] args) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String line = br.readLine();
+        int n = Integer.parseInt(line.split(" ")[0]);
+        int k = Integer.parseInt(line.split(" ")[1]);
+        int[][] arr = new int[n][k];
+        for (int i = 0; i < n; i++) {
+            String str = br.readLine();
+            String[] items = str.split(" ");
+            for (int j = 0; j < k; j++) {
+                arr[i][j] = Integer.parseInt(items[j]);
             }
         }
-        profit += prices[sellDate] - prices[buyDate];  //last upstroke
-        
-        return profit;
+
+        int min = Integer.MAX_VALUE;
+        int smin = Integer.MAX_VALUE;
+        for (int j = 0; j < arr[0].length; j++) {
+            if (arr[0][j] <= min) {
+                smin = min;
+                min = arr[0][j];
+            } else if (arr[0][j] <= smin) {
+                smin = arr[0][j];
+            }
+        }
+
+        for (int i = 1; i < arr.length; i++) {
+            int cmin = Integer.MAX_VALUE;
+            int csmin = Integer.MAX_VALUE;
+
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i - 1][j] != min) {
+                    arr[i][j] += min;
+                } else {
+                    arr[i][j] += smin;
+                }
+
+                if (arr[i][j] <= cmin) {
+                    csmin = cmin;
+                    cmin = arr[i][j];
+                } else if (arr[i][j] <= csmin) {
+                    csmin = arr[i][j];
+                }
+            }
+
+            min = cmin;
+            smin = csmin;
+        }
+
+        System.out.println(min);
+    }
+}
+
+
+// paint fence
+public class Main {
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int k = scn.nextInt();
+
+        // start 2
+        long same = k;
+        long diff = k * (k - 1);
+        long total = same + diff;
+
+        for (int i = 3; i <= n; i++) {
+            same = diff;
+            diff = total * (k - 1);
+            total = same + diff;
+        }
+
+        System.out.println(total);
     }
 }
 

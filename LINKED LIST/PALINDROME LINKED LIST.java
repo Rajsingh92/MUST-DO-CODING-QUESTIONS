@@ -1,5 +1,5 @@
 /**
-Palindrome Linked List
+| 234 | Palindrome Linked List |  Easy | Amazon, Google |
 Given a singly linked list, determine if it is a palindrome.
 
 Example 1:

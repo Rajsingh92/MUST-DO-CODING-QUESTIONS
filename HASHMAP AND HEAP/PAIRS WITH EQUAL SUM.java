@@ -87,63 +87,24 @@ class Solution
 }
 
 /**
- * 
-Find All Four Sum Numbers 
-Given an array of integers and another number. Find all the unique quadruple from the given array that 
-sums up to the given number.
+| 18 | 4Sum |  Medium | Adobe, Amazon, Apple, Facebook |
+Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? 
+Find all unique quadruplets in the array which gives the sum of target.
+
+Notice that the solution set must not contain duplicate quadruplets.
+
+ 
 
 Example 1:
 
-Input:
-N = 5, K = 3
-A[] = {0,0,2,1,1}
-Output: 0 0 1 2 
+Input: nums = [1,0,-1,0,-2,2], target = 0
+Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
  */
 
 
 
 class Solution {
-    
-    public class Pair {
-        int x;
-        int y;
-        
-        Pair(int x,int y){
-            this.x = x;
-            this.y = y;
-        }
-    }
-    
-    public static void fourSum(int[] arr, int k) {
-        
-        HashMap<Integer,Pair> map = new HashMap<>();
-        for(int i = 0;i<arr.length-1;i++){
-            for(int j = 0;j<arr.length;j++){
-                int sum = arr[i]+arr[j];
-                map.put(sum,new Pair(i,j));
-            }
-        }
-        
-        
-        for(int i = 0;i<arr.length-1;i++){
-            for(int j = 0;j<arr.length;j++){
-                int sum = arr[i]+arr[j];
-                
-                if(map.containsKey(k-sum)){
-                    Pair p = map.get(k-sum);
-                    
-                    // distict indices
-                    if(p.x!=i && p.x!=j && p.y!=i && p.y!=j){
-                        System.out.println(arr[i],arr[j],arr[p.x],arr[p.y]);
-                    }
-                }
-            }
-        }
-    
-    }
-
-
-    public static ArrayList < ArrayList < Integer >> fourSum(int[] nums, int target, int n) {
+    public List<List<Integer>> fourSum(int[] nums, int target) {
         HashSet < ArrayList < Integer >> s = new HashSet < > ();
         Arrays.sort(nums);
 
@@ -175,10 +136,11 @@ class Solution {
         }
 
 
-        ArrayList < ArrayList < Integer >> ret = new ArrayList < > ();
+        List<List<Integer>> ret = new ArrayList < > ();
         for (ArrayList < Integer > i: s) {
             ret.add(i);
         }
         return ret;
+        
     }
 }
