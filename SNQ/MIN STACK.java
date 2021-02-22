@@ -118,3 +118,65 @@ class MinStack {
         return (int)globalMin;
     }
 }
+
+/**
+|  Max Stack | Facebook |
+ */
+
+
+class Solution {
+    public static class MyStack {
+        Stack<Integer> s = new Stack<Integer>();
+        int maxEle;
+
+        public int getMax() {
+            if (s.empty())
+                System.out.print("Stack is empty\n");
+            else
+                return maxEle;
+        }
+
+        
+        public int top() {
+            if (s.empty()) {
+                System.out.print("Stack is empty ");
+                return -1;
+            }
+            if(s.peek()>maxEle){
+                return maxEle;
+            }else{
+                return s.peek();
+            }
+        }
+
+        public void pop() {
+            if (s.empty()) {
+                System.out.print("Stack is empty\n");
+                return;
+            }
+
+            if(s.peek()>maxEle){
+                maxEle = 2 * maxEle - t;
+            }
+            s.pop();
+        }
+
+
+        public void push(int x) {
+            if (s.empty()) {
+                maxEle = x;
+                s.push(x);
+                return;
+            }
+
+            if (x > maxEle) {
+                s.push(2 * x - maxEle);
+                maxEle = x;
+            }else{
+                s.push(x);
+            }
+        }
+    };
+
+ 
+}

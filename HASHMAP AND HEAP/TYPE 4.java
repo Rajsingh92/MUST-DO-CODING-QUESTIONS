@@ -88,6 +88,66 @@ public class Main {
     }
 }
 
+
+/**
+Print all subarrays with 0 sum
+Given an array, print all subarrays in the array which has sum 0.
+
+Examples:
+
+Input:  arr = [6, 3, -1, -3, 4, -2, 2,
+             4, 6, -12, -7]
+Output:  
+Subarray found from Index 2 to 4
+Subarray found from Index 2 to 6          
+Subarray found from Index 5 to 6
+Subarray found from Index 6 to 9
+Subarray found from Index 0 to 10
+ */
+
+
+
+class Solution {
+
+    public static void printAllSubarrayWith0Sum(int[] arr) {
+        HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
+        ArrayList<Integer> firstal = new ArrayList();
+        firstal.add(-1);
+        map.put(0, firstal);
+
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (map.containsKey(sum)) {
+                ArrayList<Integer> al = map.get(sum);
+                al.add(i);
+                map.put(sum, al);
+            } else {
+                ArrayList<Integer> al = new ArrayList();
+                al.add(i);
+                map.put(sum, al);
+            }
+
+        }
+
+        ArrayList<Integer> al = new ArrayList<>(map.keySet());
+        Collections.sort(al);
+        for (int key : al) {
+            ArrayList<Integer> getal = map.get(key);
+           
+            for (int i = 0; i < getal.size(); i++) {
+                for (int j = i + 1; j < getal.size(); j++) {
+                    System.out.println(getal.get(i) + 1 + " " + getal.get(j));
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
 /**
  * 
 Longest Sub-Array with Sum K 

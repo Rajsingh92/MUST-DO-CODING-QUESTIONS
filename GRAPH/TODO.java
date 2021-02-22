@@ -52,7 +52,6 @@ DFS/BFS:
 | 126 | Word Ladder II |  Hard | Facebook, Google, Microsoft |
 | 127 | Word Ladder |  Medium | Affirm, Airbnb, Amazon, Apple, Facebook, Google, Microsoft |
 | 130 | Surrounded Regions |  Medium | Amazon, Google |
-| 200 | Number of Islands |  Medium | Adobe, Affirm, Alibaba, Amazon, appdynamics, Facebook, Google, Microsoft |
 | 505 | The Maze II |  Medium | Amazon, Google |
 | 317 | Shortest Distance from All Buildings |  Hard | Amazon |
 | 301 | Remove Invalid Parentheses |  Hard | Amazon, Google |
@@ -63,12 +62,9 @@ DFS/BFS:
 | 529 | Minesweeper |  Medium | Google |
 | 542 | 01 Matrix |  Medium | Google |
 | 690 | Employee Importance |  Easy | Google |
-| 694 | Number of Distinct Islands |  Medium | Amazon, Facebook, Google, Microsoft |
-| 711 | Number of Distinct Islands II |  Hard | Amazon |
 | 752 | Open the Lock |  Medium | Facebook, Google |
 | 773 | Sliding Puzzle |  Hard | Airbnb, Amazon, Google |
 | 815 | Bus Routes |  Hard | Airbnb, Amazon, Google |
-| 827 | Making A Large Island |  Hard | Google |
 | 847 | Shortest Path Visiting All Nodes |  Hard | Amazon |
 | 909 | Snakes and Ladders |  Medium | Amazon |
 | 913 | Cat and Mouse |  Hard | Google |
@@ -77,7 +73,6 @@ DFS/BFS:
 | 489 | Robot Room Cleaner |  Hard | Amazon, Google |
 | 737 | Sentence Similarity II |  Medium | Google |
 | 721 | Accounts Merge |  Medium | Facebook, Google |
-| 695 | Max Area of Island |  Medium | Adobe, Affirm, Alibaba, Amazon, Facebook, Google, Microsoft |
 | 679 | 24 Game |  Hard | Google, Microsoft |
 | 494 | Target Sum |  Medium | Facebook, Google |
 | 491 | Increasing Subsequences |  Medium | Facebook |

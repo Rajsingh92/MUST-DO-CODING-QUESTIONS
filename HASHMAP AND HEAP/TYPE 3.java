@@ -4,7 +4,7 @@
      
 
 /**
-Kth Largest Element in an Array
+| 215 | Kth Largest Element in an Array |  Medium | Facebook |
 
 Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order, not the kth 
 distinct element.
@@ -31,7 +31,7 @@ class Solution:
 
 class Solution {
     public int findKthLargest(int[] nums, int k) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        PriorityQueue<Integer> pq = new PriorityQueue<>(); //min heap
         
         for(int i =0;i<nums.length;i++){
             pq.add(nums[i]);
@@ -49,7 +49,7 @@ class Solution {
 
 /**
  * 
-Kth Smallest Element in a Sorted Matrix
+| 378 | Kth Smallest Element in a Sorted Matrix |  Medium | Apple |
 
 Given a n x n matrix where each of the rows and columns are sorted in ascending order, find the kth smallest element in the matrix.
 Note that it is the kth smallest element in the sorted order, not the kth distinct element.
@@ -219,7 +219,7 @@ class Solution {
 
 /**
  * 
-K Closest Points to Origin
+| 973 | K Closest Points to Origin |  Medium | Amazon, Apple, Facebook, Google, Microsoft |
 We have a list of points on the plane.  Find the K closest points to the origin (0, 0).
 
 (Here, the distance between two points on a plane is the Euclidean distance.)
@@ -289,7 +289,7 @@ class Solution {
 
 /**
  * 
-Sort Characters By Frequency
+| 451 | Sort Characters By Frequency |  Medium | Amazon, Google, Microsoft |
 Given a string, sort it in decreasing order based on the frequency of characters.
 
 Example 1:
@@ -381,4 +381,157 @@ class GFG {
 
 	}
 
+}
+
+
+
+/**
+| 373 | Find K Pairs with Smallest Sums |  Medium | Amazon, Apple, Google, Microsoft |
+
+You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k.
+Define a pair (u,v) which consists of one element from the first array and one element from the second array.
+Find the k pairs (u1,v1),(u2,v2) ...(uk,vk) with the smallest sums.
+
+Example 1:
+
+Input: nums1 = [1,7,11], nums2 = [2,4,6], k = 3
+Output: [[1,2],[1,4],[1,6]] 
+Explanation: The first 3 pairs are returned from the sequence: [1,2],[1,4],[1,6],[7,2],[7,4],[11,2],[7,6],[11,4],[11,6]
+ */
+
+
+class Solution {
+    public static class Pair implements Comparable<Pair>{
+        int sum;
+        int i;
+        int j;
+
+        
+        Pair(int sum,int i,int j){
+            this.sum = sum;
+            this.i = i;
+            this.j = j;
+        }
+        
+        public int compareTo(Pair o){
+            return o.sum-this.sum;
+        }
+    }
+    
+    public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
+        
+        PriorityQueue<Pair> pq = new PriorityQueue<>(); 
+        
+        for(int i=0;i<nums1.length;i++){
+            for(int j=0;j<nums2.length;j++){
+                pq.add(new Pair(nums1[i]+nums2[j],i,j));
+                
+                if(pq.size()>k){
+                    pq.remove();
+                }
+            }
+        }
+        
+        List<List<Integer>> ans = new ArrayList<>();
+        while(pq.size()!=0){
+            Pair rem = pq.remove();
+            ArrayList<Integer> temp = new ArrayList<>();
+            temp.add(nums1[rem.i]);
+            temp.add(nums2[rem.j]);
+            ans.add(temp);
+        }
+        
+        return ans;
+    }
+}
+
+/**
+ 
+Print all elements in sorted order from row and column wise sorted matrix
+Given an n x n matrix, where every row and column is sorted in non-decreasing order. Print all elements of 
+matrix in sorted order.
+Example:
+
+Input: mat[][]  =  { {10, 20, 30, 40},
+                     {15, 25, 35, 45},
+                     {27, 29, 37, 48},
+                     {32, 33, 39, 50},
+                   };
+
+Output: 10 15 20 25 27 29 30 32 33 35 37 39 40 45 48 50
+ */
+
+public class Solution {
+
+	private static void sortmatrix(int[][] arr) {
+		PriorityQueue<Pair> pq = new PriorityQueue<>();
+		for (int row = 0; row < arr.length; row++) {
+			pq.add(new Pair(arr[row][0], row, 0));
+		}
+
+		while (!pq.isEmpty()) {
+			Pair pair = pq.remove();
+			System.out.print(pair.value+" ");
+			if (pair.col+1 != arr[0].length)
+				pq.add(new Pair(arr[pair.row][pair.col+1], pair.row, pair.col+1));
+		}
+	}
+
+	static class Pair implements Comparable<Pair> {
+		int value;
+		int row;
+		int col;
+
+		public Pair(int value, int row, int col) {
+			this.value = value;
+			this.row = row;
+			this.col = col;
+		}
+
+		public int compareTo(Pair o) {
+			return this.value - o.value;
+		}
+	}
+
+}
+
+
+/**
+Maximize Sum Of Array After K Negations
+
+Given an array A of integers, we must modify the array in the following way: we choose an i and replace A[i] 
+with -A[i], and we repeat this process K times in total.  (We may choose the same index i multiple times.)
+
+Return the largest possible sum of the array after modifying it in this way.
+
+
+Example 1:
+
+Input: A = [4,2,3], K = 1
+Output: 5
+Explanation: Choose indices (1,) and A becomes [4,-2,3].
+ */
+
+class Solution {
+    public int largestSumAfterKNegations(int[] A, int k) {
+        PriorityQueue<Integer> pq = new PriorityQueue<>(); 
+        
+        for(Integer val: A){
+            pq.add(val);
+        }
+        
+        while(k-->0){
+            int temp = pq.remove();
+            temp = (-1)*temp;
+            pq.add(temp);
+        }
+        
+        int sum = 0;
+        while(pq.size()!=0){
+            int temp = pq.remove();
+            sum+=temp;
+        }
+        
+        return sum;
+    }
 }

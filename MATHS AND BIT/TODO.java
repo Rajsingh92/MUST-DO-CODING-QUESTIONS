@@ -33,54 +33,10 @@
 Divide two integers without using multiplication, division and mod operator
 Calculate square of a number without using *, / and pow()
 Power Set
-
-
-questions iconFind the two non-repeating elements in an array of repeating elements
-questions iconCount set bits in an integer
-questions iconFind the Number Occurring Odd Number of Times
-questions iconCheck if a number is Bleak
-questions iconCopy set bits in a range
-questions iconWrite an Efficient Method to Check if a Number is Multiple of 3
-questions iconFind position of the only set bit
-questions iconBinary representation of a given number
-questions iconWrite an Efficient C Program to Reverse Bits of a Number
-questions iconCount number of bits to be flipped to convert A to B
-questions iconCount total set bits in all numbers from 1 to n
-questions iconSwap two nibbles in a byte
-questions iconFind the element that appears once
-questions iconProgram to find whether a no is power of two
-questions iconSum of bit differences among all pairs
-questions iconGenerate n-bit Gray Codes
-questions iconJosephus problem
-questions iconA Boolean Array Puzzle
-questions iconSwap all odd and even bits
-questions iconCalculate 7n/8 without using division and multiplication operators
-
-
+questions iconSieve of Eratosthenes in 0(n) time complexity
 questions iconEuclidean algorithms (Basic and Extended)
 questions iconPrime Factorization using Sieve O(log n) for multiple queries
-questions iconFermat’s Last Theorem
-questions iconMatrix Exponentiation
-questions iconChinese Remainder Theorem
-questions iconBirthday Paradox
-questions iconProgram for nth Catalan Number
-questions iconPollard’s Rho Algorithm for Prime Factorization
-questions iconEuler’s Totient Function
-questions iconSieve of Eratosthenes in 0(n) time complexity
 
-
-questions iconOrientation of 3 ordered points
-questions iconHow to check if two given line segments intersect?
-questions iconConvex Hull | Set 1 (Jarvis’s Algorithm or Wrapping)
-questions iconFind Simple Closed Path for a given set of points
-questions iconConvex Hull | Set 2 (Graham Scan)
-questions iconQuickhull Algorithm for Convex Hull
-questions iconClosest Pair of Points | O(nlogn) Implementation
-questions iconThe Skyline Problem using Divide and Conquer algorithm
-questions iconGiven n line segments, find if any two segments intersect
-questions iconLine Sweep Technique
-questions iconLine Intersection using Bentley Ottmann Algorithm
-questions iconPoints Inside A Polygon 
 
 
 | 78 | Subsets |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
@@ -157,3 +113,5 @@ questions iconPoints Inside A Polygon
 | 885 | Spiral Matrix III |  Medium | Facebook |
 | 914 | X of a Kind in a Deck of Cards |  Easy | Google |
  */
+
+

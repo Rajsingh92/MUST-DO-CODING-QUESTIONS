@@ -1,6 +1,6 @@
 /**
  * 
-First Unique Character in a String  #AMAZON
+| 387 | First Unique Character in a String |  Easy | Amazon, Apple, Facebook, Google, Microsoft |
 Given a string, find the first non-repeating character in it and return its index. If it doesn't exist, 
 return -1.
 

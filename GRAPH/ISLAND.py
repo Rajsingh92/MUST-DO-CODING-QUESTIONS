@@ -1,5 +1,5 @@
 '''
-Number of Islands
+| 200 | Number of Islands |  Medium | Adobe, Affirm, Alibaba, Amazon, appdynamics, Facebook, Google, Microsoft |
 Given an m x n 2d grid map of '1's (land) and '0's (water), return the number of islands.
 
 An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may 
@@ -80,7 +80,7 @@ class Solution: # O( R *C)
 
 
 '''
-Max Area of Island
+| 695 | Max Area of Island |  Medium | Adobe, Affirm, Alibaba, Amazon, Facebook, Google, Microsoft |
 
 Given a non-empty 2D array grid of 0's and 1's, an island is a group of 1's (representing land) connected 4-directionally 
 (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
@@ -174,7 +174,22 @@ class Solution:
         self.dfs(grid,i,j-1)
 
 
+
+
+
+
+
+
+
+
+
+
+
 '''
+| 694 | Number of Distinct Islands |  Medium | Amazon, Facebook, Google, Microsoft |
+| 711 | Number of Distinct Islands II |  Hard | Amazon |
+| 827 | Making A Large Island |  Hard | Google |
+
 // Leetcode 305
     public List<Integer> numIslands2(int n, int m, int[][] positions) {
         // par.resize(n*m,0);

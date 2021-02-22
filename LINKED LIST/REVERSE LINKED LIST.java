@@ -1,5 +1,5 @@
 /**
-Reverse a singly linked list.
+| 206 | Reverse Linked List |  Easy | Adobe, Alibaba, Facebook, Google, Microsoft |
 
 Example:
 
@@ -55,3 +55,47 @@ class Solution {
     }
 }
 
+/**
+| 92 | Reverse Linked List II |  Medium | Adobe, Alibaba, Amazon, Facebook, Google, Microsoft |
+
+Input: head = [1,2,3,4,5], left = 2, right = 4
+Output: [1,4,3,2,5]
+ */
+
+
+class Solution {
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        if (head == null || head.next == null || n == m)
+            return head;
+            
+        ListNode prev = null;
+        ListNode curr = head;
+        for(int i = 1;curr!=null && i<m;i++){
+            prev = curr;
+            curr = curr.next;
+        }
+
+
+
+        ListNode start = curr;
+        ListNode end = null;
+        for(int i = 1;curr!=null && i<=n-m+1;i++){
+            ListNode next = curr.next;
+            curr.next = end;
+            end = curr;
+            curr = next;
+        }
+
+
+
+        //fix pointers
+        start.next = curr;
+        if(prev!=null){
+            prev.next = end;
+        }else{
+            head = end;
+        }
+        
+        return head;
+    }
+}
