@@ -43,21 +43,4 @@ Longest Common Prefix
 Number of flips to make binary string alternate
 Minimum characters to be added at front to make string palindrome
 String matching where one string contains wildcard characters
-| 334 | Increasing Triplet Subsequence |  Medium | Amazon, Google, Facebook |
-| 708 | Insert into a Cyclic Sorted List |  Medium | Amazon, Facebook, Google, Microsoft |
-| 55 | Jump Game |  Medium | Amazon, Apple, Facebook, Google, Microsoft |
-| 724 | Find Pivot Index |  Easy | Amazon, Apple, Facebook, Google, Microsoft |
-| 28 | Implement strStr |  Easy | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 56 | Merge Intervals |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 31 | Next Permutation |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 54 | Spiral Matrix |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 59 | Spiral Matrix II |  Medium | Amazon, Google, Microsoft |
-| 36 | Valid Sudoku |  Medium | Amazon, Apple, Facebook, Google, Microsoft |
-| 843 | Guess the Word |  Hard | Airbnb, Amazon, Facebook, Google |
-| 57 | Insert Interval |  Hard | Amazon, Apple, Facebook, Google, Microsoft |
-| 45 | Jump Game II |  Hard | Adobe, Amazon, Apple, Google |
-| 414 | Third Maximum Number |  Easy | Facebook, Google, Microsoft |
-| 905 | Sort Array By Parity |  Easy | Adobe, Amazon, Google, Microsoft |
  */
-
-

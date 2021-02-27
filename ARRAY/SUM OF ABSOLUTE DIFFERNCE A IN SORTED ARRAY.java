@@ -44,3 +44,76 @@ class Solution {
     }
 }
 
+
+
+
+/**
+Minimum sum of absolute difference of pairs of two arrays
+Input :  n = 4
+         a[] = {4, 1, 8, 7}
+         b[] = {2, 3, 6, 5}
+Output : 6
+ */
+
+
+class Solution{
+    public static int  findMinSum(int[] arr1,int[] arr2) {
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        int diff = 0;
+        for(int i=0;i<arr1.length;i++){
+            diff+=Math.abs(arr1[i]-arr2[i]);
+        }
+
+        return diff;
+    }
+}
+
+
+
+
+/**
+Permutations in array 
+Given two arrays of equal size N and an integer K. The task is to check if after permuting both arrays, we get 
+sum of their corresponding element greater than or equal to k i.e Ai + Bi >= K for all i (from 0 to N-1). 
+Return true if possible, else false.
+ 
+
+Example 1:
+
+Input : 
+a[] = {2, 1, 3}, 
+b[] = { 7, 8, 9 }, 
+k = 10. 
+Output : 
+True
+
+Explanation:
+Permutation  a[] = { 1, 2, 3 } 
+and b[] = { 9, 8, 7 } 
+satisfied the condition a[i] + b[i] >= K.
+ */
+
+
+
+
+class Compute {
+    public boolean isPossible(long a[], long b[], long n, long k) {
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        int low = 0;
+        int high = a.length - 1;
+        while (low < high) {
+            if (a[low] + b[high] < k) {
+                return false;
+            }
+            low++;
+            high--;
+        }
+
+        return true;
+    }
+}

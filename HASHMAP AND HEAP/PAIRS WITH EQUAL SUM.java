@@ -1,4 +1,41 @@
 /**
+| 1 | Two Sum |  Easy | Adobe, Aetion, Affirm, Airbnb, Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+You can return the answer in any order.
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Output: Because nums[0] + nums[1] == 9, we return [0, 1].
+ */
+
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int[] res = new int[2];
+            
+        for(int i=0;i<nums.length;i++){
+            if(map.containsKey(target-nums[i])){
+                res[0] = map.get(target-nums[i]);
+                res[1] = i;
+            }else{
+                map.put(nums[i],i);
+            }
+        }
+        return res;
+    }
+}
+
+
+
+
+
+
+/**
  * 
 Print all pairs in an unsorted array with equal sum
 Given an unsorted array A[]. The task is to print all unique pairs in the unsorted array with equal sum.

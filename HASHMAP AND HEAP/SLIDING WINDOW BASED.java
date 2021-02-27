@@ -91,6 +91,9 @@ largest substring of k distinct array
 length of largest substring no repetive
 pick toy
 minimum window substring
+Minimum Swaps Required To Bring All Elements Less Than Or Equal To k Together
+
+
 
 | 713 | Subarray Product Less Than K |  Medium | Akuna Capital |
 | 3 | Longest Substring Without Repeating Characters |  Medium | Akuna Capital, Alibaba |

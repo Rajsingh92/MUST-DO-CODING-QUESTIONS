@@ -1,9 +1,3 @@
-//  | 429 | N-ary Tree Level Order Traversal |  Easy | Google |
-//  | 559 | Maximum Depth of N-ary Tree |  Easy | Amazon, Google |
-//  Diameter N Ary Tree
-//  Check Mirror N Ary Tree
-
-
 public class GenericTree{
     public static class Node{
         int data;  
@@ -51,4 +45,8 @@ public class GenericTree{
 /**
 N-ary Tree Preorder Traversal		
 N-ary Tree Postorder Traversal		
+//  | 429 | N-ary Tree Level Order Traversal |  Easy | Google |
+//  | 559 | Maximum Depth of N-ary Tree |  Easy | Amazon, Google |
+//  Diameter N Ary Tree
+//  Check Mirror N Ary Tree
  */

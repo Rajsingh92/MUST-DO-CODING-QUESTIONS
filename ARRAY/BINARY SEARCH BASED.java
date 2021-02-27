@@ -51,12 +51,9 @@ class Solution {
     }
 }
 
-
-
 /**
  * 
 | 74 | Search a 2D Matrix |  Medium | Amazon, Facebook, Google, Microsoft |
-| 240 | Search a 2D Matrix II |  Medium | Amazon, Facebook, Google, Microsoft |
 
 Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:
 Integers in each row are sorted from left to right.
@@ -170,6 +167,7 @@ class Solution {
         return last;
     }
 
+    // Count of an Element in a Sorted Array
     public int numberOfOccurences(int[] arr,int ele){
         if(lastOccurence(arr,ele)==-1 && firstOccurence(arr,ele) == -1){
             return 0;
@@ -221,49 +219,96 @@ public class Solution {
 }
 
 
+/**
+Search in Rotated Sorted Array |  Medium | Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
+You are given an integer array nums sorted in ascending order, and an integer target.
+Suppose that nums is rotated at some pivot unknown to you beforehand (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
+If target is found in the array return its index, otherwise, return -1.
 
+Example 1:
+Input: nums = [4,5,6,7,0,1,2], target = 0
+Output: 4
+ */
+                    
+class Solution {
+    public int search(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length-1;
+        
+        while(low<high){
+            int mid = (low + high) / 2;
+            
+            if(nums[mid] == target){
+                return mid;
+            }else if(nums[low]<=nums[mid]){//first part is sorted
+                if(nums[low]<= target && target<nums[mid]){// lie between low and mid
+                    high = mid-1;
+                }else{
+                    low = mid+1;
+                }                 
+            } else{ //  second part sorted
+                if(nums[mid]< target && target<=nums[high]){// lie between mid and high
+                    low = mid+1;
+                }else{
+                    high = mid-1;
+                }   
+            }  
+        }
+            
+        return nums[low] == target ? low : -1;
+    }
+    
 
-                        
+}                      
 
+/*
+| 81 | Search in Rotated Sorted Array II |  Medium | Google |
+Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
+(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
+You are given a target value to search. If found in the array return true, otherwise return false.
 
-                        
-                        
+Example 1:
+Input: nums = [2,5,6,0,0,1,2], target = 0
+Output: true
+*/
 
-
+class Solution {
+    public boolean search(int[] nums, int target) {
+        int low = 0;
+        int high = nums.length-1;
+        
+        while(low<high){
+            int mid = (low + high) / 2;
+            
+            if(nums[mid] == target){
+                return true;
+            }
+            
+            while(low<mid && nums[low] == nums[mid]){
+                low++;
+            }
+             
+            if(nums[low]<=nums[mid]){//first part is sorted
+                if(nums[low]<= target && target<nums[mid]){// lie between low and mid
+                    high = mid-1;
+                }else{
+                    low = mid+1;
+                }                 
+            } else{ //  second part sorted
+                if(nums[mid]< target && target<=nums[high]){// lie between mid and high
+                    low = mid+1;
+                }else{
+                    high = mid-1;
+                }   
+            }  
+        }
+            
+        return nums[low] == target ? true : false;
+    }
+}
 
 
 /**
-BINARYSEARCH:
-
-| 702 | Search in a Sorted Array of Unknown Size |  Medium | Google |
-| 33 | Search in Rotated Sorted Array |  Medium | Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
-| 81 | Search in Rotated Sorted Array II |  Medium | Google |
-| 162 | Find Peak Element |  Medium | Amazon, Facebook, Microsoft, Google |
-| 852 | Peak Index in a Mountain Array |  Easy | Amazon, Google |
-| 493 | Reverse Pairs |  Hard | Apple, Facebook, Google, Microsoft |
-| 153 | Find Minimum in Rotated Sorted Array |  Medium | Google |
-| 154 | Find Minimum in Rotated Sorted Array II |  Hard | Facebook, Google |
-| 540 | Single Element in a Sorted Array |  Medium | Amazon, Google |
-| 4 | Median of Two Sorted Arrays |  Hard | Alibaba, Apple |
-| 278 | First Bad Version |  Easy | Facebook, Google |
-
-
- # Find position of an element in a sorted array of infinite numbers
-    def findKeyInInfiniteSortedArray(self,arr,key):
-        low = 0
-        high = 1
-
-        while arr[high]<key:
-            low= high
-            high = high*2
-
-        return self.binarySearch(arr,low,high,key)
-
-
-
-
-
-'''
 Rotation 
 Given an ascending sorted rotated array Arr of distinct integers of size N. The array is right rotated K times. Find the value 
 of K.
@@ -278,123 +323,136 @@ Explanation: The given array is 5 1 2 3 4.
 The original sorted array is 1 2 3 4 5. 
 We can see that the array was rotated 
 1 times to the right.
-
-'''
-
-class Solution:
-    def findKRotation(self,arr,  n):
-        # find the position of smallest element its index will be K
-        low = 0
-        high = len(arr)-1
-        
-        while high>=low:
-            if arr[low]<=arr[high]:
-                return low #already sorted array 
-            
-            mid = (low+high)//2
-            next = (mid+1)%len(arr)
-            prev = (mid-1+len(arr))%len(arr)
-            
-            if arr[mid]<=arr[prev] and arr[mid]<=arr[next]:
-                return mid
-            elif arr[mid]>=arr[low]: #if first part sorted search in second part
-                low = mid+1
-            elif arr[high]>=arr[mid]: #if second part sorted search in first part
-                high = mid-1
-                
-        return -1
-
-
-
-
-
-
-
-
-
-'''
-Search in Rotated Sorted Array
-You are given an integer array nums sorted in ascending order, and an integer target.
-Suppose that nums is rotated at some pivot unknown to you beforehand (i.e., [0,1,2,4,5,6,7] might become [4,5,6,7,0,1,2]).
-If target is found in the array return its index, otherwise, return -1.
-
-Example 1:
-Input: nums = [4,5,6,7,0,1,2], target = 0
-Output: 4
-
-'''
-        
-class Solution:
-    def search(self, nums: List[int], target: int) -> int:
-        low = 0
-        high = len(nums)-1
-        
-        while high>=low:
-            
-            mid =  low+(high-low)//2
-            
-            if nums[mid] == target:
-                return mid
-            
-            elif nums[low]<=nums[mid]: #first part is sorted
-                if nums[low]<=target<=nums[mid] : # lie between low and mid
-                    high = mid-1
-                else:
-                    low = mid+1
+ */
      
-            else: # second part sorted
-                if nums[mid]<=target<=nums[high]: # lie between mid and high
-                    low = mid+1
-                else:
-                    high = mid-1
-            
-                
-        return -1     
-        
+
+class Solution {
+    int findKRotation(int arr[], int n) {
+        // find the position of smallest element its index will be K
+        int low = 0;
+        int high = n - 1;
+
+        while (high >= low) {
+            if (arr[low] <= arr[high])
+                return low; // already sorted array
+
+            int mid = (low + high) / 2;
+            int next = (mid + 1) % n;
+            int prev = (mid - 1 + n) % n;
+
+            if (arr[mid] <= arr[prev] && arr[mid] <= arr[next])
+                return mid;
+            else if (arr[mid] >= arr[low]) // if first part sorted search in second part
+                low = mid + 1;
+            else if (arr[high] >= arr[mid]) // if second part sorted search in first part
+                high = mid - 1;
+        }
+        return -1;
+    }
+}
+
+
+// Find position of an element in a sorted array of infinite numbers
+class Solution{
+    public static int findKeyInInfiniteSortedArray(int[] arr,int key){
+        int low = 0;
+        int high = 1;
+
+        while(arr[high]<key){
+            low = high;
+            high = high*2;
+        }
+
+        return binarySearch(arr,low,high,key);
+    }
+}
+
+//  Searching in a Nearly Sorted Array
+class Solution{
+    public static int searchElement(int[] arr,int key) {
+        int low = 0;
+        int high = arr.length-1;
+
+        while(low<=high){
+            int mid = (low+high)/2;
+
+            if(arr[mid] == target){
+                return mid;
+            }else if(mid-1>=low && arr[mid-1] == target){
+                return mid-1;
+            }else if(mid+1<=high && arr[mid+1] == target){
+                return mid+1;
+            }
+
+
+            if(arr[mid]>target){
+                high = mid-2;
+            }else{
+                low = mid+2;
+            }
+        }
+
+        return -1;
+    }
+}
+
+
+
+/* 
+Smallest alphabet greater than a given character
+
+find the smallest element in the list that is larger than K. 
+
+Examples:  
+
+Input : Letters = ["D", "J", "K"]
+        K = "B"
+Output: 'D'
+*/
+
+class Solution{
+    public static char nextGreatestAlphabet2(char[] alphabets,char k){
+        int low = 0;
+        int high = alphabets.length-1;
+        int floor = -1;
+
+        while(low<=high){
+            int mid = (low+high)/2;
+
+            if(alphabets[mid]>target){
+                high = mid-1;
+                floor = mid;
+            }else{
+                low = mid+1;
+            }
+        }
+
+        return alphabets[floor];
+    }
+}
 
 
 
 
-        
-'''
-Search in Rotated Sorted Array II
-Suppose an array sorted in ascending order is rotated at some pivot unknown to you beforehand.
-(i.e., [0,0,1,2,2,5,6] might become [2,5,6,0,0,1,2]).
-You are given a target value to search. If found in the array return true, otherwise return false.
 
-Example 1:
-Input: nums = [2,5,6,0,0,1,2], target = 0
-Output: true
 
-'''
 
-class Solution:
-    def search(self, nums: List[int], target: int) -> bool:
-        low = 0
-        high = len(nums)-1
-        
-        while high>=low:
-            
-            mid =  low+(high-low)//2
-            
-            if nums[mid] == target:
-                return True
-            while low<mid and nums[low] == nums[mid]:
-                low+=1
-            
-            if nums[low]<=nums[mid]: #first half is sorted
-                if nums[low]<=target<=nums[mid] : # lie between low and mid
-                    high = mid-1
-                else:
-                    low = mid+1
-     
-            else: # second half sorted
-                if nums[mid]<=target<=nums[high]: # lie between mid and high
-                    low = mid+1
-                else:
-                    high = mid-1
-            
-                
-        return False 
-
+/**
+| 162 | Find Peak Element |  Medium | Amazon, Facebook, Microsoft, Google |
+| 852 | Peak Index in a Mountain Array |  Easy | Amazon, Google |
+| 493 | Reverse Pairs |  Hard | Apple, Facebook, Google, Microsoft |
+| 153 | Find Minimum in Rotated Sorted Array |  Medium | Google |
+| 154 | Find Minimum in Rotated Sorted Array II |  Hard | Facebook, Google |
+| 540 | Single Element in a Sorted Array |  Medium | Amazon, Google |
+| 4 | Median of Two Sorted Arrays |  Hard | Alibaba, Apple |
+| 278 | First Bad Version |  Easy | Facebook, Google |
+Book Allocation Problem
+Missing Number in AP
+square root of an integer
+Aggressive cows
+Given A Sorted And Rotated Array, Find If There Is A Pair With A Given Sum
+Find a Fixed Point (Value equal to index) in a given array
+Minimum Difference Element in a Sorted Array
+Find maximum element in Bitonic Array
+Search An Element in Bitonic Array
  */

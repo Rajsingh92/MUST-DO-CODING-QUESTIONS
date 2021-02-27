@@ -9,17 +9,7 @@ Input Explanation: The intersected node's value is 8 (note that this must not be
  before the intersected node in A; There are 3 nodes before the intersected node in B.
  */
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
+
 public class Solution1 {
     public ListNode detectCycle(ListNode head) {
         if(head == null || head.next == null){

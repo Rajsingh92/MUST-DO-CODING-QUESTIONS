@@ -16,9 +16,7 @@ to the left end of the linked list,
 1s in between.
  */
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+
 
 class LinkedList
 {

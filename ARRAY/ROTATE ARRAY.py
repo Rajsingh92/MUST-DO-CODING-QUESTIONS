@@ -67,3 +67,17 @@ def leftrotateOneByOne(arr,k):
 
 
 
+# inverse of an array
+def inverse(arr):
+    inv = []
+
+    for i in range(0,len(arr)):
+        val = arr[i]
+        inv[val] = i
+    
+    return inv
+
+
+
+
+        

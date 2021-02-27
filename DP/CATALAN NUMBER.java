@@ -6,6 +6,7 @@
 
 
 /**
+All questions has same solution:
 Nth catalan number 
 number of bsts
 counting valleys and mountanis

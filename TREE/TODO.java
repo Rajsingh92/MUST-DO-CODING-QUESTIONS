@@ -12,24 +12,24 @@
 Construct Bst From Given Preorder Traversal
 Construct Bst Given Level Order Traversal
 | 1008 | Construct Binary Search Tree from Preorder |  Medium | Facebook |
-| 987 | Vertical Order Traversal of a Binary Tree | Medium | Adobe, Facebook
+Construct Binary tree from Inorder and preorder traversal
+Construct BST from preorder traversal
+Construct Full K Ary Tree Preorder Traversal
+Construct A Special Tree From Given Preorder Traversal
+Construct Tree From Ancestor Matrix
+Construct Ancestor Matrix From A Given Binary Tree
+Construct A Binary Tree From Parent Array Representation
 | 111 | Minimum Depth of Binary Tree | Easy | Adobe, Amazon, Microsoft |
 | 104 | Maximum Depth of Binary Tree | Easy | Apple, Facebook, Google |
+| 425 | Word Squares |  Hard | Google |
 Immediate Smaller Element N Ary Tree
 Node Maximum Sum Immediate Children N Ary Tree
 Given N Ary Tree Count Number Nodes Number Children Parent
-Construct Full K Ary Tree Preorder Traversal
 Creating Tree Left Child Right Sibling Representation
 Left Child Right Sibling Representation Tree
 Longest Path Undirected Tree
 Clone Binary Tree Random Pointers
 Count Subtress Sum Given Value X
-Boundary Traversal Of Binary Tree
-Perfect Binary Tree Specific Level Order Traversal
-Construct A Special Tree From Given Preorder Traversal
-Construct Tree From Ancestor Matrix
-Construct Ancestor Matrix From A Given Binary Tree
-Construct A Binary Tree From Parent Array Representation
 Create Doubly Linked List Ternary Ree
 In Place Convert A Given Binary Tree To Doubly Linked List
 Convert A Given Tree To Sum Tree
@@ -40,7 +40,9 @@ Find Distance Between Two Nodes Of A Binary Tree
 Print Common Nodes Path Root Common Ancestors
 Root To Leaf Path Sum Equal To A Given Number
 Populate Inorder Successor For All Nodes
+Convert Binary Search Tree to Sorted Doubly Linked List
 Connect Nodes At Same Level With O1 Extra Space
+| 109 | Convert Sorted List to Binary Search Tree |  Medium | Facebook, Microsoft |
 Foldable Binary Trees
 Maximum Width Of A Binary Tree
 Double Tree
@@ -89,7 +91,6 @@ Find Median Bst Time O1 Space
 Avl Tree Set 1 Insertion
 Avl Tree Set 2 Deletion
 Mirror of a tree
-Construct Binary tree from Inorder and preorder traversal
 Find minimum swaps required to convert a Binary tree into BST
 Check if all leaf nodes are at same level or not
 Check if a Binary Tree contains duplicate subtrees of size 2 or more [ IMP ]
@@ -104,7 +105,6 @@ Find all Duplicate subtrees in a Binary tree [ IMP ]
 Tree Isomorphism Problem
 Find inorder successor and inorder predecessor in a BST
 Find LCA  of 2 nodes in a BST
-Construct BST from preorder traversal
 Convert Binary tree into BST
 Convert a normal BST into a Balanced BST
 Count pairs from 2 BST whose sum is equal to given value "X"
@@ -123,6 +123,5 @@ Implement a Phone Directory
 Print all words matching a pattern in CamelCase Notation Dictonary
 Print unique rows in a given boolean matrix
 Count of distinct substrings of a string using Suffix Trie
-| 425 | Word Squares |  Hard | Google |
  */
 

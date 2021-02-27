@@ -93,4 +93,70 @@ class Solution:
         
         grid[i][j]=val
     
-        
+
+
+
+
+
+'''
+// https://practice.geeksforgeeks.org/problems/gold-mine-problem/0
+
+    public static int goldmineProblem(int[][] grid, int sr, int sc, int[][] dp) {
+        if (sc == grid[0].length - 1)
+            return grid[sr][sc];
+        if (dp[sr][sc] != 0)
+            return dp[sr][sc];
+
+        int[][] dirA = { { 0, 1 }, { -1, 1 }, { 1, 1 } };
+        int maxCoin = 0; // max coin collected by nbrs.
+        for (int d = 0; d < 3; d++) {
+            int r = sr + dirA[d][0];
+            int c = sc + dirA[d][1];
+            if (r >= 0 && c >= 0 && r < grid.length && c < grid[0].length) {
+                maxCoin = Math.max(maxCoin, goldmineProblem(grid, r, c, dp));
+            }
+        }
+
+        return dp[sr][sc] = maxCoin + grid[sr][sc];
+    }
+
+    public static int goldmineProblem_DP(int[][] grid, int sr, int sc, int[][] dp) {
+
+        int[][] dirA = { { 0, 1 }, { -1, 1 }, { 1, 1 } };
+        for (sc = grid[0].length - 1; sc >= 0; sc--) {
+            for (sr = grid.length - 1; sr >= 0; sr--) {
+                if (sc == grid[0].length - 1) {
+                    dp[sr][sc] = grid[sr][sc];
+                    continue;
+                }
+
+                int maxCoin = 0; // max coin collected by nbrs.
+                for (int d = 0; d < 3; d++) {
+                    int r = sr + dirA[d][0];
+                    int c = sc + dirA[d][1];
+                    if (r >= 0 && c >= 0 && r < grid.length && c < grid[0].length) {
+                        maxCoin = Math.max(maxCoin, dp[r][c]);
+                    }
+                }
+
+                dp[sr][sc] = maxCoin + grid[sr][sc];
+            }
+        }
+        int MaxCoins = 0;
+        for (int i = 0; i < grid.length; i++) {
+            MaxCoins = Math.max(MaxCoins, dp[i][0]);
+        }
+        return MaxCoins;
+    }
+
+    public static int goldmineProblem(int[][] grid) {
+        int[][] dp = new int[grid.length][grid[0].length];
+
+        int MaxCoins = 0;
+        for (int i = 0; i < grid.length; i++) {
+            MaxCoins = Math.max(MaxCoins, goldmineProblem(grid, i, 0, dp));
+        }
+
+        return MaxCoins;
+    }
+'''

@@ -143,6 +143,52 @@ class Solution {
 }
 
 
+// 3 Way Quicksort Dutch National Flag
+public class Solution {
+    private static void quicksort(int[] arr, int lo, int hi) {
+        if (lo >= hi) {
+            return;
+        }
+
+        int[] two = threewayPartition(arr, lo, hi);
+        quicksort(arr, lo, two[0]);
+        quicksort(arr, two[1], hi);
+
+    }
+
+    private static int[] threewayPartition(int[] arr, int lo, int hi) {
+        int pivot = arr[hi];
+
+        int i = lo;
+        int j = hi;
+        int itr = lo;
+        while (itr <= j) {
+            if (arr[itr] < pivot) {
+                swap(arr, itr, i);
+                i++;
+                itr++;
+            } else if (arr[itr] == pivot) {
+                itr++;
+            } else {
+                swap(arr, itr, j);
+                j--;
+            }
+        }
+
+        int[] two = new int[2];
+        two[0] = i - 1;
+        two[1] = itr;
+        return two;
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+}
+
 /**
 
 | 75 | Sort Colors |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
@@ -205,6 +251,5 @@ class Solution {
         arr[j] = temp;
     }
 }
-
 
 

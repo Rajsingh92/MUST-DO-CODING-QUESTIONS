@@ -38,6 +38,11 @@ def knapSack_DP(val,wt,W,n):
 
     print(dp[n][W])
 
+
+
+
+
+
 # unbounded knapsack
 def unboundedKnapsack_DP1(val,wt,W,n):
     dp = [[0 for j in range(W+1)] for i in range(n+1)]
@@ -63,7 +68,5 @@ def unboundedKnapsack_DP2(val,wt,W,n):
                 dp[i] = max(dp[i],dp[i-wt[j]]+val[j])
 
     return dp[W]
-
-
 
 

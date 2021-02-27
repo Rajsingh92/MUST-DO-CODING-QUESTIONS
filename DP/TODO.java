@@ -5,24 +5,11 @@
  Min Cost In Maze Traversal Easy
  | 746 | Min Cost Climbing Stairs |  Easy | Amazon |
  Target Sum Subsets - Dp Medium
- Tiling With 2 * 1 Tiles Easy
- Tiling With M * 1 Tiles Easy
- Friends Pairing Easy
+ Friends Pairing Easy(dp+recursion)
  Partition Into Subsets Easy
- Buy And Sell Stocks With Transaction Fee - Infinite Transactions Allowed Medium
- Buy And Sell Stocks With Cooldown - Infinite Transaction Allowed Medium
- Buy And Sell Stocks - Two Transactions Allowed Easy
- Buy And Sell Stocks - K Transactions Allowed Easy
- | 714 | Best Time to Buy and Sell Stock with Transaction Fee |  Medium | Facebook |
-| 123 | Best Time to Buy and Sell Stock III |  Hard | Amazon, Microsoft |
-| 188 | Best Time to Buy and Sell Stock IV |  Hard | Amazon, Google |
  Maximum Non-overlapping Bridges Easy
 | 354 | Russian Doll Envelopes |  Hard | Google |
  Min Squares Easy
- Longest Palindromic Subsequences Medium
- Count Palindromic Subsequences Hard
- Count Palindromic Substrings Medium
- Longest Palindromic Substring Medium
  Count Distinct Subsequences Easy
  Count Of Distinct Palindromic Subsequences Medium
  Print All Paths With Minimum Jumps Medium
@@ -30,12 +17,12 @@
  Print All Paths With Maximum Gold Medium
  Print All Paths With Target Sum Subset Medium
  Print All Results In 0-1 Knapsack Medium
- Wildcard Pattern Matching Medium
- Regular Expression Matching Hard
+| 44 | Wildcard Matching |  Hard | Adobe, Amazon, Facebook, Google, Microsoft |
+| 10 | Regular Expression Matching |  Hard | Alibaba, Amazon, Google |
  Minimum Score Of Triangulation Medium
  Rod Cutting Easy
  Minimum Palindromic Cut Easy
- Matrix Chain Multiplication Medium
+ Matrix Chain Multiplication Medium(dp+recursion)
  Boolean Parenthesization Easy
  Optimal Binary Search Tree Easy
  Burst Balloons Hard
@@ -45,8 +32,8 @@
  Minimum Cost To Make Two Strings Identical Easy
  Shortest Uncommon Subsequence Medium
  Distinct Transformations Medium
- Probability Of Knight In The Chessboard Medium
- Edit Distance Hard
+| 688 | Knight Probability in Chessboard |  Medium | Facebook, Google, Microsoft |
+| 72 | Edit Distance |  Hard | Facebook, Adobe, Amazon, Apple, Google, Microsoft |
  Maximum Sum Subarray With At Least K Elements Medium
  Numeric Keypad Medium
  Maximum Difference Of Zeros And Ones In Binary String Easy
@@ -62,6 +49,8 @@
  Arithmetic Slices 2 Hard
  Word Break 2 Medium
  Word Wrap Medium
+ | 139 | Word Break |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
+| 140 | Word Break II |  Hard | Amazon, Apple, Facebook |
  2 Key Keyboard Medium
  4 Key Keyboard Hard
  Highway Billboard Medium
@@ -100,6 +89,7 @@ Cut A Rope To Maximize Product
 Count Number Binary Strings Without Consecutive 1S
 Painters Partition Problem
 Check Whether A Given String Is An Interleaving Of Two Other Given Strings Set 2
+| 97 | Interleaving String |  Hard | Amazon, Apple, Microsoft |
 Two Water Jug Puzzle
 Find Water In A Glass
 Remove Minimum Elements Either Side 2Min Max
@@ -114,32 +104,22 @@ Bitmasking And Dynamic Programming Set 1 Count Ways To Assign Unique Cap To Ever
 Longest Common Increasing Subsequence Lcs Lis
 Find If String Is K Palindrome Or Not
 Minimum Sum Path 3 D Array
+| 64 | Minimum Path Sum |  Medium | Adobe, Amazon, Google, Microsoft |
 Maximum Sum Alternating Subsequence Sum
 Paper Cut Minimum Number Squares
 Dynamic Programming Set 20 Maximum Length Chain Of Pairs
-| 10 | Regular Expression Matching |  Hard | Alibaba, Amazon, Google |
-| 44 | Wildcard Matching |  Hard | Adobe, Amazon, Facebook, Google, Microsoft |
+Number Of Subarrays With Maximum Values In Given Range
 | 53 | Maximum Subarray |  Easy | Adobe, Alibaba, Amazon, Apple, Facebook, Microsoft |
 | 62 | Unique Paths |  Medium | Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
 | 63 | Unique Paths II |  Medium | Amazon, Facebook, Microsoft |
-| 64 | Minimum Path Sum |  Medium | Adobe, Amazon, Google, Microsoft |
-| 72 | Edit Distance |  Hard | Facebook, Adobe, Amazon, Apple, Google, Microsoft |
 | 91 | Decode Ways |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 97 | Interleaving String |  Hard | Amazon, Apple, Microsoft |
-| 139 | Word Break |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 140 | Word Break II |  Hard | Amazon, Apple, Facebook |
 | 198 | House Robber |  Easy | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 300 | Longest Increasing Subsequence |  Medium | Adobe, Airbnb, Amazon, Apple, Facebook, Google, Microsoft |
-| 673 | Number of Longest Increasing Subsequence |  Medium | Amazon, Facebook |
 | 307 | Range Sum Query - Mutable |  Medium | Facebook, Google |
 | 304 | Range Sum Query 2D - Immutable |  Medium | Facebook, Google, Microsoft |
 | 361 | Bomb Enemy |  Medium | Amazon, Google |
 | 392 | Is Subsequence |  Medium | Facebook, Google |
 | 403 | Frog Jump |  Hard | Amazon, Apple, Facebook, Google |
 | 416 | Partition Equal Subset Sum |  Medium | Facebook, Google, Microsoft |
-| 516 | Longest Palindromic Subsequence |  Medium | Apple, Microsoft |
 | 568 | Maximum Vacation Days |  Hard | Facebook, Google, Microsoft |
-| 647 | Palindromic Substrings |  Medium | Adobe, Amazon, Facebook, Google, Microsoft |
-| 688 | Knight Probability in Chessboard |  Medium | Facebook, Google, Microsoft |
 | 689 | Maximum Sum of 3 Non-Overlapping Subarrays |  Hard | Facebook, Google |
  */

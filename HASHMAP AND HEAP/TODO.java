@@ -39,6 +39,7 @@ HASHMAP AND HEAP:
 | 454 | 4Sum II |  Medium | Amazon |
 //  Powerful Number Easy
 //  Count Total Anagram Substrings
+//  Find Subarray With Given Sum
 //  are two array/String equal
 //  subarray range with given target
 //  smallest subarrray with all occurences of most frequent
@@ -58,4 +59,6 @@ HASHMAP AND HEAP:
 | 438 | Find All Anagrams in a String |  Easy | Amazon, Facebook, Google |
 | 787 | Cheapest Flights Within K Stops |  Medium | Airbnb, Microsoft |
 | 266 | Palindrome Permutation |  Easy | Amazon, Facebook, Google, Microsoft |
+Rearrange characters in a string such that no two adjacent are same
+Median Of Stream Of Integers Running Integers
  */

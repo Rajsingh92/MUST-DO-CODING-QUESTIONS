@@ -1,3 +1,4 @@
+/**
 '''
 Longest Common Subsequence
 Given two strings text1 and text2, return the length of their longest common subsequence.
@@ -102,3 +103,85 @@ def LCS3_DP(X,Y,Z,m,n,o): #  LCS for three strings
 
     print(dp[m][n][o])
 
+
+
+// Leetcode 1143
+    public static int LCSubseq(String str1, int n, String str2, int m, int[][] dp) {
+        if (n == 0 || m == 0)
+            return 0;
+        if (dp[n][m] != -1)
+            return dp[n][m];
+        if (str1.charAt(n - 1) == str2.charAt(m - 1))
+            return dp[n][m] = LCSubseq(str1, n - 1, str2, m - 1, dp) + 1;
+        else
+            return dp[n][m] = Math.max(LCSubseq(str1, n - 1, str2, m, dp), LCSubseq(str1, n, str2, m - 1, dp));
+    }
+
+    public static int LCSubseq_DP(String str1, int n, String str2, int m, int[][] dp) {
+
+        int N = n, M = m;
+        for (n = 0; n <= N; n++) {
+            for (m = 0; m <= M; m++) {
+                if (n == 0 || m == 0) {
+                    dp[n][m] = 0;
+                    continue;
+                }
+                if (str1.charAt(n - 1) == str2.charAt(m - 1))
+                    dp[n][m] = dp[n - 1][m - 1] + 1;
+                else
+                    dp[n][m] = Math.max(dp[n - 1][m], dp[n][m - 1]);
+
+            }
+        }
+        return dp[N][M];
+    }
+
+    public static int longestCommonSubsequence(String text1, String text2) {
+        int[][] dp = new int[text1.length() + 1][text2.length() + 1];
+        for (int[] d : dp)
+            Arrays.fill(d, -1);
+
+        // int ans = LCSubseq(text1, text1.length(), text2, text2.length(), dp);
+        int ans = LCSubseq_DP(text1, text1.length(), text2, text2.length(), dp);
+
+        display2D(dp);
+        return ans;
+    }
+
+    // Leetcode 1143
+    public int longestCommonSubsequence(String s1, String s2,int n,int m,int[][] dp) {
+        if(n==0 || m == 0) return 0;
+        if(dp[n][m]!=-1) return dp[n][m];
+        
+        if(s1.charAt(n-1) == s2.charAt(m-1)) dp[n][m] = longestCommonSubsequence(s1,s2,n-1,m-1,dp) + 1;
+        else dp[n][m] = Math.max(longestCommonSubsequence(s1,s2,n,m-1,dp),longestCommonSubsequence(s1,s2,n-1,m,dp));
+        
+        return dp[n][m];
+    }
+
+    public int longestCommonSubsequenceDP(String s1, String s2,int N,int M,int[][] dp) {
+        for(int n=0;n<=N;n++){
+            for(int m =0;m<=M;m++){
+                if(n==0 || m == 0){
+                    dp[n][m] = 0;
+                    continue;
+                }
+
+                if(s1.charAt(n-1) == s2.charAt(m-1)) dp[n][m] = dp[n-1][m-1] + 1;
+                else dp[n][m] = Math.max(dp[n][m-1],dp[n-1][m]);
+            }
+        }
+
+        return dp[N][M];
+    }
+    
+    public int longestCommonSubsequence(String s1, String s2) {
+        int n = s1.length();
+        int m = s2.length();
+        
+        int[][] dp = new int[n+1][m+1];
+        // for(int[] d : dp) Arrays.fill(d,-1);
+        
+        return longestCommonSubsequenceDP(s1,s2,n,m,dp);
+    }
+ */

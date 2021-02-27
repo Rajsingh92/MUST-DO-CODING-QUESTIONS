@@ -1,3 +1,46 @@
+class Solution {
+    public static void levelOrder1(TreeNode root) {
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        queue.addLast(root);
+
+        while (queue.size() != 0) {
+            TreeNode rnode = queue.removeFirst();
+
+            System.out.print(rnode.data + " ");
+
+            if (rnode.left != null)
+                queue.addLast(rnode.left);
+            if (rnode.right != null)
+                queue.addLast(rnode.right);
+        }
+    }
+
+    public static void levelOrder2(TreeNode node) {
+        LinkedList<TreeNode> pQue = new LinkedList<>();
+        LinkedList<TreeNode> cQue = new LinkedList<>();
+
+        pQue.addLast(node);
+
+        while (pQue.size() != 0) {
+            TreeNode rnode = pQue.removeFirst();
+
+            System.out.print(rnode.data + " ");
+            
+            if (rnode.left != null)
+                cQue.addLast(rnode.left);
+            if (rnode.right != null)
+                cQue.addLast(rnode.right);
+
+            if (pQue.size() == 0) {
+                LinkedList<TreeNode> temp = pQue;
+                pQue = cQue;
+                cQue = temp;
+            }
+        }
+    }
+}
+
+
 /**
 | 102 | Binary Tree Level Order Traversal |  Medium | Apple, Google |
 Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
@@ -15,42 +58,6 @@ return its level order traversal as:
   [9,20],
   [15,7]
 ]
-
-
-class Solution{
-    public static void levelOrder1(TreeNode root){
-        LinkedList<TreeNode> queue = new LinkedList<>();
-        queue.addLast(root);
-
-        while(queue.size()!=0){
-            TreeNode rnode = queue.removeFirst();
-            System.out.print(rnode.data + " ");
-            if(rnode.left!=null) queue.addLast(rnode.left);
-            if(rnode.right!=null) queue.addLast(rnode.right);
-        }
-    }
-
-    public static void levelOrder2(TreeNode node) {
-        LinkedList < TreeNode > pQue = new LinkedList < > (); 
-        LinkedList < TreeNode > cQue = new LinkedList < > (); 
-
-        pQue.addLast(node);
-
-
-        while (pQue.size() != 0) {
-            TreeNode rnode = pQue.removeFirst();
-            System.out.print(rnode.data + " ");
-            if (rnode.left != null) cQue.addLast(rnode.left);
-            if (rnode.right != null) cQue.addLast(rnode.right);
-
-            if (pQue.size() == 0) {
-                LinkedList < TreeNode > temp = pQue;
-                pQue = cQue;
-                cQue = temp;
-            }
-        }
-    }
-}
 
  */
 

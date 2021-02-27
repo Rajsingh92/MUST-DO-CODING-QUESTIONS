@@ -190,3 +190,121 @@ class Solution {
         return k;
     }
 }
+
+
+/**
+Find Missing And Repeating 
+Given an unsorted array Arr of size N of positive integers. One number 'A' from set {1, 2, …N} is missing and 
+one number 'B' occurs twice in array. Find these two numbers.
+
+Example 1:
+
+Input:
+N = 2
+Arr[] = {2, 2}
+Output: 2 1
+Explanation: Repeating number is 2 and 
+smallest positive missing number is 1.
+ */
+
+
+
+class Solve {
+    int[] findTwoElement(int arr[], int n) {
+
+        Map<Integer, Boolean> numberMap = new HashMap<>();
+
+        int[] res = new int[2];
+
+        for (Integer i : arr) {
+
+            if (numberMap.get(i) == null) {
+                numberMap.put(i, true);
+            } else {
+                res[0] = i;
+            }
+        }
+
+        for (int i = 1; i <= n; i++) {
+            if (numberMap.get(i) == null) {
+                res[1] = i;
+            }
+        }
+
+        return res;
+    }
+
+    // O(n)
+    int[] findTwoElement2(int arr[], int n) {
+
+ 
+        int[] res = new int[2];
+
+        int Sum_N = (n * (n + 1)) / 2;
+        int Sum_NSq = (n * (n + 1) * (2 * n + 1)) / 6;
+        int missingNumber = 0, repeating = 0;
+ 
+        for (int i = 0; i < n; i++) 
+        {
+            Sum_N -= arr[i];
+            Sum_NSq -= arr[i] * arr[i];
+        }
+ 
+        missingNumber = (Sum_N + Sum_NSq / Sum_N) / 2;
+        repeating = missingNumber - Sum_N;
+        
+        res[0] = repeating;
+        res[1] = missingNumber;
+        
+        
+        return res;
+    }
+
+    int[] findTwoElement3(int[] arr, int n) {
+        int[] res = new int[2];
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[Math.abs(arr[i]) - 1] < 0) {
+                res[0] = Math.abs(arr[i]); // repeating number
+            } else {
+                arr[Math.abs(arr[i]) - 1] = -arr[Math.abs(arr[i]) - 1]; // first time visit make it negative
+            }
+        }
+
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                res[1] = i+1;
+            }
+        }
+
+        return res;
+    }
+}
+
+/**
+Missing Number
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing 
+from the array.
+
+Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
+
+Example 1:
+Input: nums = [3,0,1]
+Output: 2
+Explanation: n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is the missing number in the range since it does not appear in nums.
+ */
+
+
+
+class Solution {
+    public static int missingNumber(int[] nums) {
+        int n = nums.length;
+        int sum = 0;
+        for (int val : nums) {
+            sum += val;
+        }
+
+        int expected = n * (n + 1) / 2;
+        return Math.abs(sum - expected);
+    }
+}

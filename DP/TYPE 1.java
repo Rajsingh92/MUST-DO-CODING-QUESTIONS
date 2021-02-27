@@ -84,4 +84,13 @@ atmost 2 transaction
 k transaction
 with cooldown period
 with transaction fees
+Buy Maximum Stocks if i stocks can be bought on i-th day
+
+ Buy And Sell Stocks With Transaction Fee - Infinite Transactions Allowed Medium
+ Buy And Sell Stocks With Cooldown - Infinite Transaction Allowed Medium
+ Buy And Sell Stocks - Two Transactions Allowed Easy
+ Buy And Sell Stocks - K Transactions Allowed Easy
+ | 714 | Best Time to Buy and Sell Stock with Transaction Fee |  Medium | Facebook |
+| 123 | Best Time to Buy and Sell Stock III |  Hard | Amazon, Microsoft |
+| 188 | Best Time to Buy and Sell Stock IV |  Hard | Amazon, Google |
  */

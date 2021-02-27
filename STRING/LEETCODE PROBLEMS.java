@@ -3,7 +3,6 @@
 | 6 | ZigZag Conversion |  Medium | Adobe, Amazon, Apple, Facebook, Google |
 | 14 | Longest Common Prefix |  Easy | Adobe, Apple, Google, Microsoft |
 | 38 | Count and Say |  Easy | Adobe, Amazon, Google, Microsoft |
-| 49 | Group Anagrams |  Medium | Adobe, Affirm, Alibaba, Amazon, Apple, Facebook, Google, Microsoft |
 | 68 | Text Justification |  Hard | Airbnb, Amazon, Facebook, Google, Microsoft |
 | 58 | Length of Last Word |  Easy | Adobe |
 | 680 | Valid Palindrome II |  Easy | Facebook |
