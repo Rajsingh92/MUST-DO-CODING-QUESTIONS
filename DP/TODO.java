@@ -1,10 +1,4 @@
 /**
- Climb Stairs Easy
- Climb Stairs With Variable Jumps Easy
- Climb Stairs With Minimum Moves Easy
- Min Cost In Maze Traversal Easy
- | 746 | Min Cost Climbing Stairs |  Easy | Amazon |
- Target Sum Subsets - Dp Medium
  Friends Pairing Easy(dp+recursion)
  Partition Into Subsets Easy
  Maximum Non-overlapping Bridges Easy
@@ -26,11 +20,9 @@
  Boolean Parenthesization Easy
  Optimal Binary Search Tree Easy
  Burst Balloons Hard
- Longest Common Substring Easy
  Longest Repeating Subsequence Medium
  Minimum Ascii Delete Sum For Two Strings Medium
  Minimum Cost To Make Two Strings Identical Easy
- Shortest Uncommon Subsequence Medium
  Distinct Transformations Medium
 | 688 | Knight Probability in Chessboard |  Medium | Facebook, Google, Microsoft |
 | 72 | Edit Distance |  Hard | Facebook, Adobe, Amazon, Apple, Google, Microsoft |
@@ -42,7 +34,6 @@
  Egg Drop Hard
  Maximum Sum Of Three Non-overlapping Subarrays Hard
  Maximum Sum Of M Non-overlapping Subarrays Hard
- Floor Tiling - 2 Medium
  Cherry Pickup Hard
 | 87 | Scramble String |  Hard | Google |
  Arithmetic Slices 1 Medium
@@ -71,6 +62,7 @@ Maximum Sum Increasing Subsequence
 Print Longest Common Sub Sequences Lexicographical Order
 Count Binary Strings K Times Appearing Adjacent Two Set Bits
 Count Ways Increase Lcs Length Two Strings One
+Longest Common Increasing Subsequence Lcs Lis
 Find Number Times String Occurs Given String
 Count Distinct Subsequences
 Number of subsequences in a string divisible by n
@@ -101,7 +93,6 @@ Vertex Cover Problem Set 2 Dynamic Programming Solution Tree
 Longest Even Length Substring Sum First Second Half
 Count Possible Ways To Construct Buildings
 Bitmasking And Dynamic Programming Set 1 Count Ways To Assign Unique Cap To Every Person
-Longest Common Increasing Subsequence Lcs Lis
 Find If String Is K Palindrome Or Not
 Minimum Sum Path 3 D Array
 | 64 | Minimum Path Sum |  Medium | Adobe, Amazon, Google, Microsoft |
@@ -122,4 +113,29 @@ Number Of Subarrays With Maximum Values In Given Range
 | 416 | Partition Equal Subset Sum |  Medium | Facebook, Google, Microsoft |
 | 568 | Maximum Vacation Days |  Hard | Facebook, Google, Microsoft |
 | 689 | Maximum Sum of 3 Non-Overlapping Subarrays |  Hard | Facebook, Google |
+| 115 | Distinct Subsequences |  Hard | Google |
+| 940 | Distinct Subsequences II |  Hard | Google |
+| 132 | Palindrome Partitioning II |  Hard | Google |
+| 639 | Decode Ways II |  Hard | Facebook |
+| 152 | Maximum Product Subarray |  Medium | Adobe |
+| 174 | Dungeon Game |  Hard | Amazon |
+| 221 | Maximal Square |  Medium | Google |
+| 388 | Longest Absolute File Path |  Medium | Google |
+| 351 | Android Unlock Patterns |  Medium | Google |
+| 375 | Guess Number Higher or Lower II |  Medium | Google |
+| 377 | Combination Sum IV |  Medium | Facebook |
+| 410 | Split Array Largest Sum |  Hard | Google |
+| 418 | Sentence Screen Fitting |  Medium | Google |
+| 471 | Encode String with Shortest Length |  Hard | Google |
+| 464 | Can I Win |  Medium | Google |
+| 472 | Concatenated Words |  Hard | Amazon |
+| 486 | Predict the Winner |  Medium | Google |
+| 552 | Student Attendance Record II |  Hard | Google |
+| 750 | Number Of Corner Rectangles |  Medium | Google |
+| 799 | Champagne Tower |  Medium | Google |
+| 920 | Number of Music Playlists |  Hard | Google |
+| 931 | Minimum Falling Path Sum |  Medium | Google |
+| 935 | Knight Dialer |  Medium | Facebook, Microsoft |
+| 943 | Find the Shortest Superstring |  Hard | Google |
+| 983 | Minimum Cost For Tickets |  Medium | Amazon |
  */

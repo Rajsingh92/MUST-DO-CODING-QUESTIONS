@@ -8,20 +8,6 @@ Output: 5->4->3->2->1->NULL
 
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        curr = head
-        prev = None
-        
-        while curr:
-            next = curr.next
-            curr.next = prev
-            prev = curr
-            curr = next
-        
-        head = prev
-        return head
-
-class Solution:
-    def reverseList(self, head: ListNode) -> ListNode:
         if head is None:
             return head
         

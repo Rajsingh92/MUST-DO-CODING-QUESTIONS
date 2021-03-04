@@ -50,6 +50,12 @@ public class Main {
 
 
 /**
+ * 
+| 886 | Possible Bipartition |  Medium | Facebook |
+| 785 | Is Graph Bipartite? |  Medium | Amazon, Apple, Facebook, Google, Microsoft |
+
+
+
 class Solution {
     public boolean isBipartite(int[][] graph) {
         int len = graph.length;

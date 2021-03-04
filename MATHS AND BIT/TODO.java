@@ -39,28 +39,6 @@ questions iconPrime Factorization using Sieve O(log n) for multiple queries
 Sort Array According Count Set Bits
 
 
-| 78 | Subsets |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
-| 136 | Single Number |  Easy | Amazon |
-| 137 | Single Number II |  Medium | Amazon, Facebook, Google |
-| 260 | Single Number III |  Medium | Adobe, Facebook |
-| 187 | Repeated DNA Sequences |  Medium | Google |
-| 190 | Reverse Bits |  Easy | Amazon, Apple |
-| 191 | Number of 1 Bits |  Easy | Amazon, Apple, Google, Microsoft |
-| 201 | Bitwise AND of Numbers Range |  Medium | Adobe |
-| 231 | Power of Two |  Easy | Amazon |
-| 268 | Missing Number |  Easy | Adobe, Amazon, Apple |
-| 318 | Maximum Product of Word Lengths |  Medium | Google |
-| 320 | Generalized Abbreviation |  Medium | Google |
-| 338 | Counting Bits |  Medium | Apple |
-| 371 | Sum of Two Integers |  Easy | Facebook, Microsoft |
-| 393 | UTF-8 Validation |  Medium | Facebook, Google |
-| 397 | Integer Replacement |  Medium | Amazon |
-| 405 | Convert a Number to Hexadecimal |  Easy | Facebook |
-| 477 | Total Hamming Distance |  Medium | Facebook |
-| 476 | Number Complement |  Easy | Google |
-| 751 | IP to CIDR |  Easy | Airbnb |
-| 756 | Pyramid Transition Matrix |  Medium | Airbnb |
-| 784 | Letter Case Permutation |  Easy | Microsoft |
 
 
 | 7 | Reverse Integer |  Easy | Adobe, Alibaba, Amazon, Facebook, Google, Microsoft |
@@ -112,6 +90,26 @@ Sort Array According Count Set Bits
 | 478 | Generate Random Point in a Circle |  Medium | Facebook |
 | 885 | Spiral Matrix III |  Medium | Facebook |
 | 914 | X of a Kind in a Deck of Cards |  Easy | Google |
+| 78 | Subsets |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
+| 136 | Single Number |  Easy | Amazon |
+| 137 | Single Number II |  Medium | Amazon, Facebook, Google |
+| 260 | Single Number III |  Medium | Adobe, Facebook |
+| 187 | Repeated DNA Sequences |  Medium | Google |
+| 190 | Reverse Bits |  Easy | Amazon, Apple |
+| 191 | Number of 1 Bits |  Easy | Amazon, Apple, Google, Microsoft |
+| 201 | Bitwise AND of Numbers Range |  Medium | Adobe |
+| 231 | Power of Two |  Easy | Amazon |
+| 268 | Missing Number |  Easy | Adobe, Amazon, Apple |
+| 318 | Maximum Product of Word Lengths |  Medium | Google |
+| 320 | Generalized Abbreviation |  Medium | Google |
+| 338 | Counting Bits |  Medium | Apple |
+| 371 | Sum of Two Integers |  Easy | Facebook, Microsoft |
+| 393 | UTF-8 Validation |  Medium | Facebook, Google |
+| 397 | Integer Replacement |  Medium | Amazon |
+| 405 | Convert a Number to Hexadecimal |  Easy | Facebook |
+| 477 | Total Hamming Distance |  Medium | Facebook |
+| 476 | Number Complement |  Easy | Google |
+| 751 | IP to CIDR |  Easy | Airbnb |
+| 756 | Pyramid Transition Matrix |  Medium | Airbnb |
+| 784 | Letter Case Permutation |  Easy | Microsoft |
  */
-
-

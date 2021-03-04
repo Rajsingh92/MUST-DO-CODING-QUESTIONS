@@ -1,9 +1,8 @@
-package oops;
 
 public class file {
 
-
     static final int N = 3;
+
     static int getMin(int arr[]) {
         int minInd = 0;
         for (int i = 1; i < N; i++)
@@ -11,6 +10,7 @@ public class file {
                 minInd = i;
         return minInd;
     }
+
     static int getMax(int arr[]) {
         int maxInd = 0;
         for (int i = 1; i < N; i++)
@@ -18,7 +18,6 @@ public class file {
                 maxInd = i;
         return maxInd;
     }
-
 
     static void minCashFlowRec(int amount[]) {
         int mxCredit = getMax(amount), mxDebit = getMin(amount);
@@ -35,7 +34,6 @@ public class file {
         minCashFlowRec(amount);
     }
 
-
     static void minCashFlow(int graph[][]) {
         int amount[] = new int[N];
         for (int p = 0; p < N; p++)
@@ -45,13 +43,9 @@ public class file {
         minCashFlowRec(amount);
     }
 
-
     public static void main(String[] args) {
 
-        int graph[][] = { { 0, 1000, 2000 }, 
-                          { 0,  0, 5000  }, 
-                          { 0, 0, 0 }, 
-                        };
+        int graph[][] = { { 0, 1000, 2000 }, { 0, 0, 5000 }, { 0, 0, 0 }, };
         minCashFlow(graph);
     }
 

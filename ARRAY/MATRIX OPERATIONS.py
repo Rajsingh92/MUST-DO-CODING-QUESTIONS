@@ -108,4 +108,6 @@ Find the largest square sub-matrix which is surrounded by all 1’sMedium
 Generate list of possible words from a character matrixHard
 Find all occurrences of given string in a character matrixHard
 Find Duplicate rows in a binary matrixMedium
+swap elements along main diagonal
+swap elements along secondary diagonal
 '''

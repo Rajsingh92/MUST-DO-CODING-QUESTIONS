@@ -39,6 +39,11 @@ class Solution{
 }
 
 
+
+
+
+
+
 /**
  * 
 Number of subarrays having sum less than K
@@ -78,6 +83,12 @@ class Solution {
 
 
 
+
+
+
+
+
+
 /**
 TODO:
 
@@ -108,4 +119,5 @@ Minimum Swaps Required To Bring All Elements Less Than Or Equal To k Together
 | 992 | Subarrays with K Different Integers |  Hard | Amazon |
 | 995 | Minimum Number of K Consecutive Bit Flips |  Hard | Akuna Capital |
 | 1004 | Max Consecutive Ones III |  Medium | Facebook |
+| 904 | Fruit Into Baskets |  Medium | Amazon, Google |
  */

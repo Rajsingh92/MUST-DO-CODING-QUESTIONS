@@ -1,6 +1,6 @@
+/**
 
-'''
-Keys and Rooms
+| 841 | Keys and Rooms |  Medium | Amazon |
 There are N rooms and you start in room 0.  Each room has a distinct number in 0, 1, 2, ..., N-1, and each room may have 
 some keys to access the next room. 
 Formally, each room i has a list of keys rooms[i], and each key rooms[i][j] is an integer in [0, 1, ..., N-1] where 
@@ -23,35 +23,8 @@ We then go to room 2, and pick up key 3.
 We then go to room 3.  Since we were able to go to every room, we return true.
 
 
-class Solution {
-    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
-        Queue<Integer> queue = new LinkedList<Integer>();
-        boolean[] visited = new boolean[rooms.size()];
-        
-        visited[0] = true;
-        for(int i : rooms.get(0)) {
-            queue.add(i);
-            visited[i] = true;
-        }
-        
-        while(!queue.isEmpty()) {
-            int temp = queue.poll();
-            for(int i : rooms.get(temp)) {
-                if(visited[i] == false) {
-                    queue.add(i);
-                    visited[i] = true;
-                }
-            }
-        }
-        
-        for (int i = 1; i < visited.length; i++) {
-            if(visited[i] == false) return false;
-        }
-        
-        return true;
-    }
-}
-'''
+
+
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         visited = [False]*len(rooms)
@@ -72,3 +45,35 @@ class Solution:
                 self.DFS(rooms,u,visited)
                 
         
+ */
+
+class Solution {
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+        Queue<Integer> queue = new LinkedList<Integer>();
+        boolean[] visited = new boolean[rooms.size()];
+
+        visited[0] = true;
+        for (int i : rooms.get(0)) {
+            queue.add(i);
+            visited[i] = true;
+        }
+
+        while (!queue.isEmpty()) {
+            int temp = queue.poll();
+            for (int i : rooms.get(temp)) {
+                if (visited[i] == false) {
+                    queue.add(i);
+                    visited[i] = true;
+                }
+            }
+        }
+
+        for (int i = 1; i < visited.length; i++) {
+            if (visited[i] == false)
+                return false;
+        }
+
+        return true;
+    }
+}
+

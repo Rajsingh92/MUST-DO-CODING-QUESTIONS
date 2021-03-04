@@ -133,7 +133,7 @@ public class DynamicStack{
 
 
 
-// | 225 | Implement Stack using Queues |  Easy | Microsoft |
+// | Implement Stack using Queues | Microsoft |
 
 public class Main {
 

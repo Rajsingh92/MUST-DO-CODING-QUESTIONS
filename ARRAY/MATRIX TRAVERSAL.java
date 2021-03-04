@@ -43,7 +43,63 @@ public class Solution{
             col++;
         }
     }
+
+    // anticlockwise
+    public static void anticlockwiseSpiral(int m, int n, int arr[][]) {
+        int i, k = 0, l = 0;
+
+        int cnt = 0;
+
+        int total = m * n;
+
+        while (k < m && l < n) {
+            if (cnt == total)
+                break;
+
+            for (i = k; i < m; ++i) {
+                System.out.print(arr[i][l] + ", ");
+                cnt++;
+            }
+            l++;
+
+            if (cnt == total)
+                break;
+
+            for (i = l; i < n; ++i) {
+                System.out.print(arr[m - 1][i] + ", ");
+                cnt++;
+            }
+            m--;
+
+            if (cnt == total)
+                break;
+
+            if (k < m) {
+                for (i = m - 1; i >= k; --i) {
+                    System.out.print(arr[i][n - 1] + ", ");
+                    cnt++;
+                }
+                n--;
+            }
+
+            if (cnt == total)
+                break;
+
+            if (l < n) {
+                for (i = n - 1; i >= l; --i) {
+                    System.out.print(arr[k][i] + ", ");
+                    cnt++;
+                }
+                k++;
+            }
+        }
+    }
 }
+
+
+
+
+
 
 /**
  * 
@@ -101,6 +157,42 @@ public class Solution{
         }
     }
 }
+
+
+
+
+
+
+// rotate matrix
+class Solution {
+    static void rotate90Clockwise(int a[][], int N) {
+        for (int i = 0; i < N / 2; i++) {
+            for (int j = i; j < N - i - 1; j++) {
+                int temp = a[i][j];
+                a[i][j] = a[N - 1 - j][i];
+                a[N - 1 - j][i] = a[N - 1 - i][N - 1 - j];
+                a[N - 1 - i][N - 1 - j] = a[j][N - 1 - i];
+                a[j][N - 1 - i] = temp;
+            }
+        }
+    }
+
+    static void rotate90AntiClockwise(int a[][],int N) {
+        for (int i = 0; i < N / 2; i++) {
+            for (int j = i; j < N - i - 1; j++) {
+                int temp = a[i][j];
+                a[i][j] = a[j][N - 1 - i];
+                a[j][N - 1 - i] = a[N - 1 - i][N - 1 - j];
+                a[N - 1 - i][N - 1 - j] = a[N - 1 - j][i];
+                a[N - 1 - j][i] = temp;
+            }
+        }
+    }
+
+}
+
+
+
 
 
 /**
@@ -177,6 +269,16 @@ public class Solution{
 }
 
 
+
+
+
+
+
+
+
+
+
+
 /**
  * 
  1     2     3     4
@@ -227,6 +329,13 @@ public class Solution {
 }
 
 
+
+
+
+
+
+
+
 /**
  * 
 Print matrix in snake pattern
@@ -257,3 +366,11 @@ class Solution{
         }
     }
 }
+
+
+
+
+
+
+
+

@@ -78,6 +78,15 @@ class Solution {
 }
 
 
+
+
+
+
+
+
+
+
+
 /**
 | 238 | Product of Array Except Self |  Medium | Adobe, Amazon, Apple, Facebook, Google, Microsoft |
 
@@ -145,6 +154,14 @@ class Solution {
 }
 
 
+
+
+
+
+
+
+
+
 /**
 Given an array arr[], find the maximum j – i such that arr[j] > arr[i]
 Examples : 
@@ -198,6 +215,14 @@ public class Solution {
 
 
 
+
+
+
+
+
+
+
+
 /**
 | 11 | Container With Most Water |  Medium | Airbnb, Alibaba |
 Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical 
@@ -236,6 +261,14 @@ class Solution {
 }
 
 
+
+
+
+
+
+
+
+
 /**
  * 
 Find common elements in three sorted arrays
@@ -268,6 +301,14 @@ public class Solution{
         }
     }
 }
+
+
+
+
+
+
+
+
 
 
 /**
@@ -312,6 +353,14 @@ class Solution {
     }
 
 }
+
+
+
+
+
+
+
+
 
 
 /**
@@ -359,6 +408,15 @@ class Solution {
         }
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -422,6 +480,11 @@ class Solution {
 }
 
 
+
+
+
+
+
 /**
 | 259 | 3Sum Smaller |  Medium | Google |
 
@@ -460,6 +523,15 @@ public class Solution {
         return count;
     }
 }
+
+
+
+
+
+
+
+
+
 
 
 /**
@@ -507,6 +579,11 @@ class Solution {
 
 
 
+
+
+
+
+
 /**
 
 | 283 | Move Zeroes |  Easy | Adobe, Apple, Facebook, Google, Microsoft |
@@ -538,6 +615,12 @@ class Solution {
         }
     }
 }
+
+
+
+
+
+
 
 
 
@@ -585,6 +668,14 @@ class Solution {
 
 }
 
+
+
+
+
+
+
+
+
 /**
 | 15 | 3Sum |  Medium | Adobe, Akuna Capital, Amazon, Apple, Google, Microsoft, Alibaba |
 Given an array nums of n integers, are there elements a, b, c in nums such that a + b + c = 0? Find all unique triplets 
@@ -626,6 +717,11 @@ class Solution {
         return new ArrayList<>(res);
     }
 }
+
+
+
+
+
 
 
 /**
@@ -677,8 +773,119 @@ public class Solution {
 
 
 
+
+
+
+
+
+
+
+
 /**
 | 209 | Minimum Size Subarray Sum |  Medium | Google, Microsoft |
-| 904 | Fruit Into Baskets |  Medium | Amazon, Google |
-| 986 | Interval List Intersections |  Medium | Facebook, Google |
+Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous subarray [numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+
+
+Example 1:
+
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal length under the problem constraint.
  */
+
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+        if (nums == null || nums.length == 0)
+            return 0;
+        
+        
+        int min = Integer.MAX_VALUE;
+        
+        for(int i=0;i<nums.length;i++){
+            int curr_sum = nums[i];
+            
+            if(curr_sum>=target){
+                return 1;
+            }
+            
+            for(int j=i+1;j<nums.length;j++){
+                curr_sum+=nums[j];
+                
+                if(curr_sum>=target && min> j-i+1){
+                    min = j-i+1;
+                }
+            }
+        }
+        
+        return min == Integer.MAX_VALUE?0:min;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/**
+| 986 | Interval List Intersections |  Medium | Facebook, Google |
+You are given two lists of closed intervals, firstList and secondList, where firstList[i] = [starti, endi] 
+and secondList[j] = [startj, endj]. Each list of intervals is pairwise disjoint and in sorted order.
+
+Return the intersection of these two interval lists.
+A closed interval [a, b] (with a < b) denotes the set of real numbers x with a <= x <= b.
+
+The intersection of two closed intervals is a set of real numbers that are either empty or represented as 
+a closed interval. For example, the intersection of [1, 3] and [2, 4] is [2, 3].
+
+ 
+
+Example 1:
+
+
+Input: firstList = [[0,2],[5,10],[13,23],[24,25]], secondList = [[1,5],[8,12],[15,24],[25,26]]
+Output: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
+ */
+
+
+
+
+
+class Solution {
+    public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
+        
+        ArrayList<int[]> list = new ArrayList<>();
+        
+        int i=0,j=0;
+        while(i<firstList.length && j<secondList.length){
+            if(secondList[j][0]>firstList[i][1]){
+                i++;
+            }else if(firstList[i][0]>secondList[j][1]){
+                j++;
+            }else{
+                int a = Math.max(firstList[i][0],secondList[j][0]);
+                int b = Math.min(firstList[i][1],secondList[j][1]);
+                list.add(new int[]{a,b});
+                
+                if(firstList[i][1]<secondList[j][1]){
+                    i++;
+                }else{
+                    j++;
+                }
+            }
+        }
+        
+        int[][] res = new int[list.size()][];
+        int k = 0;
+        for(int[] temp : list){
+            res[k++] = temp;
+        }
+        
+        return res;
+    }
+}
+

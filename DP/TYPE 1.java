@@ -4,9 +4,8 @@
 
 
 
-/**
-Best Time to Buy and Sell Stock -- One transaction
-| 121 | Best Time to Buy and Sell Stock |  Easy | Facebook |
+/** 
+| 121 | Best Time to Buy and Sell Stock |  Easy | Facebook | -- One transaction
 You are given an array prices where prices[i] is the price of a given stock on the ith day.
 You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to 
 sell that stock.
@@ -43,9 +42,14 @@ class Solution {
 }
 
 
+
+
+
+
+
+
 /**
-Best Time to Buy and Sell Stock II -- Infinite transaction
-| 122 | Best Time to Buy and Sell Stock II |  Easy | Alibaba |
+| 122 | Best Time to Buy and Sell Stock II |  Easy | Alibaba | -- Infinite transaction
 Say you have an array prices for which the ith element is the price of a given stock on day i.
 Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell 
 one share of the stock multiple times).
@@ -79,13 +83,18 @@ class Solution {
     }
 }
 
+
+
+
+
+
+
 /**
 atmost 2 transaction
 k transaction
 with cooldown period
 with transaction fees
 Buy Maximum Stocks if i stocks can be bought on i-th day
-
  Buy And Sell Stocks With Transaction Fee - Infinite Transactions Allowed Medium
  Buy And Sell Stocks With Cooldown - Infinite Transaction Allowed Medium
  Buy And Sell Stocks - Two Transactions Allowed Easy

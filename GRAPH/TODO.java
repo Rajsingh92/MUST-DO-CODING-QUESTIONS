@@ -1,31 +1,52 @@
 /**
 GRAPH
 
-//   Travelling Salesman Problem 
-//   Detect Negative cycle in a graph 
-//   Longest Path in a Directed Acyclic Graph 
-//   Print All Jumping Numbers Smaller Than Or Equal To A Given Value 
-//   Optimal Read List Given Number Days 
-//   Vertex Cover Problem 
-//   M-Colouring Problem 
-//   Rat in a Maze 
-//   Paths to travel each nodes using each edge(Seven Bridges) 
-//   bridge in a graph
-//   Water Jug problem using BFS 
-//   Construct Binary Palindrome By Repeated Appending And Trimming 
-//   Two Clique Problem 
-//   Find if there is a path of more thank length from a source 
-// 928
-// 1168
-// 839
-// 1061
-// 1192
-// 802
-// 1319
-// mrPresident
-// JourneyToMoon_UsingDFS
-
-
+Roads and Libraries
+Journey to the Moon
+Even Tree
+Course Schedule II
+Mancunian And Liverbird Go Bar Hopping
+Cheapest Flights Within K Stops
+Dhoom 4
+Monk And The Islands
+Connected Horses
+We Are On Fire
+Mrinal And Three Musketeers
+Efficient Network
+Mr President
+Chocolate Journey
+Minimizing Path Cost
+Oliver And The Game
+Madmax
+Friend Circles Problem
+Strongly Connected Components
+Minimum Number Of Trials To Reach From Source Word To Destination Word
+Longest Path in a Directed Acyclic Graph
+Count All Possible Paths Between Two Vertices
+Water Jug Problem Using Bfs
+Snake and Ladder Problem
+Given A Sorted Dictionary Of An Alien Language, Find Order Of Characters
+Print All Jumping Numbers Smaller Than Or Equal To A Given Value
+Optimal Read List Given Number Days
+Count Number Of Trees In A Forest
+Construct Binary Palindrome By Repeated Appending And Trimming
+Find Eventual Safe States
+Madmax
+Equal
+Even Tree
+Travelling Salesman Problem 
+Detect Negative cycle in a graph 
+Longest Path in a Directed Acyclic Graph 
+Print All Jumping Numbers Smaller Than Or Equal To A Given Value 
+Optimal Read List Given Number Days 
+Vertex Cover Problem 
+M-Colouring Problem 
+Rat in a Maze 
+Paths to travel each nodes using each edge(Seven Bridges) 
+bridge in a graph
+Construct Binary Palindrome By Repeated Appending And Trimming 
+Two Clique Problem 
+Find if there is a path of more thank length from a source 
 | 133 | Clone Graph |  Medium | Amazon, Facebook |
 | 207 | Course Schedule |  Medium | Amazon, Facebook, Google, Microsoft |
 | 210 | Course Schedule II |  Medium | Amazon, Facebook, Google, Microsoft |
@@ -38,17 +59,10 @@ GRAPH
 | 684 | Redundant Connection |  Medium | Google |
 | 685 | Redundant Connection II |  Hard | Google |
 | 743 | Network Delay Time |  Medium | Amazon |
-| 785 | Is Graph Bipartite? |  Medium | Amazon, Apple, Facebook, Google, Microsoft |
 | 797 | All Paths From Source to Target |  Medium | Amazon |
-| 841 | Keys and Rooms |  Medium | Amazon |
 | 854 | K-Similar Strings |  Hard | Google |
-| 886 | Possible Bipartition |  Medium | Facebook |
 | 924 | Minimize Malware Spread |  Hard | Amazon |
 | 997 | Find the Town Judge |  Easy | Amazon |
-
-
-DFS/BFS:
-
 | 126 | Word Ladder II |  Hard | Facebook, Google, Microsoft |
 | 127 | Word Ladder |  Medium | Affirm, Airbnb, Amazon, Apple, Facebook, Google, Microsoft |
 | 130 | Surrounded Regions |  Medium | Amazon, Google |
@@ -79,5 +93,4 @@ DFS/BFS:
 | 329 | Longest Increasing Path in a Matrix |  Hard | Facebook |
 | 630 | Course Schedule III |  Hard | Google |
 | 131 | Palindrome Partitioning |  Medium | Adobe, Amazon |
-
  */

@@ -1,45 +1,13 @@
-/**
-//Leetcode 295.=============================================
-class MedianFinder {
-         
-        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a,b)->{
-            return b - a;
-        });
-        
-        public MedianFinder() {
-             
-        }
-        
-        public void addNum(int num) {
-            if( maxHeap.size() == 0 || num <= maxHeap.peek())  maxHeap.add(num);
-            else minHeap.add(num);
-
-            if(maxHeap.size() > minHeap.size() + 1){
-                minHeap.add(maxHeap.peek());
-                maxHeap.remove();
-            }else if(maxHeap.size() < minHeap.size()){
-                maxHeap.add(minHeap.peek());
-                minHeap.remove();
-            }  
-        }
-        
-        public double findMedian() {
-            if(maxHeap.size() == minHeap.size() && maxHeap.size() != 0) return (maxHeap.peek() + minHeap.peek()) / 2;
-            else if(maxHeap() != minHeap.size()) return maxHeap.peek();
-        }
-    }
- */
 
 public class Main {
 
     public static class MedianPriorityQueue {
-        PriorityQueue < Integer > left;
-        PriorityQueue < Integer > right;
+        PriorityQueue<Integer> left;
+        PriorityQueue<Integer> right;
 
         public MedianPriorityQueue() {
-            left = new PriorityQueue < > (Collections.reverseOrder());  //max heap
-            right = new PriorityQueue < > ();   // min heap
+            left = new PriorityQueue<>(Collections.reverseOrder()); // max heap
+            right = new PriorityQueue<>(); // min heap
         }
 
         public void add(int val) {
@@ -87,3 +55,57 @@ public class Main {
         }
     }
 }
+
+
+/**
+Find Median from Data Stream
+
+Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle 
+value. So the median is the mean of the two middle value.
+
+For example,
+[2,3,4], the median is 3
+
+[2,3], the median is (2 + 3) / 2 = 2.5
+
+Design a data structure that supports the following two operations:
+
+void addNum(int num) - Add a integer number from the data stream to the data structure.
+double findMedian() - Return the median of all elements so far.
+ 
+
+Example:
+
+addNum(1)
+addNum(2)
+findMedian() -> 1.5
+addNum(3) 
+findMedian() -> 2
+ */
+
+
+class MedianFinder {
+
+    private PriorityQueue<Integer> small = new PriorityQueue<>(Collections.reverseOrder());
+    private PriorityQueue<Integer> large = new PriorityQueue<>();
+    private boolean even = true;
+
+    public double findMedian() {
+        if (even)
+            return (small.peek() + large.peek()) / 2.0;
+        else
+            return small.peek();
+    }
+
+    public void addNum(int num) {
+        if (even) {
+            large.offer(num);
+            small.offer(large.poll());
+        } else {
+            small.offer(num);
+            large.offer(small.poll());
+        }
+        even = !even;
+    }
+}
+

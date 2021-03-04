@@ -146,7 +146,7 @@ public class DynamicQueue {
 
 
 
-// | 232 | Implement Queue using Stacks |  Easy | Apple, Microsoft |
+// | Implement Queue using Stacks | Apple, Microsoft |
 
 public class Main {
     // add efficient

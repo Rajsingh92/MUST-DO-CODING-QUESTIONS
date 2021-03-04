@@ -1,3 +1,9 @@
+//              PARENTHESES BASED PROBLEMS
+//              PARENTHESES BASED PROBLEMS
+//              PARENTHESES BASED PROBLEMS
+
+
+
 /**
 | 20 | Valid Parentheses |  Easy | Adobe, Akuna Capital, Amazon, Apple, Facebook, Google, Microsoft |
 Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -164,6 +170,13 @@ class Solution {
 }
 
 
+
+
+
+
+
+
+
 /**
 Minimum Insertions to Balance a Parentheses String
 
@@ -212,3 +225,5 @@ public class Solution{
         return right + res;
     }
 }
+
+

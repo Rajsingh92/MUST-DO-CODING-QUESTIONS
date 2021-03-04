@@ -1,3 +1,7 @@
+//              NEAREST GREATER SMALLER BASED
+//              NEAREST GREATER SMALLER BASED
+//              NEAREST GREATER SMALLER BASED
+
 
 public class Solution{
 

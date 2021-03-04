@@ -47,4 +47,28 @@ SNQ
 | 739 | Daily Temperatures |  Medium | Amazon, Google, Microsoft |
 | 496 | Next Greater Element I |  Easy | Amazon, Google |
 | 503 | Next Greater Element II |  Medium | Microsoft |
+| 636 | Exclusive Time of Functions |  Medium | Microsoft |
+| 316 | Remove Duplicate Letters |  Hard | Microsoft |
+| 341 | Flatten Nested List Iterator |  Medium | Airbnb |
+| 844 | Backspace String Compare |  Easy | Google |
+| 862 | Shortest Subarray with Sum at Least K |  Hard | Facebook |
+| 726 | Number of Atoms |  Hard | Adobe |
+| 150 | Evaluate Reverse Polish Notation |  Medium | Microsoft |
+| 1019 | Next Greater Node In Linked List |  Medium | Amazon |
+| 346 | Moving Average from Data Stream |  Easy | Google |
+| 895 | Maximum Frequency Stack |  Hard | Amazon |
+| 363 | Max Sum of Rectangle No Larger Than K |  Hard | Google |
+| 591 | Tag Validator |  Hard | Google |
+| 975 | Odd Even Jump |  Hard | Google |
+| 582 | Kill Process |  Medium | Apple |
+| 933 | Number of Recent Calls |  Easy | Google |
+| 251 | Flatten 2D Vector |  Medium | Airbnb |
+| 281 | Zigzag Iterator |  Medium | Google |
+| 284 | Peeking Iterator |  Medium | Google |
+| 460 | LFU Cache |  Hard | Amazon |
+| 588 | Design In-Memory File System |  Hard | Amazon |
+| 631 | Design Excel Sum Formula |  Hard | Amazon |
+| 635 | Design Log Storage System |  Medium | Google |
+| 379 | Design Phone Directory |  Medium | Google |
  */
+

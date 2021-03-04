@@ -61,4 +61,31 @@ HASHMAP AND HEAP:
 | 266 | Palindrome Permutation |  Easy | Amazon, Facebook, Google, Microsoft |
 Rearrange characters in a string such that no two adjacent are same
 Median Of Stream Of Integers Running Integers
+Anagram Substring Search Search Permutations
+Check Binary Representations Two Numbers Anagram
+Function To Find Number Of Customers Who Could Not Get A Computer
+| 710 | Random Pick with Blacklist |  Hard | Amazon, Google |
+| 274 | H-Index |  Medium | Google |
+| 170 | Two Sum III - Data structure design |  Easy | Facebook |
+| 658 | Find K Closest Elements |  Medium | Facebook |
+| 524 | Longest Word in Dictionary through Deleting |  Medium | Google |
+| 409 | Longest Palindrome |  Easy | Amazon |
+| 659 | Split Array into Consecutive Subsequences |  Medium | Google |
+| 218 | The Skyline Problem |  Hard | Facebook |
+| 609 | Find Duplicate File in System |  Medium | Amazon |
+| 359 | Logger Rate Limiter |  Easy | Facebook, Google |
+| 778 | Swim in Rising Water |  Hard | Amazon |
+| 288 | Unique Word Abbreviation |  Medium | Google |
+| 299 | Bulls and Cows |  Medium | Amazon, Google |
+| 311 | Sparse Matrix Multiplication |  Medium | Apple |
+| 554 | Brick Wall |  Medium | Facebook |
+| 599 | Minimum Index Sum of Two Lists |  Easy | Amazon |
+| 734 | Sentence Similarity |  Easy | Google |
+| 811 | Subdomain Visit Count |  Easy | Google |
+| 953 | Verifying an Alien Dictionary |  Easy | Facebook |
+| 957 | Prison Cells After N Days |  Medium | Amazon |
+| 291 | Word Pattern II |  Hard | Facebook |
+| 818 | Race Car |  Hard | Google |
+| 857 | Minimum Cost to Hire K Workers |  Hard | Google |
+| 871 | Minimum Number of Refueling Stops |  Hard | Amazon |
  */

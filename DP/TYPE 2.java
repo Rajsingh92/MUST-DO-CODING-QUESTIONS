@@ -3,6 +3,8 @@
 //              INCLUDE EXCLUDE BASED
 
 
+
+
 //count of binary string with no consecutive zeros
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -23,6 +25,11 @@ public class Main {
         System.out.println(oldCountZero + oldCountOne);
     }
 }
+
+
+
+
+
 
 // Arrange Buildings
 public class Main {
@@ -46,6 +53,11 @@ public class Main {
         System.out.println(ways * ways);
     }
 }
+
+
+
+
+
 
 // count of substring of nature a+b+c+
 public class Main {
@@ -74,6 +86,10 @@ public class Main {
 }
 
 
+
+
+
+
 // Maximum Sum Non Adjacent Elements
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -100,6 +116,10 @@ public class Main {
         System.out.println(ans);
     }
 }
+
+
+
+
 
 
 // paint house
@@ -134,6 +154,13 @@ public class Main {
         System.out.println(Math.min(red, Math.min(blue, green)));
     }
 }
+
+
+
+
+
+
+
 
 // paint house -- multiple color
 public class Main {
@@ -190,6 +217,11 @@ public class Main {
 }
 
 
+
+
+
+
+
 // paint fence
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -211,4 +243,7 @@ public class Main {
         System.out.println(total);
     }
 }
+
+
+
 
