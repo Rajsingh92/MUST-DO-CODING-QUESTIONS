@@ -146,3 +146,9 @@ public class Solution{
 		System.out.println(count);
 	}
 }
+
+
+/**
+	Count Pairs whose sum is equal to X	GP				https://practice.geeksforgeeks.org/problems/count-pairs-whose-sum-is-equal-to-x/1	Count Pairs whose sum is equal to X
+
+ */

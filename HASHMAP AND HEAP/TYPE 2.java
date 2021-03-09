@@ -401,3 +401,9 @@ public class Main {
 
 
 
+/**
+| 438 | Find All Anagrams in a String |  Easy | Amazon, Facebook, Google |
+//  Count Total Anagram Substrings
+Anagram Substring Search Search Permutations
+Check Binary Representations Two Numbers Anagram
+ */

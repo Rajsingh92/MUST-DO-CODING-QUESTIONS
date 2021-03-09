@@ -36,3 +36,11 @@ class Solution {
     }
         
 }
+
+
+/**
+	Find n/k th node in Linked list	GP				https://practice.geeksforgeeks.org/problems/find-nk-th-node-in-linked-list/1
+	Find the Sum of Last N nodes of the Linked List	GP				https://practice.geeksforgeeks.org/problems/find-the-sum-of-last-n-nodes-of-the-linked-list/1	
+	Swap Kth nodes from ends	GP				https://practice.geeksforgeeks.org/problems/swap-kth-node-from-beginning-and-kth-node-from-end-in-a-singly-linked-list/1
+	Remove every k'th node	GP				https://practice.geeksforgeeks.org/problems/remove-every-kth-node/1	Remove every k'th node
+ */

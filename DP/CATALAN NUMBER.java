@@ -52,14 +52,24 @@ public class Main {
         return dp[dp.length - 1];
     }
 
-}
+    // Number of ways of triangulation
+    public static int ways(int n) {
+        if (n < 3) {
+            return 0;
+        }
+        int[] dp = new int[n - 1];
+        dp[0] = dp[1] = 1;
 
-// number of bsts
-public class Main {
+        for (int i = 2; i < dp.length; i++) {
+            for (int j = 0; j < i; j++) {
+                dp[i] += dp[j] * dp[i - j - 1];
+            }
+        }
+        return dp[dp.length - 1];
+    }
 
-    public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int n = Integer.parseInt(br.readLine());
+    // number of bsts
+    public static void NumberOfBsts(int n){
         long[] dp = new long[n + 1];
         dp[0] = 1;
 
@@ -74,11 +84,11 @@ public class Main {
 
 }
 
-/**
-No Changes same solution:
 
+
+
+/**
 counting valleys and mountanis
 count brackets
-Number of ways of triangulation
 maze paths above diagonal
  */

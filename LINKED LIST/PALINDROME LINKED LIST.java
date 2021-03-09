@@ -73,3 +73,8 @@ class Solution {
         return head;
     }
 }
+
+/**
+	Length of longest palindrome in linked list 	GP				https://practice.geeksforgeeks.org/problems/length-of-longest-palindrome-in-linked-list/1	Length of longest palindrome in linked list 
+
+ */

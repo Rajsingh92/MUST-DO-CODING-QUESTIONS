@@ -21,4 +21,6 @@ class Solution:
         return head
         
 
-
+'''
+	Move all zeros to the front of the linked list	GP				https://practice.geeksforgeeks.org/problems/move-all-zeros-to-the-front-of-the-linked-list/1
+'''

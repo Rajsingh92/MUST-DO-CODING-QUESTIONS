@@ -44,15 +44,172 @@ public class GenericTree{
 
 
 
-public class Solution{
-    public static Node immediateSmallerElement(Node root,int x){
+/**
+Maximum Depth of N-ary Tree
+Given a n-ary tree, find its maximum depth.
 
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by 
+the null value (See examples).
+
+
+Example 1:
+Input: root = [1,null,3,2,4,null,5,6]
+Output: 3
+ */
+
+class Solution {
+    public int maxDepth(Node root) {
+        if(root==null){
+            return 0;
+        }
+        int h = 0;
+
+        for (Node child: root.children) {
+            int ch = maxDepth(child);
+            h = Math.max(h, ch);
+        }
+        h += 1;
+
+        return h;
+}
+}
+
+/**
+N-ary Tree Preorder Traversal
+Given an n-ary tree, return the preorder traversal of its nodes' values.
+Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by 
+the null value (See examples).
+
+Follow up:
+Recursive solution is trivial, could you do it iteratively?
+
+Example 1:
+Input: root = [1,null,3,2,4,null,5,6]
+Output: [1,3,5,6,2,4]
+ * 
+ */
+
+class Solution {
+    public List<Integer> list = new ArrayList<>();
+    public List<Integer> preorder(Node root) {
+        if (root == null)
+            return list;
+        
+        list.add(root.val);
+        for(Node node: root.children)
+            preorder(node);
+                
+        return list;
     }
+}
 
-    public static Node immediateSmallerElementUtil(Node root,int x){
+class Solution {
+    public List<Integer> preorder(Node root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) return list;
+        
+        Stack<Node> stack = new Stack<>();
+        stack.add(root);
+        
+        while (!stack.empty()) {
+            root = stack.pop();
+            list.add(root.val);
+            for (int i = root.children.size() - 1; i >= 0; i--)
+                stack.add(root.children.get(i));
+        }
+        
+        return list;
+    }
+}
+
+/**
+N-ary Tree Postorder Traversal
+Given an n-ary tree, return the postorder traversal of its nodes' values.
+Nary-Tree input serialization is represented in their level order traversal, each group of children is separated by 
+the null value (See examples).
+
+Follow up:
+Recursive solution is trivial, could you do it iteratively?
+
+Example 1:
+Input: root = [1,null,3,2,4,null,5,6]
+Output: [5,6,3,2,4,1]
+ */
+
+class Solution {
+    List<Integer> res = new ArrayList<>();
+    public List<Integer> postorder(Node root) {
+        if(root==null){
+            return res;
+        }
+        
+        for(Node child : root.children){
+            postorder(child);
+        }
+        res.add(root.val);
+        
+        return res;
         
     }
 }
+
+class Solution {
+
+    public List<Integer> postorder(Node root) {
+        List<Integer> list = new ArrayList<>();
+        if (root == null) return list;
+        
+        Stack<Node> stack = new Stack<>();
+        stack.add(root);
+        
+        while (!stack.empty()) {
+            root = stack.pop();
+            list.add(root.val);
+            for(Node child : root.children){
+                stack.add(child);
+            }
+        }
+        Collections.reverse(list);
+        
+        return list;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**
@@ -62,6 +219,7 @@ N-ary Tree Postorder Traversal
 //  | 559 | Maximum Depth of N-ary Tree |  Easy | Amazon, Google |
 //  Diameter N Ary Tree
 //  Check Mirror N Ary Tree
+N-ary Tree Level Order Traversal	Leet				https://leetcode.com/problems/n-ary-tree-level-order-traversal
 
 
 

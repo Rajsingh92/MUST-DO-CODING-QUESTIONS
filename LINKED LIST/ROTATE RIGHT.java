@@ -36,3 +36,7 @@ class Solution {
         return dummy.next;
     }
 }
+
+/**
+	Rotate doubly Linked List by P nodes	GP				https://practice.geeksforgeeks.org/problems/rotate-doubly-linked-list-by-p-nodes/1	
+ */

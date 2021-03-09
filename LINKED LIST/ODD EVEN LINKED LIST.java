@@ -86,3 +86,8 @@ public class Main{
 
     }
 }
+
+
+/**
+	Arrange Consonants and Vowels	GP				https://practice.geeksforgeeks.org/problems/arrange-consonants-and-vowels/1
+ */

@@ -1,3 +1,56 @@
+/**
+Climbing Stairs
+
+You are climbing a staircase. It takes n steps to reach the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+ 
+
+Example 1:
+
+Input: n = 2
+Output: 2
+Explanation: There are two ways to climb to the top.
+1. 1 step + 1 step
+2. 2 steps
+ */
+
+class Solution {
+    public int climbStairs(int n) {
+        int[] dp = new int[n+1];
+        // return return climbStairs_rec(n,dp);
+
+
+        dp[0] = 1;
+        dp[1] = 1;
+        
+        for(int i=2;i<n+1;i++){
+            dp[i] = dp[i-1]+dp[i-2];
+        }
+        
+        
+        return dp[n];
+        
+    }
+
+    public int climbStairs_rec(int n,int[] dp) {
+        if(n<=1){
+            return dp[n] = 1;
+        }
+
+        if(dp[n]!=0) return dp[n];
+        
+        int ans = climbStairs_rec(n-1,dp) + climbStairs_rec(n-2,dp);
+        
+        return dp[n] = ans;
+    }
+
+}
+
+
+
+
 
 // you are allowed to climb 1, 2 or 3 stairs.
 public class Main {
@@ -53,8 +106,12 @@ public class Main {
 
 }
 
-// variable jumps
 
+
+
+
+
+// variable jumps
 public class Main {
 
     public static int countPaths(int[] arr, int n) {
@@ -74,8 +131,9 @@ public class Main {
 
 
 
-// min jumps
 
+
+// min jumps
 public class Main {
 
     public static int countPaths(int[] arr, int n) {
@@ -99,6 +157,58 @@ public class Main {
         return dp[0];
     }
 
+    public static class Pair {
+        int i;
+        int jmps;
+        String psf;
+
+        Pair(int i, int jmps,String psf) {
+            this.i = i;
+            this.jmps = jmps;
+            this.psf = psf;
+        }
+    }
+
+    //  print all paths with min jumps  -- (need to check solution)
+    public static void solve(int[] arr){
+        Integer[] dp = new Integer[arr.length]; 
+        dp[arr.length-1] = 0;
+
+        for(int i=arr.length-2;i>=0;i--){
+            int min = Integer.MAX_VALUE;
+
+            for(int j=1;j<=arr[i] && i+j<dp.length;j++){
+                if(dp[i+j] != null && dp[i+j]<min){
+                    min = dp[i+j];
+                }
+            }
+
+            if(min!=Integer.MAX_VALUE){
+                dp[i] = min+1;
+            }
+        }
+
+        System.out.println(dp[0]);
+
+        ArrayDeque<Pair> queue = new ArrayDeque<>();
+        queue.add(new Pair(0,dp[0],""));
+
+        while(queue.size()>0){
+            Pair rem = queue.removeFirst();
+
+            if(rem.jmps == 0){
+                System.out.println(rem.psf+" .");
+            }
+
+            for(int j=1;j<=arr[rem.i] && rem.i+j<dp.length;j++){
+                int ci = rem.i+j;
+                if(dp[ci]!=null && dp[ci] == rem.jmps-1){
+                    queue.add(new Pair(ci,rem.jmps-1,rem.psf+" - > "+ci));
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -107,231 +217,10 @@ public class Main {
 
 
 
-
-
-
-
-
-
-
-
-
-//               MINIMUM NUMBER OF JUMPS
-//               MINIMUM NUMBER OF JUMPS
-//               MINIMUM NUMBER OF JUMPS
 
 // | 746 | Min Cost Climbing Stairs |  Easy | Amazon |
-/**
-
-find minimum jumps
-minimum steps to minimize n as per given condition
-minimum operations
-egg drop
-optimal starategy for game
-encoding
-minimum number of square
-
-
-
-
-
- // Leetcode 70.
-
- public static int climbStairs(int n, int[] dp) {
-    if (n <= 1)
-        return dp[n] = 1;
-    if (dp[n] != 0)
-        return dp[n];
-
-    return dp[n] = climbStairs(n - 1, dp) + climbStairs(n - 2, dp);
-}
-
-public static int climbStairs(int n) {
-
-    int[] dp = new int[n + 1];
-    return climbStairs(n, dp);
-}
-
-public static int minCostClimbingStairs(int[] cost, int n, int[] dp) {
-    if (n <= 1)
-        return dp[n] = cost[n];
-    if (dp[n] != 0)
-        return dp[n];
-
-    int minCost = Math.min(minCostClimbingStairs(cost, n - 1, dp), minCostClimbingStairs(cost, n - 2, dp));
-
-    return dp[n] = minCost + (n == cost.length ? 0 : cost[n]);
-}
-
-public static int minCostClimbingStairs_Opti(int[] cost) {
-    int a = cost[0];
-    int b = cost[1];
-
-    for (int i = 2; i < cost.length; i++) {
-        int ans = Math.min(a, b) + cost[i];
-        a = b;
-        b = ans;
-    }
-    return Math.min(a, b);
-}
-
-public static int minCostClimbingStairs(int[] cost) {
-    int[] dp = new int[cost.length + 1];
-
-    return minCostClimbingStairs(cost, cost.length, dp);
-}
- */
-
-/*
-public int minCostClimbingStairs(int[] cost,int n,int[] dp){
-    if(n<=1){
-      return dp[n] = cost[n]; 
-    }
-
-    if(dp[n]!=0) return dp[n];
-
-    int a = minCostClimbingStairs(cost, n-1,dp);
-    int b = minCostClimbingStairs(cost, n-2,dp);
-
-    return Math.min(a,b) + (n != cost.length ? cost[n] : 0);
-}
-
-public int minCostClimbingStairs(int[] cost,int n,int[] dp){
-  
-  int N = n;
-  for(n = 0; n <= N ; n++){
-      if(n<=1){
-          dp[n] = cost[n];
-          continue;
-        }
-
-        int a = dp[n-1]; //minCostClimbingStairs(cost, n-1,dp);
-        int b = dp[n-2]; //minCostClimbingStairs(cost, n-2,dp);
-
-        Math.min(a,b) + (n != cost.length ? cost[n] : 0);
-  
-  }
-
-  return dp[N];
-}
-
-
-
-
-
-public  int minCostClimbingStairs(int[] cost) {
-  int n = cost.length;
-  int[] dp = new int[cost.length + 1];
-  int ans = minCostClimbingStairs(cost,n,dp);
-  // int ans = minCostClimbingStairs_DP(cost,n,dp);
-  return ans;
-}
-
-//leetcode 746
-
-    public int minCostClimbingStairs(int[] cost, int n, int[] dp) {
-        if(n<=1) return dp[n]=cost[n];
-        if(dp[n]!=0) return dp[n];
-        
-        int ans = Math.min(minCostClimbingStairs(cost,n-1,dp),minCostClimbingStairs(cost,n-2,dp));
-
-        return dp[n] = ans + (n != cost.length ? cost[n] : 0);
-    }
-
-    public int minCostClimbingStairs_DP(int[] cost, int n, int[] dp) {
-        for(n=0;n<=cost.length;n++){
-            if(n<=1){
-                dp[n]=cost[n];
-                continue;
-            }
-
-            int ans = Math.min(dp[n-1],dp[n-2]);
-            dp[n] = ans + (n != cost.length ? cost[n] : 0);
-        }
-        
-        return dp[cost.length];
-    }
-
-    public  int minCostClimbingStairs(int[] cost) {
-        int[] dp = new int[cost.length + 1];
-        int ans = minCostClimbingStairs(cost,dp.length,dp);
-        // ans = minCostClimbingStairs_DP(cost,dp.length,dp);
-        return ans;
-    }
-
-       //Leetcode 746.==============================================================
-    public int minCostClimbingStairs(int[] cost,int n,int[] dp){
-        if(n<=1){
-            return dp[n] = cost[n];
-        }
-
-        if(dp[n]!=0) return dp[n];
-
-        int ans = Math.min(minCostClimbingStairs(cost,n-1,dp),minCostClimbingStairs(cost,n-2,dp));
-
-        return dp[n] = ans + (n!=cost.length?cost[n]:0);
-    }
-
-    public int minCostClimbingStairs_DP(int[] cost,int N, int[] dp){
-        for(int n = 0 ;n<=N;n++){
-            if(n<=1){
-                dp[n] = cost[n];
-                continue;
-            }
+class Solution{
     
-            int ans = Math.min(dp[n-1],dp[n-2]);
-    
-            dp[n] = ans + (n != cost.length ? cost[n] : 0);
-        }
-        return dp[N];
-    }
-
-    public  int minCostClimbingStairs(int[] cost) {
-        int n = cost.length;
-        int[] dp = new int[cost.length + 1];
-        int ans = minCostClimbingStairs(cost,n,dp);
-        // int ans = minCostClimbingStairs_DP(cost,n,dp);
-        return ans;
-    }
-
-    //leetcode 70.
-	public static int climbStairs(int n) {
-		if (n <= 1) return 1;
-
-		int count = climbStairs(n - 1) + climbStairs(n - 2);
-		return count;
-	}
-
-	public static int climbStairs_DP(int n) {
-		int[] dp = new int[n + 1];
-
-		for (int i = 0; i <= n; i++) {
-			if (i <= 1) {
-				dp[i] = 1;
-				continue;
-			}
-
-			dp[i] = dp[i - 1] + dp[i - 2];
-		}
-
-		display(dp);
-		return dp[n];
-	}
-
-	public static int climbStairs_fast(int n) {
-		int a = 1;
-		int b = 1;
-		int ans = 1;
-		for (int i = 2; i <= n; i++) {
-			ans = a + b;
-			a = b;
-			b = ans;
-		}
-
-		return ans;
-	}
-
-	//leetcode 746
 	public static int minCostClimbingStairs_(int i, int[] cost, int[] dp) {
 		if (i <= 1) return cost[i];
 
@@ -395,37 +284,20 @@ public  int minCostClimbingStairs(int[] cost) {
 		// return dp[dp.length-1];
 
 	}
+}
 
-    // Leetcode 70 .=============================================================
-    public int climbStairs(int n,int[] dp) {
-        if(n<=1){
-            return dp[n] = 1;
-        }
+	
 
-        if(dp[n]!=0) return dp[n];
-        
-        int ans = climbStairs(n-1,dp) + climbStairs(n-2,dp);
-        
-        return dp[n] = ans;
-    }
 
-    public int climbStairs_DP(int N,int[] dp) {
-        for(int n = 0;n<=N;n++){
-            if(n<=1){
-                dp[n] = 1;
-                continue;
-            }
-    
-            int ans = dp[n-1] + dp[n-2];//climbStairs(n-1,dp) + climbStairs(n-2,dp);
-            
-            dp[n] = ans;
-        }
-        return dp[N];
-    }
 
-    public  int climbStairs(int n) {
-        int[] dp = new int[n + 1];
-        // return climbStairs(n, dp);
-        return climbStairs_DP(n,dp);
-    }
-*/
+
+
+/**
+find minimum jumps
+minimum steps to minimize n as per given condition
+minimum operations
+egg drop
+optimal starategy for game
+encoding
+minimum number of square
+ */

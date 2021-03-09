@@ -27,6 +27,7 @@ public class Main {
 }
 
 
+// Count number of binary strings without consecutive 1’s -- count is actually (n+2)’th Fibonacci number
 
 
 
@@ -246,4 +247,9 @@ public class Main {
 
 
 
+/**
+Paint Fence	Leet				https://leetcode.com/problems/paint-fence	Paint Fence
+Paint House	Leet				https://leetcode.com/problems/paint-house	Paint House
+Paint House II	Leet				https://leetcode.com/problems/paint-house-ii	Paint House II
 
+ */

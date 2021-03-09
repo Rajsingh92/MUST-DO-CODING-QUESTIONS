@@ -484,6 +484,7 @@ class Solution {
 | 493 | Reverse Pairs |  Hard | Apple, Facebook, Google, Microsoft |
 | 153 | Find Minimum in Rotated Sorted Array |  Medium | Google |
 | 154 | Find Minimum in Rotated Sorted Array II |  Hard | Facebook, Google |
+| 658 | Find K Closest Elements |  Medium | Facebook |
 | 4 | Median of Two Sorted Arrays |  Hard | Alibaba, Apple |
 | 278 | First Bad Version |  Easy | Facebook, Google |
 Book Allocation Problem

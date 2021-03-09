@@ -1,4 +1,132 @@
 /**
+ public static void PathSeries() {
+		int er = 3;
+		int ec = 3;
+		int sr = 0;
+		int sc = 0;
+
+		int ans = 0;
+		// int[][] dp = new int[er + 1][ec + 1];
+
+		// ans = mazePathHV_rec(sr, sc, er, ec, dp);
+
+		// ans = mazePathMulti_rec(sr, sc, er, ec, dp);
+		// ans = mazePathMulti_DP(sr, sc, er, ec, dp);
+
+		// int si=0;
+		// int ei=10;
+		// int[] dp=new int[ei+1];
+		// ans=boradPath(si,ei,dp);
+		// ans=boradPath_DP(si,ei,dp);
+		// ans=boradPath_opti(si,ei,dp);
+
+		// climbStair_DP(8);
+
+		// goldMine(arr);
+
+		// int n = 6;
+		// int[] dp = new int[n + 1];
+		// ans = pairAndSingle_01(n, dp);
+
+		int n = 11,
+		k = 4;
+		int[][] dp = new int[n + 1][k + 1];
+		// ans = divideItemsInKGroup(n, k, dp);
+		ans = divideItemsInKGroup_DP(n, k, dp);
+
+		// display(dp);
+		display2D(dp);
+		System.out.println(ans);
+
+	}
+
+
+
+    
+public static int mazePath_Multi(int sr,int sc,int er,int ec,int[][] dp,int[][] dir){
+    if(sr==er && sc == ec){
+        return dp[sr][sc] = 1;
+    }
+
+    if(dp[sr][sc]!=0) return dp[sr][sc];
+    
+    int count = 0;
+    for(int d = 0; d<dir.length;d++){   
+       for(int jump = 1;jump <= Math.max(er,ec) ; jump++){
+           int r = sr + jump*dir[d][0];
+           int c = sc + jump*dir[d][1];
+
+           if(r>=0 && c>=0 && r <= er && c<=ec)
+              count+=mazePath_Multi(r,c,er,ec,dp,dir);
+           else break;
+       }
+    }
+
+    return dp[sr][sc] = count;
+}
+
+public static int mazePath_MultiDP(int sr,int sc,int er,int ec,int[][] dp,int[][] dir){
+           
+    for(sr = er ; sr>=0 ; sr--){
+        for(sc = ec; sc>=0 ; sc--){
+            if(sr==er && sc == ec){
+               dp[sr][sc] = 1;
+               continue;
+            }
+    
+            
+            int count = 0;
+            for(int d = 0; d<dir.length;d++){   
+               for(int jump = 1;jump <= Math.max(er,ec) ; jump++){
+                   int r = sr + jump*dir[d][0];
+                   int c = sc + jump*dir[d][1];
+    
+                   if(r>=0 && c>=0 && r <= er && c<=ec)
+                      count+=dp[r][c];
+                   else break;
+               }
+            }
+    
+            dp[sr][sc] = count;
+        }
+    }
+
+    return dp[0][0];
+}
+
+public static int boardPath(int sp,int ep,int[] dp){
+    if(sp==ep){
+        return dp[sp] = 1;
+    }
+
+    int count = 0;
+    for(int dice = 1;dice <= 6 && sp+dice <=ep;dice++){
+        count+= boardPath(sp+dice,ep,dp);
+    }
+
+    return dp[sp] = count;
+}
+
+public static int boardPath_DP(int sp,int ep,int[] dp){
+
+    for(sp=ep; sp >= 0 ; sp--){
+        if(sp==ep){
+            dp[sp] = 1;
+            continue;
+        }
+
+        int count = 0;
+        for(int dice = 1;dice <= 6 && sp+dice <= ep;dice++){
+            count+= dp[sp + dice];//boardPath(sp+dice,ep,dp);
+        }
+
+        dp[sp] = count;            
+    }
+
+    return dp[0];
+}
+
+
 
     //Path Set.==============================================================
     public static int mazePath_HVD(int sr,int sc,int er,int ec,int[][] dp,int[][] dir){

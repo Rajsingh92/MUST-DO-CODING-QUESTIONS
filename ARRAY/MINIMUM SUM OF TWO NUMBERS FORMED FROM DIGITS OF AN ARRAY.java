@@ -1,3 +1,6 @@
+
+//  Min sum formed by digits				
+
 class Solution {
     void solve(int[] arr, int n) {
 

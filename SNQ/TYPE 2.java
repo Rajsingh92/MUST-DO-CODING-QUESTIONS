@@ -1,6 +1,6 @@
-//              PARENTHESES BASED PROBLEMS
-//              PARENTHESES BASED PROBLEMS
-//              PARENTHESES BASED PROBLEMS
+//              BRACKETS BASED PROBLEMS
+//              BRACKETS BASED PROBLEMS
+//              BRACKETS BASED PROBLEMS
 
 
 
@@ -227,3 +227,14 @@ public class Solution{
 }
 
 
+
+
+/**
+Minimum number of bracket reversals needed to make an expression balanced.
+Minimum number of swaps for bracket balancing.
+Find duplicate parenthesis in an expressionMedium
+Duplicate brackets
+Score of Parentheses
+minRemoveToMakeValid
+Find Expression Duplicate Parenthesis Not
+ */

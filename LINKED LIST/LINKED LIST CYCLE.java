@@ -83,3 +83,7 @@ public class Solution {
         return slow;
     }
 }
+
+/**
+	Remove loop in Linked List	GP				https://practice.geeksforgeeks.org/problems/remove-loop-in-linked-list/1	Remove loop in Linked List
+ */

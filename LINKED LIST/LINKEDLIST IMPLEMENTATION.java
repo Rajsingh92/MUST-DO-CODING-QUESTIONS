@@ -453,3 +453,7 @@ public class Main{
 
 
 
+/**
+	XOR Linked List	GP				https://practice.geeksforgeeks.org/problems/xor-linked-list/1	XOR Linked List
+
+ */

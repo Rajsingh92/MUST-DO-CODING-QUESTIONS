@@ -20,4 +20,9 @@
 Print all permutations of a string 
 Print all the permutations of the given string
 Print all Subsequences of a string.
+Permutations	Leet				https://leetcode.com/problems/permutations	Permutations
+Permutations II	Leet				https://leetcode.com/problems/permutations-ii	Permutations II
+Print all permutations of a given string	GTT				https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/	Print all permutations of a given string
+Permutation with Spaces	GP				https://practice.geeksforgeeks.org/problems/permutation-with-spaces/0	Permutation with Spaces
+Permutations of a given string	GP				https://practice.geeksforgeeks.org/problems/permutations-of-a-given-string/0	Permutations of a given string
  */

@@ -29,3 +29,10 @@ public class Solution{
         slow.next = head;
     }
 }
+
+
+/**
+| 86 | Partition List |  Medium | Amazon, Microsoft |
+| 725 | Split Linked List in Parts |  Medium | Google |
+modify linkedlist https://www.geeksforgeeks.org/modify-contents-linked-list/
+ */

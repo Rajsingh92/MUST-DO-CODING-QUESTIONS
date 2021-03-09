@@ -16,6 +16,12 @@ def reverse2(q):  # stack
     while stack:
         q.append(stack.pop())
 
+
+
+
+
+
+
 #----------------------------------------------------------------------------------------------------------------------------
 def sortedInsert(stack,top):
     if not stack or top>stack[-1]:
@@ -34,6 +40,12 @@ def sortStack(stack):
     top = stack.pop()
     sortStack(stack)
     sortedInsert(stack,top)
+
+
+
+
+
+
 
 #----------------------------------------------------------------------------------------------------------------------------
 def insertAtBottom(stack,item):

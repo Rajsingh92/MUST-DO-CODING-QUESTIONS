@@ -119,3 +119,15 @@ class Solution {
     }
 }
 
+/**
+// bubble sort
+// insert into sorted cyclic linkedlist
+
+    Quick Sort on Linked List	GP				https://practice.geeksforgeeks.org/problems/quick-sort-on-linked-list/1	Quick Sort on Linked List
+	QuickSort on Doubly Linked List	GP				https://practice.geeksforgeeks.org/problems/quicksort-on-doubly-linked-list/1	QuickSort on Doubly Linked List
+	Merge Sort for Linked List	GP				https://practice.geeksforgeeks.org/problems/sort-a-linked-list/1	Merge Sort for Linked List
+	Merge Sort on Doubly Linked List	GP				https://practice.geeksforgeeks.org/problems/merge-sort-on-doubly-linked-list/1	Merge Sort on Doubly Linked List
+	Insertion Sort List	Leet				https://leetcode.com/problems/insertion-sort-list	Insertion Sort List
+	Linked List that is Sorted Alternatingly	GP				https://practice.geeksforgeeks.org/problems/linked-list-that-is-sorted-alternatingly/1	Linked List that is Sorted Alternatingly
+	
+ */
