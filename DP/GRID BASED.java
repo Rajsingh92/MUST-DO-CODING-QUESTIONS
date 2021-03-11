@@ -121,3 +121,15 @@ public class Main {
     }
 
 }
+
+
+
+/**
+Cherry Pickup	Leet				https://leetcode.com/problems/cherry-pickup	Cherry Pickup
+Minimum Path Sum |  Medium | Adobe, Amazon, Google, Microsoft |
+Dungeon Game |  Hard | Amazon |
+Longest Path In Matrix	GTT				https://www.geeksforgeeks.org/find-the-longest-path-in-a-matrix-with-given-constraints/	Longest Path In Matrix
+Minimum Sum Path 3 D Array
+Collect maximum points in a matrix by satisfying given constraints
+Ways to reach the bottom-right corner of a matrix with exactly k turns allowed
+ */

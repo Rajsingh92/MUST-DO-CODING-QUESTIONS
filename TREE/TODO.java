@@ -73,6 +73,33 @@ Sum of Nodes on the Longest path from root to leaf node
 Tree Isomorphism Problem
 Width Binary Tree Set 1
 Word Boggle
+Add One Row to Tree	Leet
+Binary Search Tree to Greater Sum Tree	Leet
+Binary Tree Paths	Leet
+Binary Tree Pruning	Leet
+Binary Tree Upside Down	Leet
+Complete Binary Tree Inserter	Leet
+Cousins in Binary Tree	Leet
+Encode N-ary Tree to Binary Tree	Leet
+Find Bottom Left Tree Value	Leet
+Find Largest Value in Each Tree Row	Leet
+Find Mode in Binary Search Tree	Leet
+Flip Binary Tree To Match Preorder Traversal	Leet
+Largest BST Subtree	Leet
+Leaf-Similar Trees	Leet
+Longest Univalue Path	Leet
+Maximum Binary Tree II	Leet
+Maximum Difference Between Node and Ancestor	Leet
+Minimum Absolute Difference in BST	Leet
+Minimum Depth of Binary Tree	Leet
+Minimum Distance Between BST Nodes	Leet
+Minimum Height Trees	Leet
+Path Sum	Leet
+Path Sum IV	Leet
+Recover a Tree From Preorder Traversal	Leet
+Smallest String Starting From Leaf	Leet
+Univalued Binary Tree	Leet
+Verify Preorder Sequence in Binary Search Tree	Leet
 | 95 | Unique Binary Search Trees II |  Medium | Adobe, Amazon, Google |
 | 96 | Unique Binary Search Trees |  Medium | Amazon, Google |
 | 98 | Validate Binary Search Tree |  Medium | Adobe, Amazon, Apple, Facebook, Microsoft |
@@ -93,7 +120,6 @@ Word Boggle
 | 298 | Binary Tree Longest Consecutive Sequence |  Medium | Facebook |
 | 333 | Largest BST Subtree |  Medium | Amazon, Google, Microsoft |
 | 336 | Palindrome Pairs 30.7% |  Hard | Facebook |
-| 337 | House Robber III |  Medium | Amazon, Facebook, Google |
 | 366 | Find Leaves of Binary Tree |  Medium | Amazon, Google |
 | 404 | Sum of Left Leaves |  Easy | Amazon |
 | 425 | Word Squares |  Hard | Google |

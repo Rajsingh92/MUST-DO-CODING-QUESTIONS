@@ -27,7 +27,8 @@ public class Main {
 }
 
 
-// Count number of binary strings without consecutive 1’s -- count is actually (n+2)’th Fibonacci number
+// Count number of binary strings without consecutive 1’s 
+// Count is actually (n+2)’th Fibonacci number
 
 
 
@@ -251,5 +252,8 @@ public class Main {
 Paint Fence	Leet				https://leetcode.com/problems/paint-fence	Paint Fence
 Paint House	Leet				https://leetcode.com/problems/paint-house	Paint House
 Paint House II	Leet				https://leetcode.com/problems/paint-house-ii	Paint House II
-
+Number of subsequences in a string divisible by n
+Minimum Sum Partition Problem
+Find all N-digit binary strings without any consecutive 1’s
+Maximum Independent Set Problem
  */

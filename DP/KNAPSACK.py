@@ -136,4 +136,17 @@ def unboundedKnapsack_DP2(val,wt,W,n):
 
 
 
-
+'''
+2 Keys Keyboard	Leet				https://leetcode.com/problems/2-keys-keyboard	2 Keys Keyboard
+4 Keys Keyboard	Leet				https://leetcode.com/problems/4-keys-keyboard	4 Keys Keyboard
+Target Sum	Leet				https://leetcode.com/problems/target-sum	Target Sum
+Tallest Billboard	Leet				https://leetcode.com/problems/tallest-billboard	Tallest Billboard
+Shopping Offers	Leet				https://leetcode.com/problems/shopping-offers	Shopping Offers
+Profitable Schemes	Leet				https://leetcode.com/problems/profitable-schemes	Profitable Schemes
+Ones and Zeroes	Leet				https://leetcode.com/problems/ones-and-zeroes	Ones and Zeroes
+Minimum Swaps To Make Sequences Increasing	Leet				https://leetcode.com/problems/minimum-swaps-to-make-sequences-increasing	Minimum Swaps To Make Sequences Increasing
+Linear Equation Of N Variables Medium
+Perfect Sum Problem Print Subsets Given Sum
+Partition Into Subsets 
+Count Number Of Ways To Partition A Set Into K Subsets
+'''

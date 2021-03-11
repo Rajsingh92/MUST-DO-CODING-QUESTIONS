@@ -427,6 +427,18 @@ class Solution {
 
 
 /**
- Longest Common Substring 
- Shortest Uncommon Subsequence Medium
- */
+Longest Common Substring 
+Shortest Uncommon Subsequence 
+Count Ways Increase Lcs Length Two Strings One
+Maximum Length of Repeated Subarray	Leet				https://leetcode.com/problems/maximum-length-of-repeated-subarray	
+Wildcard Matching |  Hard | Adobe, Amazon, Facebook, Google, Microsoft |
+Edit Distance |  Hard | Facebook, Adobe, Amazon, Apple, Google, Microsoft |
+Interleaving String |  Hard | Amazon, Apple, Microsoft |
+Regular Expression Matching |  Hard | Alibaba, Amazon, Google |
+Longest Repeating Subsequence 
+Print Longest Common Sub Sequences Lexicographical Order
+Find Longest Recurring Subsequence in String
+Find Number Times String Occurs Given String
+Number of Unique Paths	GP				https://practice.geeksforgeeks.org/problems/number-of-unique-paths/0
+Shortest Uncommon Subsequence	GP				https://practice.geeksforgeeks.org/problems/shortest-uncommon-subsequence/0	
+*/

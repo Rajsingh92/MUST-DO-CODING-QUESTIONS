@@ -8,10 +8,9 @@ Connect N Ropes with Minimum Cost
 Convert BST to Min Heap
 count of substring containing k ones
 Design A Data Structure That Supports Insert, Delete, Search And GetRandom In Constant Time
-Double Pair Array Medium
+Array of Doubled Pairs	Leet
 equivalent subarrays
 find all pairs on integer array whose sum is equal to given number
-Find Subarray With Given Sum
 Find Surpasser Count Of Each Element In Array
 Find the first repeated word in string.
 Function To Find Number Of Customers Who Could Not Get A Computer
@@ -31,12 +30,55 @@ Rabbits In The Forest Medium
 Rearrange A String So That All Same Characters Become At Least D Distance Away
 Rearrange characters in a string such that no two adjacent are same
 Recurring Sequence In A Fraction Hard
-Smallest range in “K” Lists
+Smallest Range	Leet
 smallest subarrray with all occurences of most frequent
 Smallest window that contains all characters of string itself
 subarray range with given target
 Subarrays With Distinct Elements
 Tournament Tree And Binary Heap
+Contains Duplicate	Leet
+Contains Duplicate II	Leet
+Contiguous Array	Leet
+Design Twitter	Leet
+Encode and Decode TinyURL	Leet
+Find All Anagrams in a String	Leet
+Find Common Characters	Leet
+Find K Pairs with Smallest Sums	Leet
+Find K-th Smallest Pair Distance	Leet
+Find the Difference	Leet
+Grid Illumination	Leet
+Happy Number	Leet
+Implement Magic Dictionary	Leet
+IPO	Leet
+Keyboard Row	Leet
+K-th Smallest Prime Fraction	Leet
+Last Stone Weight	Leet
+Line Reflection	Leet
+Longest Duplicate Substring	Leet
+Longest Harmonious Subsequence	Leet
+Longest String Chain	Leet
+Longest Substring Without Repeating Characters	Leet
+Max Points on a Line	Leet
+Maximum Distance in Arrays	Leet
+Maximum Size Subarray Sum Equals k	Leet
+N-Repeated Element in Size 2N Array	Leet
+Number of Boomerangs	Leet
+Palindrome Pairs	Leet
+Reachable Nodes In Subdivided Graph	Leet
+Rearrange String k Distance Apart	Leet
+Repeated DNA Sequences	Leet
+Replace Words	Leet
+Set Mismatch	Leet
+Shortest Completing Word	Leet
+Shortest Word Distance II	Leet
+Single Number	Leet
+Sort Characters By Frequency	Leet
+Strobogrammatic Number	Leet
+Subarrays with K Different Integers	Leet
+Time Based Key-Value Store	Leet
+Two Sum	Leet
+Uncommon Words from Two Sentences	Leet
+Vowel Spellchecker	Leet
 | 767 | Reorganize String |  Medium | Amazon, Facebook, Google |
 | 381 | Insert Delete GetRandom O(1) - Duplicates allowed |  Hard | Affirm, Amazon |
 | 380 | Insert Delete GetRandom O(1) |  Medium | Microsoft |

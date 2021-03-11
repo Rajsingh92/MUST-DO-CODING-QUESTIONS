@@ -155,19 +155,22 @@ public class Main {
 
 /**
 Count All Palindromic Subsequence in a given String.
+Distinct palindromic substrings	GP				https://practice.geeksforgeeks.org/problems/distinct-palindromic-substrings/0	Distinct palindromic substrings
 Count Different Palindromic Subsequences	Leet				https://leetcode.com/problems/count-different-palindromic-subsequences	Count Different Palindromic Subsequences
 Count Of Distinct Palindromic Subsequences Medium
 Count Palindromic Subsequences	GP				https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1	Count Palindromic Subsequences
 Longest Palindromic Substring	Leet				https://leetcode.com/problems/longest-palindromic-substring	Longest Palindromic Substring
 Palindromic Substrings	Leet				https://leetcode.com/problems/palindromic-substrings	Palindromic Substrings
 min partition
+Palindrome Partitioning II |  Hard | Google |
 count palindromic subsequence
 count and longest palindromic substring
- //  | 5 | Longest Palindromic Substring |  Medium | Alibaba |
-//  | 730 | Count Different Palindromic Subsequences |  Hard | Google |
-// Leetcode 516
-// https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1
-// Count Palindromic Substrings 
-// | 647 | Palindromic Substrings |  Medium | Adobe, Amazon, Facebook, Google, Microsoft |
-// Leetcode 005,647.
+| 5 | Longest Palindromic Substring |  Medium | Alibaba |
+| 730 | Count Different Palindromic Subsequences |  Hard | Google |
+Leetcode 516
+https://practice.geeksforgeeks.org/problems/count-palindromic-subsequences/1
+Count Palindromic Substrings 
+| 647 | Palindromic Substrings |  Medium | Adobe, Amazon, Facebook, Google, Microsoft |
+Leetcode 005,647.
+Palindromic Strings	GP				https://practice.geeksforgeeks.org/problems/palindromic-strings/0	
  */

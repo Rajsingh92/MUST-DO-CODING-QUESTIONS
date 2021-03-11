@@ -288,16 +288,36 @@ class Solution{
 
 	
 
+// Count number of ways to cover a distance
+public class Solution {
+    static int countWays(int n) {
+        if (n == 0)
+            return 1;
+        if (n <= 2)
+            return n;
 
+        int f0 = 1, f1 = 1, f2 = 2;
+        int ans = 0;
 
+        for (int i = 3; i <= n; i++) {
+            ans = f0 + f1 + f2;
+            f0 = f1;
+            f1 = f2;
+            f2 = ans;
+        }
+
+        return ans;
+    }
+}
 
 
 /**
 find minimum jumps
 minimum steps to minimize n as per given condition
 minimum operations
-egg drop
-optimal starategy for game
+Egg Dropping Puzzle	GP				https://practice.geeksforgeeks.org/problems/egg-dropping-puzzle/0	Egg Dropping Puzzle
+Optimal Strategy For A Game	GP				https://practice.geeksforgeeks.org/problems/optimal-strategy-for-a-game/0	Optimal Strategy For A Game
 encoding
 minimum number of square
+Dice Throw Problem	GTT				https://www.geeksforgeeks.org/dice-throw-problem/	Dice Throw Problem
  */

@@ -372,9 +372,15 @@ Maximum Sum Bitonic Sub Sequence
 maximum non overlapping bridges
 Russian Doll Envelopes |  Hard | Google |
 activity selection
-maximum sum alternating sequence
+Alternating Subsequence With Maximum Sum Medium
 highway billboard game
 word wrap problem
 Longest Common Increasing Subsequence Lcs Lis
+Find the Shortest Superstring |  Hard | Google |
+Longest alternating subsequence	GP				https://practice.geeksforgeeks.org/problems/longest-alternating-subsequence/0	
+Box Stacking				https://practice.geeksforgeeks.org/problems/box-stacking/1	Box Stacking
+Longest Arithmetic Sequence	Leet				https://leetcode.com/problems/longest-arithmetic-sequence	
+Minimum four sum subsequence 	GP				https://practice.geeksforgeeks.org/problems/minimum-four-sum-subsequence/1	
 Number of Longest Increasing Subsequence	Leet				https://leetcode.com/problems/number-of-longest-increasing-subsequence	
- */
+Delete Columns to Make Sorted III	Leet				https://leetcode.com/problems/delete-columns-to-make-sorted-iii	
+*/

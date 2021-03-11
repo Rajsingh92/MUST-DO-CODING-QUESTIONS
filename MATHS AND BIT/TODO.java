@@ -11,7 +11,6 @@ Divide two integers without using multiplication, division and mod operator
 Euclidean algorithms (Basic and Extended)
 Flip Bits To Convert A To B Easy
 Gray Code Easy
-Is A Power Of 2 Easy
 Josephus Special Easy
 Kernighans Algorithm Easy
 Min Xor Pairs Easy
@@ -27,7 +26,6 @@ Print Binary And Reverse Bits Easy
 Print Value Of Rsb Mask Easy
 Reduce N To 1 Easy
 Sieve of Eratosthenes in 0(n) time complexity
-Solve 7n By 8 Easy
 Sort Array According Count Set Bits
 Sudoku Using Bit Manipulation Medium
 Sum Of Bit Differences Of All Pairs Easy
@@ -35,6 +33,7 @@ Swap All Odd And Even Bits Easy
 Triplets - 1 Easy
 Utf - 8 Encoding Easy
 Xor Of Sum Of All Pairs Easy
+Remove repeated digits in a given number	GP				https://practice.geeksforgeeks.org/problems/remove-repeated-digits-in-a-given-number/0	
 | 7 | Reverse Integer |  Easy | Adobe, Alibaba, Amazon, Facebook, Google, Microsoft |
 | 8 | String to Integer (atoi) |  Medium | Apple |
 | 12 | Integer to Roman |  Medium | Adobe, Amazon, Apple, Google, Microsoft |
@@ -61,7 +60,6 @@ Xor Of Sum Of All Pairs Easy
 | 202 | Happy Number |  Easy | Amazon, Apple, Facebook |
 | 204 | Count Primes |  Easy | Adobe, Amazon, Apple, Google, Microsoft |
 | 223 | Rectangle Area |  Medium | Microsoft |
-| 231 | Power of Two |  Easy | Amazon |
 | 233 | Number of Digit One |  Hard | Amazon |
 | 246 | Strobogrammatic Number |  Easy | Facebook, Google |
 | 260 | Single Number III |  Medium | Adobe, Facebook |
@@ -84,7 +82,6 @@ Xor Of Sum Of All Pairs Easy
 | 397 | Integer Replacement |  Medium | Amazon |
 | 400 | Nth Digit |  Easy | Adobe, Google |
 | 405 | Convert a Number to Hexadecimal |  Easy | Facebook |
-| 446 | Arithmetic Slices II - Subsequence |  Hard | Alibaba, Facebook |
 | 447 | Number of Boomerangs |  Easy | Amazon, Google |
 | 476 | Number Complement |  Easy | Google |
 | 477 | Total Hamming Distance |  Medium | Facebook |
@@ -106,5 +103,4 @@ Xor Of Sum Of All Pairs Easy
 | 877 | Stone Game |  Medium | Google |
 | 885 | Spiral Matrix III |  Medium | Facebook |
 | 914 | X of a Kind in a Deck of Cards |  Easy | Google |
-Remove repeated digits in a given number	GP				https://practice.geeksforgeeks.org/problems/remove-repeated-digits-in-a-given-number/0	Remove repeated digits in a given number
  */

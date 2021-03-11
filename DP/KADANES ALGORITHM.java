@@ -106,7 +106,12 @@ public class Main {
 
 
 /**
- Print continuous subarray with maximum sumMedium
- Maximum Contiguous Circular Subarray Sum
- Largest Sum Subarray With At-Least k Numbers
+Print continuous subarray with maximum sumMedium
+Maximum Contiguous Circular Subarray Sum
+Largest Sum Subarray With At-Least k Numbers
+Bitwise ORs of Subarrays	Leet				https://leetcode.com/problems/bitwise-ors-of-subarrays	Bitwise ORs of Subarrays
+Largest Divisible Subset	Leet				https://leetcode.com/problems/largest-divisible-subset	Largest Divisible Subset
+Maximum Product Subarray |  Medium | Adobe |
+Longest Turbulent Subarray	Leet				https://leetcode.com/problems/longest-turbulent-subarray	Longest Turbulent Subarray
+Length of Longest Fibonacci Subsequence	Leet				https://leetcode.com/problems/length-of-longest-fibonacci-subsequence	Length of Longest Fibonacci Subsequence
  */

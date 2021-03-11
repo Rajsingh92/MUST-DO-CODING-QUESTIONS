@@ -41,5 +41,5 @@ class Solution {
 
 
 /**
-Arithmetic Slices II - Subsequence	Leet				https://leetcode.com/problems/arithmetic-slices-ii-subsequence	Arithmetic Slices II - Subsequence
- */
+| 446 | Arithmetic Slices II - Subsequence |  Hard | Alibaba, Facebook |
+*/

@@ -91,4 +91,5 @@ public class Main {
 counting valleys and mountanis
 count brackets
 maze paths above diagonal
+minuimum score triangulation
  */
